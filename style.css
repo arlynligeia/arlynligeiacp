@@ -177,14 +177,12 @@ border-spacing: 0;
 background-color: transparent;
 }
 /* SISTEMA DE ESPACIADO UNIFORME */
-.tablacuatro-table-wrapper th,
-.tablacuatro-table-wrapper td {
-border-right: 15px solid transparent;
-box-sizing: border-box;
-}
-.tablacuatro-table-wrapper th:last-child,
-.tablacuatro-table-wrapper td:last-child {
-border-right: none;
+.tablacuatro-table-wrapper {
+width: 100%;
+table-layout: fixed;
+border-collapse: separate;
+border-spacing: 5px;
+background-color: transparent;
 }
 /* ANCHO DE COLUMNAS CON ESPACIADO INCLUIDO */
 .tablacuatro-table-wrapper th:nth-child(1),
@@ -245,7 +243,7 @@ margin: 0px;
 box-sizing: border-box;
 }
 /* LÍNEA DIVISORA (si la necesitas) */
-.tablacuatro-table-wrapper-body-divider-1 td {
+.tablacuatro-table-wrapper-body-divider td {
 width: 100%;
 border-top: 3px solid #39ff14;
 height: 0;
