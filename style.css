@@ -123,6 +123,135 @@ nav {
 
 
 
+/* ======================================
+   TABLA CUATRO
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.tablacuatro-container {
+position: relative;
+width: 800px;
+background-color: #9900CC !important;
+border-radius: 20px;
+padding: 30px;
+margin: 40px auto;
+}
+.tablacuatro-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;
+}
+.tablacuatro-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.tablacuatro-title a {
+color: white !important;
+text-decoration: none;
+}
+
+/* CONTENEDOR: TABLA */
+.tablacuatro-table {
+width: 100%;
+margin: 0px;
+}
+/* TABLA PRINCIPAL - ESPACIADO UNIFORME */
+.tablacuatro-table-wrapper {
+width: 100%;
+table-layout: fixed;
+border-collapse: separate;
+border-spacing: 0;
+background-color: transparent;
+}
+/* SISTEMA DE ESPACIADO UNIFORME */
+.tablacuatro-table-wrapper th,
+.tablacuatro-table-wrapper td {
+border-right: 15px solid transparent;
+box-sizing: border-box;
+}
+.tablacuatro-table-wrapper th:last-child,
+.tablacuatro-table-wrapper td:last-child {
+border-right: none;
+}
+/* ANCHO DE COLUMNAS CON ESPACIADO INCLUIDO */
+.tablacuatro-table-wrapper th:nth-child(1),
+.tablacuatro-table-wrapper td:nth-child(1) {
+width: 10%;
+}
+.tablacuatro-table-wrapper th:nth-child(2),
+.tablacuatro-table-wrapper td:nth-child(2) {
+width: 20%;
+}
+.tablacuatro-table-wrapper th:nth-child(3),
+.tablacuatro-table-wrapper td:nth-child(3) {
+width: 25%;
+}
+.tablacuatro-table-wrapper th:nth-child(4),
+.tablacuatro-table-wrapper td:nth-child(4) {
+width: 45%;
+}
+/* ENCABEZADOS */
+.tablacuatro-table-wrapper-head-row {
+width: 100%;
+margin: 0px;
+}
+.tablacuatro-table-wrapper-head-row-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39ff14 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+text-transform: uppercase;
+padding: 0px;
+margin: 0px;  
+}
+/* CUERPO DE LA TABLA */
+.tablacuatro-table-wrapper-body {
+width: 100%;
+}
+.tablacuatro-table-wrapper-body-row {
+vertical-align: middle;
+}
+/* CELDAS - MANTENIENDO TU ESTILO ORIGINAL */
+.tablacuatro-table-wrapper-body-row-cell span {
+width: 100%;
+height: 40px;
+display: flex;
+background-color: white !important;
+border-radius: 6px;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black !important;
+text-decoration: none;
+text-align: center;  
+justify-content: center;
+align-items: center; 
+padding: 10px 5px 10px 5px;
+margin: 0px;
+box-sizing: border-box;
+}
+/* LÍNEA DIVISORA (si la necesitas) */
+.tablacuatro-table-wrapper-body-divider-1 td {
+width: 100%;
+border-top: 3px solid #39ff14;
+height: 0;
+}
+
+
 
 
 
