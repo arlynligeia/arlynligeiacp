@@ -243,7 +243,8 @@ box-sizing: border-box;
 cursor: pointer;
 transition: transform 0.3s ease;  
 }
-.cartfull-table-full-body-row-product-button-remove:hover {
+.button-tiktok:hover,
+.button-youtube:hover {
 transform: scale(1.05);
 }
 /* CELDAS */
@@ -264,20 +265,6 @@ padding: 10px 5px 10px 5px;
 margin: 0px;
 box-sizing: border-box;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ======================================
    TABLA CUATRO
