@@ -1118,7 +1118,9 @@ margin-bottom: 30px;
 /* CONTENEDOR: PRECIO Y BOTONES */
 .gridtres-columns-grid-acquire {
 display: flex;
-flex-direction: column;  
+flex-direction: column;
+justify-content: center;
+align-items: center;
 height: 100%;
 min-height: 300px;
 }
@@ -1127,22 +1129,22 @@ min-height: 300px;
 width: 100%;
 min-width: 0;  
 margin: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* ← Centra verticalmente */
-align-items: center; /* ← Centra horizontalmente */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 .gridtres-columns-grid-acquire-price div {
 display: flex;
 flex-direction: column;
+justify-content: center;
+align-items: center; 
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;  
-justify-content: center;
-align-items: center;
 box-sizing: border-box;
 padding: 0px;
 margin: 0 0 10px 0;
@@ -1152,26 +1154,25 @@ margin: 0 0 10px 0;
 width: 100%;
 min-width: 0;  
 margin: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* ← Centra verticalmente */
-align-items: center; /* ← Centra horizontalmente */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 .gridtres-columns-grid-acquire-button-addtocart,
 .gridtres-columns-grid-acquire-button-share {
 display: flex;
 flex-direction: column;
+justify-content: center;
+align-items: center;  
 border-radius: 6px;
-border: none;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
 text-decoration: none;
 text-align: center;  
-justify-content: center;
-align-items: center; 
 padding: 10px 20px 10px 20px;
-margin: 0 0 10px 0; 
+margin: 0 0 20px 0; 
 box-sizing: border-box;
 cursor: pointer;
 transition: transform 0.3s ease;  
