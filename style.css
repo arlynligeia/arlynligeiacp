@@ -722,7 +722,34 @@ transition: transform 0.3s ease;
 .tablaseis-table-wrapper-body-row-cell-button-remove:hover {
 transform: scale(1.05);
 }
-
+/* CONTENEDOR: SUBTOTAL,SHIPPING,TOTAL */
+.tablaseis-table-wrapper-body-row-cell-subtotal,
+.tablaseis-table-wrapper-body-row-cell-shipping,
+.tablaseis-table-wrapper-body-row-cell-total {
+width: 100%;
+height: 40px;
+display: flex;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black !important;
+text-decoration: none;
+text-align: right;
+justify-content: space-between;
+align-items: center;
+box-sizing: border-box;
+padding: 10px 5px 10px 5px;
+margin: 0px;
+}
+.tablaseis-table-wrapper-body-row-cell-subtotalprice-symbol,
+.tablaseis-table-wrapper-body-row-cell-shippingprice-symbol,
+.tablaseis-table-wrapper-body-row-cell-totalprice-symbol {
+text-align: left;
+}
+.tablaseis-table-wrapper-body-row-cell-subtotalprice-amount,
+.tablaseis-table-wrapper-body-row-cell-shippingprice-amount,
+.tablaseis-table-wrapper-body-row-cell-totalprice-amount {
+text-align: right;
+}
 
 
 
