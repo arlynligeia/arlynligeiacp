@@ -448,7 +448,6 @@ margin: 0 0 16px 0;
 color: white !important;
 text-decoration: none;
 }
-
 /* CONTENEDOR: TABLA */
 .tablacuatro-table {
 width: 100%;
@@ -531,7 +530,7 @@ box-sizing: border-box;
 /* LÍNEA DIVISORA (si la necesitas) */
 .tablacuatro-table-wrapper-body-divider td {
 width: 100%;
-border-top: 3px solid #39ff14;
+border-top: 3px solid #39ff14 !important;
 height: 0;
 }
 
@@ -640,7 +639,7 @@ width: 100%;
 /* LÍNEA DIVISORA */
 .tablaseis-table-wrapper-body-divider td {
 width: 100%;
-border-top: 3px solid #39ff14;
+border-top: 3px solid #39ff14 !important;
 height: 0;
 }
 .tablaseis-table-wrapper-body-row {
@@ -737,15 +736,19 @@ height: 40px;
 display: flex;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: black !important;
+color: white !important;
 text-decoration: none;
 text-align: right;
-justify-content: space-between;
+justify-content: flex-end;
 align-items: center;
 box-sizing: border-box;
 padding: 10px 5px 10px 5px;
 margin: 0px;
 }
+.tablaseis-table-wrapper-body-row-cell-total {
+color: #39ff14 !important;
+}
+
 
 
 
