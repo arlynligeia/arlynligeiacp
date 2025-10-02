@@ -1145,7 +1145,6 @@ color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;  
-box-sizing: border-box;
 padding: 0px;
 margin: 0 0 10px 0;
 }
@@ -1173,7 +1172,7 @@ text-decoration: none;
 text-align: center;  
 padding: 10px 20px 10px 20px;
 margin: 0 0 20px 0; 
-box-sizing: border-box;
+border:none;
 cursor: pointer;
 transition: transform 0.3s ease;  
 }
