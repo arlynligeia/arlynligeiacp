@@ -121,6 +121,9 @@ nav {
 }
 
 
+
+
+
 /* ======================================
    TABLA TRES
 ====================================== */
@@ -186,11 +189,11 @@ width: 20%;
 }
 .tablatres-table-wrapper th:nth-child(2),
 .tablatres-table-wrapper td:nth-child(2) {
-width: 40%;
+width: 45%;
 }
 .tablatres-table-wrapper th:nth-child(3),
 .tablatres-table-wrapper td:nth-child(3) {
-width: 40%;
+width: 35%;
 }
 /* ENCABEZADOS */
 .tablatres-table-wrapper-head-row {
@@ -202,7 +205,6 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: #39ff14 !important;
 text-decoration: none;
-line-height: 1.5;
 text-align: center;
 text-transform: uppercase;
 padding: 0px;
@@ -211,6 +213,7 @@ margin: 0px;
 /* CUERPO DE LA TABLA */
 .tablatres-table-wrapper-body {
 width: 100%;
+margin: 0px;
 }
 /* LÍNEA DIVISORA */
 .tablatres-table-wrapper-body-divider td {
@@ -222,29 +225,29 @@ height: 0;
 vertical-align: middle;
 }
 /* CONTENEDOR: BOTONES TIKTOK-YOUTUBE */
-.button-tiktok,
-.button-youtube {
+.tablatres-table-wrapper-body-row-cell-button-tiktok,
+.tablatres-table-wrapper-body-row-cell-button-youtube {
 width: 100%;
 height: 40px;
-display: flex;  
+display: flex;
+justify-content: center;
+align-items: center;   
 background-color: #39ff14 !important;
 border-radius: 6px;
-border: none;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
 text-decoration: none;
 text-align: center;  
-justify-content: center;
-align-items: center; 
-padding: 10px 5px 10px 5px;
-margin: 0px; 
 box-sizing: border-box;
+padding: 10px 20px 10px 20px;
+margin: 0px; 
+border: none;
 cursor: pointer;
 transition: transform 0.3s ease;  
 }
-.button-tiktok:hover,
-.button-youtube:hover {
+.tablatres-table-wrapper-body-row-cell-button-tiktok:hover,
+.tablatres-table-wrapper-body-row-cell-button-youtube:hover {
 transform: scale(1.05);
 }
 /* CELDAS */
@@ -252,6 +255,8 @@ transform: scale(1.05);
 width: 100%;
 height: 40px;
 display: flex;
+justify-content: center;
+align-items: center;   
 background-color: white !important;
 border-radius: 6px;
 font-family: 'Share Tech Mono', monospace;
@@ -259,11 +264,9 @@ font-size: 1.25rem;
 color: black !important;
 text-decoration: none;
 text-align: center;  
-justify-content: center;
-align-items: center; 
-padding: 10px 5px 10px 5px;
-margin: 0px;
 box-sizing: border-box;
+padding: 10px 10px 10px 10px;
+margin: 0px;
 }
 
 /* ======================================
@@ -327,11 +330,11 @@ background-color: transparent;
 /* ANCHO DE COLUMNAS*/
 .tabladoss-table-wrapper th:nth-child(1),
 .tabladoss-table-wrapper td:nth-child(1) {
-width: 30%;
+width: 25%;
 }
 .tabladoss-table-wrapper th:nth-child(2),
 .tabladoss-table-wrapper td:nth-child(2) {
-width: 70%;
+width: 75%;
 }
 /* ENCABEZADOS */
 .tabladoss-table-wrapper-head-row {
@@ -343,7 +346,6 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: #39ff14 !important;
 text-decoration: none;
-line-height: 1.5;
 text-align: center;
 text-transform: uppercase;
 padding: 0px;
@@ -352,6 +354,7 @@ margin: 0px;
 /* CUERPO DE LA TABLA */
 .tabladoss-table-wrapper-body {
 width: 100%;
+margin: 0px;
 }
 /* LÍNEA DIVISORA */
 .tabladoss-table-wrapper-body-divider td {
@@ -363,31 +366,31 @@ height: 0;
 vertical-align: middle;
 }
 /* CONTENEDOR: BOTONES */
-.button-film,
-.button-music,
-.button-fashion {
+.tabladoss-table-wrapper-body-row-cell-button-film,
+.tabladoss-table-wrapper-body-row-cell-button-music,
+.tabladoss-table-wrapper-body-row-cell-button-fashion {
 width: 100%;
 height: 40px;
-display: flex;  
+display: flex;
+justify-content: center;
+align-items: center;  
 background-color: #39ff14 !important;
 border-radius: 6px;
-border: none;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
 text-decoration: none;
 text-align: center;  
-justify-content: center;
-align-items: center; 
+box-sizing: border-box;
 padding: 10px 5px 10px 5px;
 margin: 0px; 
-box-sizing: border-box;
+border: none;
 cursor: pointer;
 transition: transform 0.3s ease;  
 }
-.button-film:hover,
-.button-music:hover,
-.button-fashion:hover {
+.tabladoss-table-wrapper-body-row-cell-button-film:hover,
+.tabladoss-table-wrapper-body-row-cell-button-music:hover,
+.tabladoss-table-wrapper-body-row-cell-button-fashion:hover {
 transform: scale(1.05);
 }
 /* CELDAS */
@@ -395,6 +398,8 @@ transform: scale(1.05);
 width: 100%;
 height: 40px;
 display: flex;
+justify-content: center;
+align-items: center;   
 background-color: white !important;
 border-radius: 6px;
 font-family: 'Share Tech Mono', monospace;
@@ -402,11 +407,9 @@ font-size: 1.25rem;
 color: black !important;
 text-decoration: none;
 text-align: center;  
-justify-content: center;
-align-items: center; 
+box-sizing: border-box;
 padding: 10px 5px 10px 5px;
 margin: 0px;
-box-sizing: border-box;
 }
 
 /* ======================================
@@ -453,7 +456,6 @@ text-decoration: none;
 width: 100%;
 margin: 0px;
 }
-/* TABLA PRINCIPAL - ESPACIADO UNIFORME */
 .tablacuatro-table-wrapper {
 width: 100%;
 table-layout: fixed;
@@ -461,7 +463,6 @@ border-collapse: separate;
 border-spacing: 0;
 background-color: transparent;
 }
-/* SISTEMA DE ESPACIADO UNIFORME */
 .tablacuatro-table-wrapper {
 width: 100%;
 table-layout: fixed;
@@ -469,7 +470,7 @@ border-collapse: separate;
 border-spacing: 5px;
 background-color: transparent;
 }
-/* ANCHO DE COLUMNAS CON ESPACIADO INCLUIDO */
+/* ANCHO DE COLUMNAS*/
 .tablacuatro-table-wrapper th:nth-child(1),
 .tablacuatro-table-wrapper td:nth-child(1) {
 width: 10%;
@@ -496,7 +497,6 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: #39ff14 !important;
 text-decoration: none;
-line-height: 1.5;
 text-align: center;
 text-transform: uppercase;
 padding: 0px;
@@ -505,15 +505,24 @@ margin: 0px;
 /* CUERPO DE LA TABLA */
 .tablacuatro-table-wrapper-body {
 width: 100%;
+margin: 0px;
+}
+/* LÍNEA DIVISORA */
+.tablacuatro-table-wrapper-body-divider td {
+width: 100%;
+border-top: 3px solid #39ff14 !important;
+height: 0;
 }
 .tablacuatro-table-wrapper-body-row {
 vertical-align: middle;
 }
-/* CELDAS - MANTENIENDO TU ESTILO ORIGINAL */
+/* CELDAS */
 .tablacuatro-table-wrapper-body-row-cell span {
 width: 100%;
 height: 40px;
 display: flex;
+justify-content: center;
+align-items: center;   
 background-color: white !important;
 border-radius: 6px;
 font-family: 'Share Tech Mono', monospace;
@@ -521,17 +530,9 @@ font-size: 1.25rem;
 color: black !important;
 text-decoration: none;
 text-align: center;  
-justify-content: center;
-align-items: center; 
+box-sizing: border-box;
 padding: 10px 5px 10px 5px;
 margin: 0px;
-box-sizing: border-box;
-}
-/* LÍNEA DIVISORA (si la necesitas) */
-.tablacuatro-table-wrapper-body-divider td {
-width: 100%;
-border-top: 3px solid #39ff14 !important;
-height: 0;
 }
 
 /* ======================================
@@ -592,6 +593,7 @@ border-collapse: separate;
 border-spacing: 5px;
 background-color: transparent;
 }
+/* ANCHO DE COLUMNAS*/
 .tablaseis-table-wrapper th:nth-child(1),
 .tablaseis-table-wrapper td:nth-child(1) {
 width: 8%;
@@ -635,6 +637,7 @@ margin: 0px;
 /* CUERPO */
 .tablaseis-table-wrapper-body {
 width: 100%;
+margin: 0px;
 }
 /* LÍNEA DIVISORA */
 .tablaseis-table-wrapper-body-divider td {
@@ -649,10 +652,9 @@ vertical-align: middle;
 .tablaseis-table-wrapper-body-row-cell-image {
 width: 100%;
 display: flex;
+justify-content: center; 
 align-items: center;
-justify-content: center;
-margin-top: 0px;
-margin-bottom: 5px; 
+margin: 0;
 }
 .tablaseis-table-wrapper-body-row-cell-image img {
 max-width: 100%;
@@ -660,7 +662,7 @@ max-height: 100%;
 border-radius: 6px;
 object-fit: contain;
 margin-top: 0px;
-margin-bottom: 5px; 
+margin: 0;
 }
 /* CONTENEDOR: NOMBRE */
 .tablaseis-table-wrapper-body-row-cell-name,
@@ -672,14 +674,14 @@ margin-bottom: 5px;
 width: 100%;
 height: 40px;
 display: flex;
+justify-content: space-between;
+align-items: center; 
 background-color: white !important;
 border-radius: 6px;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: black !important;
 text-decoration: none;  
-justify-content: space-between;
-align-items: center;
 box-sizing: border-box;
 padding: 10px 5px 10px 5px;
 margin: 0px;
@@ -707,20 +709,20 @@ text-align: right;
 .tablaseis-table-wrapper-body-row-cell-button-remove {
 width: 100%;
 height: 40px;
-display: flex;  
+display: flex;
+justify-content: center;
+align-items: center;  
 background-color: #ff4444 !important;
 border-radius: 6px;
-border: none;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
 text-decoration: none;
 text-align: center;  
-justify-content: center;
-align-items: center;
 box-sizing: border-box;
 padding: 10px 5px 10px 5px;
-margin: 0px; 
+margin: 0px;
+border: none;
 cursor: pointer;
 transition: transform 0.3s ease;  
 }
@@ -734,13 +736,13 @@ transform: scale(1.05);
 width: 100%;
 height: 40px;
 display: flex;
+justify-content: flex-end;
+align-items: center; 
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white !important;
 text-decoration: none;
 text-align: right;
-justify-content: flex-end;
-align-items: center;
 box-sizing: border-box;
 padding: 10px 5px 10px 5px;
 margin: 0px;
@@ -807,6 +809,7 @@ border-collapse: separate;
 border-spacing: 10px;
 background-color: transparent;
 }
+/* ANCHO DE COLUMNAS*/
 .segundatablacuatro-table-wrapper th:nth-child(1),
 .segundatablacuatro-table-wrapper td:nth-child(1) {
 width: 58%;
@@ -833,7 +836,6 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: #39ff14 !important;
 text-decoration: none;
-line-height: 1.5;
 text-align: center;
 text-transform: uppercase;
 padding: 0px;
@@ -842,6 +844,7 @@ margin: 0px;
 /* CUERPO */
 .segundatablacuatro-table-wrapper-body {
 width: 100%;
+margin: 0px;
 }
 /* LÍNEA DIVISORA */
 .segundatablacuatro-table-wrapper-body-divider td {
@@ -862,12 +865,12 @@ vertical-align: middle;
 .segundatablacuatro-table-wrapper-body-row-cell-totalprice-end {
 width: 100%;
 display: flex;
+justify-content: space-between;
+align-items: center; 
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white !important;
 text-decoration: none;  
-justify-content: space-between;
-align-items: center;
 box-sizing: border-box;
 padding: 0px;
 margin: 0px;
@@ -900,13 +903,13 @@ text-align: right;
 .segundatablacuatro-table-wrapper-body-row-cell-total {
 width: 100%;
 display: flex;
+justify-content: flex-end;
+align-items: center; 
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white !important;
 text-decoration: none;
 text-align: right;
-justify-content: flex-end;
-align-items: center;
 box-sizing: border-box;
 padding: 0px;
 margin: 0px;
@@ -914,13 +917,6 @@ margin: 0px;
 .segundatablacuatro-table-wrapper-body-row-cell-total {
 color: #39ff14 !important;
 }
-
-
-
-
-
-
-
 
 /* ======================================
    GRID DOS
@@ -1008,11 +1004,6 @@ border-radius: 15px;
 margin: 0px;
 }
 
-
-
-
-
-
 /* ======================================
    GRID TRES
 ====================================== */
@@ -1068,6 +1059,8 @@ margin: 0px;
 .gridtres-columns-grid-image {
 width: 100%;
 min-width: 0;
+display: flex;
+align-items: center;
 margin: 0px;
 }
 .gridtres-columns-grid-image img {
@@ -1085,14 +1078,14 @@ margin: 0px;
 }
 .gridtres-columns-grid-information-subtitle-1,
 .gridtres-columns-grid-information-subtitle-2 {
+justify-content: space-between;
+align-items: center;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;  
-justify-content: space-between;
-align-items: center;
 box-sizing: border-box;
 padding: 0px;
 margin: 0px;
@@ -1102,14 +1095,14 @@ text-align: center;
 }
 .gridtres-columns-grid-information-text-1,
 .gridtres-columns-grid-information-text-2 {
+justify-content: space-between;
+align-items: center;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;  
-justify-content: space-between;
-align-items: center;
 box-sizing: border-box;
 padding: 0px;
 margin: 0px;
@@ -1117,7 +1110,6 @@ margin: 0px;
 .gridtres-columns-grid-information-text-1 {
 margin-bottom: 30px;
 }
-
 /* CONTENEDOR: PRECIO Y BOTONES */
 .gridtres-columns-grid-acquire {
 width: 100%;
