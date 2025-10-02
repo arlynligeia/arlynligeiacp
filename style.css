@@ -863,12 +863,12 @@ width: 100%;
 display: flex;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: black !important;
+color: white !important;
 text-decoration: none;  
 justify-content: space-between;
 align-items: center;
 box-sizing: border-box;
-padding: 10px 5px 10px 5px;
+padding: 0px;
 margin: 0px;
 }
 .segundatablacuatro-table-wrapper-body-row-cell-name {
@@ -877,6 +877,9 @@ text-align: left;
 .segundatablacuatro-table-wrapper-body-row-cell-quantity {
 justify-content: center; 
 text-align: center;
+}
+.segundatablacuatro-table-wrapper-body-row-cell-totalprice {
+color: #39ff14 !important;
 }
 .segundatablacuatro-table-wrapper-body-row-cell-unitprice-symbol,
 .segundatablacuatro-table-wrapper-body-row-cell-totalprice-symbol,
@@ -904,7 +907,7 @@ text-align: right;
 justify-content: flex-end;
 align-items: center;
 box-sizing: border-box;
-padding: 10px 5px 10px 5px;
+padding: 0px;
 margin: 0px;
 }
 .segundatablacuatro-table-wrapper-body-row-cell-total {
