@@ -1123,6 +1123,9 @@ justify-content: center;
 align-items: center;
 height: 100%;
 min-height: 300px;
+  max-width: 100%; /
+  box-sizing: border-box;
+  width: 100%;
 }
 /* CONTENEDOR: PRECIO */
 .gridtres-columns-grid-acquire-price {
