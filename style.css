@@ -878,7 +878,8 @@ text-align: left;
 justify-content: center; 
 text-align: center;
 }
-.segundatablacuatro-table-wrapper-body-row-cell-totalprice-end {
+.segundatablacuatro-table-wrapper-body-row:last-child 
+.segundatablacuatro-table-wrapper-body-row-cell-totalprice {
 color: #39ff14 !important;
 }
 .segundatablacuatro-table-wrapper-body-row-cell-unitprice-symbol,
