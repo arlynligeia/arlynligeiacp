@@ -1112,14 +1112,15 @@ margin: 0px;
 .gridtres-columns-grid-information-text-1 {
 margin-bottom: 30px;
 }
+
+
+
 /* CONTENEDOR: PRECIO Y BOTONES */
 .gridtres-columns-grid-acquire {
 display: flex;
-flex-direction: column;
+flex-direction: column;  
 height: 100%;
 min-height: 300px;
-justify-content: center; /* ← Centra verticalmente */
-align-items: center; /* ← Centra horizontalmente */
 }
 /* CONTENEDOR: PRECIO */
 .gridtres-columns-grid-acquire-price {
