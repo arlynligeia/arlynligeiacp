@@ -667,7 +667,9 @@ margin-bottom: 5px;
 .tablaseis-table-wrapper-body-row-cell-name,
 .tablaseis-table-wrapper-body-row-cell-quantity,
 .tablaseis-table-wrapper-body-row-cell-unitprice,
-.tablaseis-table-wrapper-body-row-cell-totalprice {
+.tablaseis-table-wrapper-body-row-cell-totalprice,
+.tablaseis-table-wrapper-body-row-cell-subtotalprice,
+.tablaseis-table-wrapper-body-row-cell-shippingprice {
 width: 100%;
 height: 40px;
 display: flex;
@@ -691,11 +693,15 @@ justify-content: center;
 text-align: center;
 }
 .tablaseis-table-wrapper-body-row-cell-unitprice-symbol,
-.tablaseis-table-wrapper-body-row-cell-totalprice-symbol {
+.tablaseis-table-wrapper-body-row-cell-totalprice-symbol,
+.tablaseis-table-wrapper-body-row-cell-subtotalprice-symbol ,
+.tablaseis-table-wrapper-body-row-cell--shippingprice-symbol {
 text-align: left;
 }
 .tablaseis-table-wrapper-body-row-cell-unitprice-amount,
-.tablaseis-table-wrapper-body-row-cell-totalprice-amount {
+.tablaseis-table-wrapper-body-row-cell-totalprice-amount,
+.tablaseis-table-wrapper-body-row-cell-subtotalprice-amount,
+.tablaseis-table-wrapper-body-row-cell-shippingprice-amount {
 text-align: right;
 }
 /* CONTENEDOR: BOTÓN REMOVER */
@@ -739,16 +745,6 @@ align-items: center;
 box-sizing: border-box;
 padding: 10px 5px 10px 5px;
 margin: 0px;
-}
-.tablaseis-table-wrapper-body-row-cell-subtotalprice-symbol,
-.tablaseis-table-wrapper-body-row-cell-shippingprice-symbol,
-.tablaseis-table-wrapper-body-row-cell-totalprice-symbol {
-text-align: left;
-}
-.tablaseis-table-wrapper-body-row-cell-subtotalprice-amount,
-.tablaseis-table-wrapper-body-row-cell-shippingprice-amount,
-.tablaseis-table-wrapper-body-row-cell-totalprice-amount {
-text-align: right;
 }
 
 
