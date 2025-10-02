@@ -809,7 +809,7 @@ background-color: transparent;
 }
 .segundatablacuatro-table-wrapper th:nth-child(1),
 .segundatablacuatro-table-wrapper td:nth-child(1) {
-width: 44%;
+width: 54%;
 }
 .segundatablacuatro-table-wrapper th:nth-child(2),
 .segundatablacuatro-table-wrapper td:nth-child(2) {
@@ -817,11 +817,11 @@ width: 6%;
 }
 .segundatablacuatro-table-wrapper th:nth-child(3),
 .segundatablacuatro-table-wrapper td:nth-child(3) {
-width: 25%;
+width: 20%;
 }
 .segundatablacuatro-table-wrapper th:nth-child(4),
 .segundatablacuatro-table-wrapper td:nth-child(4) {
-width: 25%;
+width: 20%;
 }
 /* ENCABEZADOS */
 .segundatablacuatro-table-wrapper-head-row {
