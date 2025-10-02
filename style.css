@@ -676,6 +676,8 @@ font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: black !important;
 text-decoration: none;
+justify-content: space-between;
+align-items: center;
 padding: 10px 5px 10px 5px;
 margin: 0px;
 box-sizing: border-box;
@@ -685,13 +687,13 @@ text-align: left;
 }
 .tablaseis-table-wrapper-body-row-cell-quantity {
 text-align: center;
+justify-content: center;
 }
 .tablaseis-table-wrapper-body-row-cell-symbol {
-justify-content: flex-start;
-font-weight: bold;
+text-align: left;
 }
 .tablaseis-table-wrapper-body-row-cell-amount {
-justify-content: flex-end;
+text-align: right;
 }
 
 
