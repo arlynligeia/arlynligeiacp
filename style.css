@@ -860,10 +860,7 @@ vertical-align: middle;
 .segundatablacuatro-table-wrapper-body-row-cell-subtotalprice,
 .segundatablacuatro-table-wrapper-body-row-cell-shippingprice {
 width: 100%;
-height: 40px;
 display: flex;
-background-color: white !important;
-border-radius: 6px;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: black !important;
@@ -898,7 +895,6 @@ text-align: right;
 .segundatablacuatro-table-wrapper-body-row-cell-shipping,
 .segundatablacuatro-table-wrapper-body-row-cell-total {
 width: 100%;
-height: 40px;
 display: flex;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
