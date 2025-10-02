@@ -1014,7 +1014,7 @@ margin: 0px;
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .gridtres-container {
 position: relative;
-width: 800px;
+width: 900px;
 background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
@@ -1159,8 +1159,8 @@ text-decoration: none;
 text-align: center;  
 justify-content: center;
 align-items: center; 
-padding: 10px 20px;
-margin: 0px; 
+padding: 10px 20px 10px 20px;
+margin: 0 0 10px 0; 
 box-sizing: border-box;
 cursor: pointer;
 transition: transform 0.3s ease;  
