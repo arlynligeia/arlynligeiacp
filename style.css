@@ -858,7 +858,8 @@ vertical-align: middle;
 .segundatablacuatro-table-wrapper-body-row-cell-unitprice,
 .segundatablacuatro-table-wrapper-body-row-cell-totalprice,
 .segundatablacuatro-table-wrapper-body-row-cell-subtotalprice,
-.segundatablacuatro-table-wrapper-body-row-cell-shippingprice {
+.segundatablacuatro-table-wrapper-body-row-cell-shippingprice,
+.segundatablacuatro-table-wrapper-body-row-cell-totalprice-end {
 width: 100%;
 display: flex;
 font-family: 'Share Tech Mono', monospace;
@@ -877,6 +878,9 @@ text-align: left;
 .segundatablacuatro-table-wrapper-body-row-cell-quantity {
 justify-content: center; 
 text-align: center;
+}
+.segundatablacuatro-table-wrapper-body-row-cell-totalprice-end {
+color: #39ff14 !important;
 }
 .segundatablacuatro-table-wrapper-body-row-cell-unitprice-symbol,
 .segundatablacuatro-table-wrapper-body-row-cell-totalprice-symbol,
