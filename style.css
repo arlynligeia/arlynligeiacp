@@ -1055,7 +1055,7 @@ z-index: 2;
 /* CONTENEDOR: GRID DE 3 */
 .gridtres-columns-grid {
 display: grid;
-grid-template-columns: 30% 40% 30%; /* Añade los anchos que necesites */
+grid-template-columns: 30% 45% 25%;
 gap: 20px;
 margin: 0px;
 }
@@ -1118,12 +1118,16 @@ display: flex;
 flex-direction: column;
 height: 100%;
 min-height: 300px;
+justify-content: center; /* ← Centra verticalmente */
+align-items: center; /* ← Centra horizontalmente */
 }
 /* CONTENEDOR: PRECIO */
 .gridtres-columns-grid-acquire-price {
 width: 100%;
 min-width: 0;  
 margin: 0px;
+  justify-content: center; /* ← Centra verticalmente */
+align-items: center; /* ← Centra horizontalmente */
 }
 .gridtres-columns-grid-acquire-price div {
 display: flex;
@@ -1145,6 +1149,8 @@ margin: 0 0 10px 0;
 width: 100%;
 min-width: 0;  
 margin: 0px;
+  justify-content: center; /* ← Centra verticalmente */
+align-items: center; /* ← Centra horizontalmente */
 }
 .gridtres-columns-grid-acquire-button-addtocart,
 .gridtres-columns-grid-acquire-button-share {
