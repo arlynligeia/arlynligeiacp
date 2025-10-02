@@ -1190,6 +1190,123 @@ font-size: 1rem;
 transform: scale(1.05);
 }
 
+/* ======================================
+   SEGUNDO GRID TRES
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.segundogridtres-container {
+position: relative;
+width: 900px;
+background-color: #9900CC !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.segundogridtres-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;
+}
+.segundogridtres-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.segundogridtres-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: COLUMNAS */
+.segundogridtres-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 3 */
+.segundogridtres-columns-grid {
+display: grid;
+grid-template-columns: 30% 40% 30%;
+gap: 20px;
+margin: 0px;
+}
+/* CONTENEDOR: IMAGEN*/
+.segundogridtres-columns-grid-image {
+width: 100%;
+min-width: 0;
+margin: 0px;
+}
+.segundogridtres-columns-grid-image img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 15px;
+margin: 0px;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.segundogridtres-columns-grid-information {
+width: 100%;
+min-width: 0;
+margin: 0px;
+}
+.segundogridtres-columns-grid-information-subtitle-1,
+.segundogridtres-columns-grid-information-subtitle-2 {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;  
+justify-content: space-between;
+align-items: center;
+box-sizing: border-box;
+padding: 0px;
+margin: 0px;
+}
+.segundogridtres-columns-grid-information-subtitle-1{
+text-align: center;  
+}
+.segundogridtres-columns-grid-information-text-1,
+.segundogridtres-columns-grid-information-text-2 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;  
+justify-content: space-between;
+align-items: center;
+box-sizing: border-box;
+padding: 0px;
+margin: 0px;
+}
+.segundogridtres-columns-grid-information-text-1 {
+margin-bottom: 30px;
+}
+/* CONTENEDOR: IMAGEN 2*/
+.segundogridtres-columns-grid-image-2 {
+width: 100%;
+min-width: 0;
+margin: 0px;
+}
+.segundogridtres-columns-grid-image-2 img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 15px;
+margin: 0px;
+}
 
 
 
