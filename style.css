@@ -650,79 +650,89 @@ height: 0;
 .tablaseis-table-wrapper-body-row {
 vertical-align: middle;
 }
-
-/* CONTENEDOR: NOMBRE DE PRODUCTO */
-.tablaseis-table-wrapper-body-row-cell-name,
-.tablaseis-table-wrapper-body-row-cell-quantity,
-.tablaseis-table-wrapper-body-row-cell-unitprice,
-.tablaseis-table-wrapper-body-row-cell-totalprice {
+/* CONTENEDOR DE IMAGEN */
+.cartfull-table-full-body-row-product-image {
 width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 0px;
+margin-bottom: 5px; 
+}
+.cartfull-table-full-body-row-product-image img {
+max-width: 100%;
+max-height: 100%; 
+border-radius: 6px;
+object-fit: contain;
+margin-top: 0px;
+margin-bottom: 5px; 
+}
+/* CONTENEDOR DE NOMBRE DE PRODUCTO - RECUADRO BLANCO */
+.cartfull-table-full-body-row-product-name,
+.cartfull-table-full-body-row-product-quantity,
+.cartfull-table-full-body-row-product-unitprice,
+.cartfull-table-full-body-row-product-totalprice {
+width: 100%;
+height: 40px;
+background-color: white !important;
+border-radius: 6px;
 display: flex;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
+color: black !important;
 text-decoration: none;  
 align-items: center;
 justify-content: space-between;   
-padding-top: 0px;
+padding-top: 10px;
 padding-bottom: 10px;
-padding-left: 0px;
-padding-right: 0px;
-margin-top: 0px;
-margin-bottom: 0px;
+padding-left: 5px;
+padding-right: 5px;
 box-sizing: border-box;
 }
-.tablaseis-table-wrapper-body-row-cell-name {
+.cartfull-table-full-body-row-product-name {
 text-align: left;
 }
-.tablaseis-table-wrapper-body-row-cell-quantity {
+.cartfull-table-full-body-row-product-quantity {
 justify-content: center; 
 text-align: center;
 }
-.tablaseis-table-wrapper-body-row-cell-unitprice-symbol,
-.tablaseis-table-wrapper-body-row-cell-totalprice-symbol {
+.cartfull-table-full-body-row-product-unitprice-symbol,
+.cartfull-table-full-body-row-product-totalprice-symbol {
 text-align: left;
 }
-.tablaseis-table-wrapper-body-row-cell-unitprice-amount,
-.tablaseis-table-wrapper-body-row-cell-totalprice-amount {
+.cartfull-table-full-body-row-product-unitprice-amount,
+.cartfull-table-full-body-row-product-totalprice-amount {
 text-align: right;
 }
-
-
-
-
-
-
-
-
-
-
-
-/* BOTÓN REMOVER */
-.button-remove {
+/* CONTENEDOR DE BOTÓN REMOVER */
+.cartfull-table-full-body-row-product-button {
 width: 100%;
 height: 40px;
-display: flex;  
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.cartfull-table-full-body-row-product-button-remove {
+width: 100%;
+height: 40px;
 background-color: #39ff14 !important;
 border-radius: 6px;
 border: none;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
-text-decoration: none;
-text-align: center;  
-justify-content: center;
-align-items: center; 
-padding: 10px 5px 10px 5px;
-margin: 0px; 
-box-sizing: border-box;
+text-decoration: none;   
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 5px;
+padding-right: 5px; 
 cursor: pointer;
-transition: transform 0.3s ease;  
+box-sizing: border-box;
+transition: transform 0.3s ease;
 }
-.button-remove:hover {
+.cartfull-table-full-body-row-product-button-remove:hover {
 transform: scale(1.05);
 }
-
 
 
 
