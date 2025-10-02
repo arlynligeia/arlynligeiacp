@@ -804,7 +804,7 @@ background-color: transparent;
 width: 100%;
 table-layout: fixed;
 border-collapse: separate;
-border-spacing: 5px;
+border-spacing: 10px;
 background-color: transparent;
 }
 .segundatablacuatro-table-wrapper th:nth-child(1),
@@ -878,7 +878,7 @@ text-align: left;
 justify-content: center; 
 text-align: center;
 }
-.segundatablacuatro-table-wrapper-body-row-cell-totalprice {
+.segundatablacuatro-table-wrapper-body-row-cell-totalprice-end {
 color: #39ff14 !important;
 }
 .segundatablacuatro-table-wrapper-body-row-cell-unitprice-symbol,
