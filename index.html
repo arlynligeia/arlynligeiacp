@@ -893,7 +893,7 @@ section.style.display = 'none';
 });
 
 if (targetId === 'cart') {
-const cartSectionId = cart.length === 0 ? 'cartempty' : 'cartfull';
+const cartSectionId = (!cart || cart.length === 0) ? 'cartempty' : 'cartfull';
 const cartSection = document.getElementById(cartSectionId);
 if (cartSection) {
 cartSection.style.display = 'block';
