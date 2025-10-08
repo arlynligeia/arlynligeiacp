@@ -883,7 +883,83 @@ target="_blank">NOTAS SOBRE EMPODERAMIENTO FEMENINO EN EL PERÚ</a>
 
 
   
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+function navigateToTarget(targetId) {
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
+
+if (targetId === 'cart') {
+const cartSectionId = cart.length === 0 ? 'cartempty' : 'cartfull';
+const cartSection = document.getElementById(cartSectionId);
+if (cartSection) {
+cartSection.style.display = 'block';
+cartSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+history.pushState(null, null, `#${cartSectionId}`);
+return;
+}
+
+const targetSection = document.getElementById(targetId);
+if (!targetSection) return;
+
+let mainSectionId;
+if (targetSection.classList.contains('subsection')) {
+mainSectionId = targetId.split('-')[0];
+} else {
+mainSectionId = targetId;
+}
+
+const mainSection = document.getElementById(mainSectionId);
+if (mainSection) {
+mainSection.style.display = 'block';
+const mainSectionPrefix = mainSectionId + '-';
+document.querySelectorAll('.subsection').forEach(subsection => {
+if (subsection.id.startsWith(mainSectionPrefix)) {
+subsection.style.display = 'block';
+}
+});
+targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+history.pushState(null, null, `#${targetId}`);
+}
+}
+
+document.querySelectorAll('.menu-button-home, .menu-button-biography, .menu-button-film, .menu-button-music, .menu-button-fashion, .menu-button-art, .menu-button-science, .menu-button-bemypatron, .menu-button-contact, .menu-button-store').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+navigateToTarget(targetId);
+});
+});
+
+document.querySelectorAll('.menu-button-cart').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+navigateToTarget('cart');
+});
+});
+
+document.querySelectorAll('.submenu-button-socialmediacontent, .submenu-button-tiktokhighlight, .submenu-button-youtubehighlight, .submenu-button-featurefilm, .submenu-button-shortfilm, .submenu-button-musicvideodirection, .submenu-button-behindthescenes, .submenu-button-soundtrack, .submenu-button-singles, .submenu-button-album, .submenu-button-videomusic, .submenu-button-lyrics, .submenu-button-sscollection, .submenu-button-fwcollection, .submenu-button-capsulecollection, .submenu-button-resortcollection, .submenu-button-inspiredbyfilm, .submenu-button-painting, .submenu-button-researcharticle, .submenu-button-supportmywork, .submenu-button-supportmystudies, .submenu-button-gifts, .submenu-button-directcontact, .submenu-button-contactforfans, .submenu-button-digitalproducts, .submenu-button-physicalproducts, .submenu-button-shippingdetails').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+navigateToTarget(targetId);
+});
+});
+
+const hash = window.location.hash.replace('#', '');
+if (hash) {
+if (hash === 'cartempty' || hash === 'cartfull') {
+navigateToTarget('cart');
+} else {
+navigateToTarget(hash);
+}
+}
+});
+</script>
 
 
 
