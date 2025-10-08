@@ -3156,425 +3156,240 @@ Authorized by Intendancy Resolution N°</p>
 
   
 
-<!-- SCRIPS -->   
-
-<!-- SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
+<!-- SCRIP: CARRITO CORREGIDO -->  
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-console.log('🔧 Navegación iniciada');
-function showOnlyOneSection(sectionId) {
-console.log('Mostrando SOLO:', sectionId);
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-const mainSection = document.getElementById(sectionId);
-if (mainSection) {
-mainSection.style.display = 'block';
-document.querySelectorAll(`[id^="${sectionId}-"]`).forEach(subsection => {
-subsection.style.display = 'block';
-});
-mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-}
-function goToSubsection(subsectionId) {
-console.log('Yendo a subsección:', subsectionId);
-const mainSectionId = subsectionId.split('-')[0];
-showOnlyOneSection(mainSectionId);
-setTimeout(() => {
-const subsection = document.getElementById(subsectionId);
-if (subsection) {
-subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-}, 100);
-}
-document.querySelectorAll('.menu-button').forEach(button => {
-button.addEventListener('click', function(e) {
-e.preventDefault();
-const targetId = this.getAttribute('href').replace('#', '');
-showOnlyOneSection(targetId);
-history.pushState(null, null, `#${targetId}`);
-});
-});
-document.querySelectorAll('.submenu-button').forEach(button => {
-button.addEventListener('click', function(e) {
-e.preventDefault();
-const targetId = this.getAttribute('href').replace('#', '');
-goToSubsection(targetId);
-history.pushState(null, null, `#${targetId}`);
-});
-});
-// ✅ NUEVO CÓDIGO PARA MANTENER LA SECCIÓN AL RECARGAR
-function checkInitialHash() {
-const hash = window.location.hash.replace('#', '');
-if (hash) {
-if (hash.includes('-')) {
-goToSubsection(hash);
-} else {
-showOnlyOneSection(hash);
-}
-}
-}
-checkInitialHash();
-console.log('✅ Navegación configurada correctamente');
+    console.log('🛒 Carrito iniciado');  
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // STOCK DE PRODUCTOS INTERNO
+    const productStock = {
+        "Comet Sponsor": 288,
+        "Planet Sponsor": 120,
+        "Star Sponsor": 48,
+        "Comet Sponsor Brand": 24,
+        "Planet Sponsor Brand": 8,
+        "Star Sponsor Brand": 2,
+        "Nebula Executive Producer": 1,
+        "Pulsar Executive Producer": 1,
+        "Black Hole Executive Producer": 1,
+        "Quasar Executive Producer": 1,
+        "Galaxy Executive Producer": 1,
+        "Cosmos Executive Producer": 1
+    };
+
+    // 1. FUNCIONES PRINCIPALES DEL CARRITO
+    function addToCart(productData) {
+        // VALIDAR STOCK ANTES DE AGREGAR
+        const cartItem = cart.find(item => item.product === productData.product);
+        const currentQuantity = cartItem ? cartItem.quantity : 0;
+        const maxStock = productStock[productData.product] || 0;
+        
+        if (currentQuantity >= maxStock) {
+            alert('❌ No hay stock disponible para ' + productData.product);
+            return;
+        }
+        
+        console.log('➕ Agregando al carrito:', productData);
+        const existingProduct = cart.find(item => item.product === productData.product); 
+        
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+            const unitPrice = existingProduct.price;
+            const quantity = existingProduct.quantity;
+            existingProduct.totalprice = (quantity * parseFloat(unitPrice.replace(/,/g, ''))).toFixed(2).toString();    
+        } else { 
+            cart.push({
+                image: productData.image,
+                product: productData.product,
+                quantity: 1,
+                price: productData.price,
+                totalprice: (parseFloat(productData.price.replace(/,/g, ''))).toFixed(2).toString(),
+                shipping: productData.shipping || '0' 
+            });
+        }
+        
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartDisplay();
+        // MOSTRAR NOTIFICACIÓN
+        showNotification('Product added to cart successfully!');
+    }
+
+    function showNotification(message) {
+        const modal = document.getElementById('notificationModal');
+        const messageElement = modal.querySelector('.notification-message');
+        messageElement.textContent = message;
+        modal.style.display = 'flex';
+        
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 2000);
+    }
+
+    function updateCartDisplay() {
+        const cartBody = document.querySelector('.cartfull-table-wrapper-body');
+        // Limpiar solo las filas de productos
+        const productRows = cartBody.querySelectorAll('.cartfull-table-wrapper-body-row.product-row');
+        productRows.forEach(row => row.remove());
+        
+        // INSERTAR PRODUCTOS
+        const dividers = cartBody.querySelectorAll('.cartfull-table-wrapper-body-divider');
+        cart.forEach((item) => {
+            const productRow = document.createElement('tr');
+            productRow.className = 'cartfull-table-wrapper-body-row product-row';
+            productRow.innerHTML = `
+                <td class="cartfull-table-wrapper-body-row-cell">
+                    <div class="cartfull-table-wrapper-body-row-cell-image">
+                        <img src="${item.image}" alt="${item.product}">
+                    </div>
+                </td>
+                <td class="cartfull-table-wrapper-body-row-cell">
+                    <div class="cartfull-table-wrapper-body-row-cell-name">
+                        <span>${item.product}</span>
+                    </div>
+                </td>
+                <td class="cartfull-table-wrapper-body-row-cell">
+                    <div class="cartfull-table-wrapper-body-row-cell-quantity">
+                        <span>${item.quantity}</span>
+                    </div>
+                </td>
+                <td class="cartfull-table-wrapper-body-row-cell">
+                    <div class="cartfull-table-wrapper-body-row-cell-unitprice">
+                        <span class="cartfull-table-wrapper-body-row-cell-unitprice-symbol">$</span>
+                        <span class="cartfull-table-wrapper-body-row-cell-unitprice-amount">${formatNumberWithCommas(item.price)}</span>
+                    </div>
+                </td>
+                <td class="cartfull-table-wrapper-body-row-cell">
+                    <div class="cartfull-table-wrapper-body-row-cell-totalprice">
+                        <span class="cartfull-table-wrapper-body-row-cell-totalprice-symbol">$</span>
+                        <span class="cartfull-table-wrapper-body-row-cell-totalprice-amount">${formatNumberWithCommas(item.totalprice)}</span>
+                    </div>
+                </td>
+                <td class="cartfull-table-wrapper-body-row-cell">
+                    <div class="cartfull-table-wrapper-body-row-cell-button">
+                        <button class="cartfull-table-wrapper-body-row-cell-button-remove" onclick="removeFromCart('${item.product}')">X</button>
+                    </div>
+                </td>
+            `;
+            cartBody.insertBefore(productRow, dividers[1]);
+        });
+        
+        updateShippingTotal();
+        updateSubtotal(); 
+        updateTotalFinal();
+        updateAddToCartButtons();
+    }
+
+    function updateAddToCartButtons() {
+        document.querySelectorAll('.button-addtocart').forEach(button => {
+            const productName = button.getAttribute('data-product');
+            const cartItem = cart.find(item => item.product === productName);
+            const currentQuantity = cartItem ? cartItem.quantity : 0;
+            const maxStock = productStock[productName] || 0;
+            
+            if (currentQuantity >= maxStock) {
+                button.disabled = true;
+                button.style.opacity = '0.5';
+                button.style.cursor = 'not-allowed';
+            } else {
+                button.disabled = false;
+                button.style.opacity = '1';
+                button.style.cursor = 'pointer';
+            }
+        });
+    }
+
+    function updateSubtotal() {
+        const subtotal = cart.reduce((sum, item) => {
+            return sum + parseFloat(item.totalprice);
+        }, 0);
+        document.querySelector('.cartfull-table-wrapper-body-row-cell-subtotalprice-amount').textContent = 
+        formatNumberWithCommas(subtotal.toFixed(2));
+    }
+
+    function updateShippingTotal() {
+        const shippingTotal = cart.reduce((sum, item) => {
+            return sum + (parseFloat(item.shipping) * item.quantity);
+        }, 0);
+        document.querySelector('.cartfull-table-wrapper-body-row-cell-shippingprice-amount').textContent = 
+        formatNumberWithCommas(shippingTotal.toFixed(2));
+    }
+
+    function updateTotalFinal() {
+        const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.totalprice), 0);
+        const shipping = cart.reduce((sum, item) => sum + (parseFloat(item.shipping) * item.quantity), 0);
+        const totalFinal = subtotal + shipping;
+        document.querySelector('.cartfull-table-wrapper-body-row-cell-totalendprice-amount').textContent = 
+        formatNumberWithCommas(totalFinal.toFixed(2));
+    }
+
+    function formatNumberWithCommas(number) {
+        let parts = number.toString().split('.');
+        let integerPart = parts[0];
+        let decimalPart = parts[1] || '';
+        integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        return decimalPart ? `${integerPart}.${decimalPart}` : integerPart;
+    }
+
+    // FUNCIONES GLOBALES
+    window.removeFromCart = function(productName) {
+        cart = cart.filter(item => item.product !== productName);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartDisplay();
+        updateAddToCartButtons();
+    };
+
+    // BOTONES "ADD TO CART"
+    document.querySelectorAll('.button-addtocart').forEach(button => {
+        button.addEventListener('click', function() {
+            const productData = {
+                image: this.getAttribute('data-image'),
+                product: this.getAttribute('data-product'),
+                price: this.getAttribute('data-price'),
+                shipping: this.getAttribute('data-shipping') || '0'
+            };
+            addToCart(productData);
+        });
+    });  
+    
+    // BOTÓN CLEAR CART CON MODAL
+    document.getElementById('cart-full-clear').addEventListener('click', function() {
+        if (cart.length > 0) {
+            document.getElementById('clearCartModal').style.display = 'flex';
+        } else {
+            alert('The cart is already empty');
+        }
+    });
+
+    // EVENTOS DEL MODAL
+    document.getElementById('modalCancel').addEventListener('click', function() {
+        document.getElementById('clearCartModal').style.display = 'none';
+    });
+    
+    document.getElementById('modalConfirm').addEventListener('click', function() {
+        cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartDisplay();
+        updateAddToCartButtons();
+        document.getElementById('clearCartModal').style.display = 'none';
+    });
+
+    document.getElementById('clearCartModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            this.style.display = 'none';
+        }
+    }); 
+
+    // INICIALIZAR
+    if (cart.length > 0) {
+        updateCartDisplay();
+    }
+    updateAddToCartButtons();
+    
+    console.log('✅ Carrito configurado correctamente');
 });
 </script>
-<!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
-
-
-
-
-
-
-
-  
-<!-- SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
-<script>
-// NAVEGACIÓN JERÁRQUICA PARA TIENDA
-document.addEventListener('DOMContentLoaded', function() {
-console.log('🛍️ Navegación jerárquica de tienda iniciada');
-// ========== FUNCIÓN ÚNICA PARA TODAS LAS NAVEGACIONES ==========
-function navigateToTarget(targetId) {
-console.log('Navegando a:', targetId);
-const targetSection = document.getElementById(targetId);
-if (!targetSection) {
-console.warn('❌ Sección no encontrada:', targetId);
-return;
-}
-// Ocultar TODAS las secciones principales y subsecciones
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-// Determinar la sección principal a mostrar
-let mainSectionId;
-if (targetSection.classList.contains('subsection')) {
-// Si es subsección, mostrar su sección principal
-mainSectionId = targetId.split('-')[0];
-} else {
-// Si es sección principal, mostrar esa misma
-mainSectionId = targetId;
-}
-const mainSection = document.getElementById(mainSectionId);
-if (mainSection) {
-// Mostrar la sección principal
-mainSection.style.display = 'block';
-// Mostrar TODAS sus subsecciones
-const mainSectionPrefix = mainSectionId + '-';
-document.querySelectorAll('.subsection').forEach(subsection => {
-if (subsection.id.startsWith(mainSectionPrefix)) {
-subsection.style.display = 'block';
-}
-});
-// Hacer scroll a la sección objetivo
-targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-// Actualizar la URL
-history.pushState(null, null, `#${targetId}`);
-}
-}
-// ========== TARJETAS Y BOTONES ==========    
-// 1. TODAS LAS TARJETAS
-document.querySelectorAll('[class*="-columns-grid-card"]').forEach(card => {
-card.addEventListener('click', function(e) {
-e.preventDefault();
-const targetId = this.getAttribute('href').replace('#', '');
-navigateToTarget(targetId);
-});
-});
-// 2. BOTONES "BACK"
-document.querySelectorAll('[class*="-button-back"]').forEach(button => {
-button.addEventListener('click', function(e) {
-e.preventDefault();
-const targetId = this.getAttribute('href').replace('#', '');
-console.log('↩️ Botón BACK - Navegando a:', targetId);
-navigateToTarget(targetId);
-});
-});
-// 3. BOTONES "CONTINUE SHOPPING"
-document.querySelectorAll('[class*="-button-continueshopping"]').forEach(button => {
-button.addEventListener('click', function(e) {
-e.preventDefault();
-const targetId = this.getAttribute('href').replace('#', '');
-console.log('🛍️ CONTINUE SHOPPING - Navegando a:', targetId);
-navigateToTarget(targetId);
-});
-});
-// 4. BOTONES "VIEW" 
-document.querySelectorAll('[class*="-button-view"]').forEach(button => {
-button.addEventListener('click', function(e) {
-e.preventDefault();
-const targetId = this.getAttribute('href').replace('#', '');
-console.log('📍 Botón VIEW - Navegando a:', targetId);
-navigateToTarget(targetId);
-});
-});
-// AGREGAR MÁS BOTONES
-console.log('✅ Navegación de tienda configurada correctamente');
-});
-</script>
-<!-- FIN SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
-
-  
-
-
-
-<!-- SCRIP: CARRITO -->  
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-console.log('🛒 Carrito iniciado');  
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-// STOCK DE PRODUCTOS INTERNO
-const productStock = {
-"Comet Sponsor": 288,
-"Planet Sponsor": 120,
-"Star Sponsor": 48,
-"Comet Sponsor Brand": 24,
-"Planet Sponsor Brand": 8,
-"Star Sponsor Brand": 2,
-"Nebula Executive Producer": 1,
-"Pulsar Executive Producer": 1,
-"Black Hole Executive Producer": 1,
-"Quasar Executive Producer": 1,
-"Galaxy Executive Producer": 1,
-"Cosmos Executive Producer": 1
-};
-// 1. FUNCIONES PRINCIPALES DEL CARRITO
-// FUNCION AGREGAR PRODUCTOS AL CARRITO
-function addToCart(productData) {
-// VALIDAR STOCK ANTES DE AGREGAR
-const cartItem = cart.find(item => item.product === productData.product);
-const currentQuantity = cartItem ? cartItem.quantity : 0;
-const maxStock = productStock[productData.product] || 0;
-if (currentQuantity >= maxStock) {
-alert('❌ No hay stock disponible para ' + productData.product);
-return; // No agregar al carrito
-}
-console.log('➕ Agregando al carrito:', productData);
-const existingProduct = cart.find(item => item.product === productData.product); 
-if (existingProduct) {
-existingProduct.quantity += 1;
-// FÓRMULA SIMPLE SIN COMPLICACIONES
-const unitPrice = existingProduct.price;
-const quantity = existingProduct.quantity;
-existingProduct.totalprice = (quantity * parseFloat(unitPrice.replace(/,/g, ''))).toFixed(2).toString();    
-} else { 
-cart.push({
-image: productData.image,
-product: productData.product,
-quantity: 1,
-price: productData.price,
-totalprice: (parseFloat(productData.price.replace(/,/g, ''))).toFixed(2).toString(),
-shipping: productData.shipping || '0' 
-});
-}
-localStorage.setItem('cart', JSON.stringify(cart));
-updateCartDisplay();
-updateCartSections(); 
-// MOSTRAR NOTIFICACIÓN
-showNotification('Product added to cart successfully!');
-}
-// FUNCIÓN MOSTRAR NOTIFICACIÓN
-function showNotification(message) {
-const modal = document.getElementById('notificationModal');
-const messageElement = modal.querySelector('.notification-message');
-messageElement.textContent = message;
-modal.style.display = 'flex';
-// OCULTAR AUTOMÁTICAMENTE DESPUÉS DE 2 SEGUNDOS
-setTimeout(() => {
-modal.style.display = 'none';
-}, 2000);
-}
-// FUNCIÓN ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
-function updateCartDisplay() {
-const cartBody = document.querySelector('.cartfull-table-wrapper-body');
-// Limpiar solo las filas de productos
-const productRows = cartBody.querySelectorAll('.cartfull-table-wrapper-body-row.product-row');
-productRows.forEach(row => row.remove());
-// INSERTAR PRODUCTOS
-const dividers = cartBody.querySelectorAll('.cartfull-table-wrapper-body-divider');
-cart.forEach((item) => {
-const productRow = document.createElement('tr');
-productRow.className = 'cartfull-table-wrapper-body-row product-row';
-productRow.innerHTML = `
-<td class="cartfull-table-wrapper-body-row-cell">
-<div class="cartfull-table-wrapper-body-row-cell-image">
-<img src="${item.image}" alt="${item.product}">
-</div>
-</td>
-<td class="cartfull-table-wrapper-body-row-cell">
-<div class="cartfull-table-wrapper-body-row-cell-name">
-<span>${item.product}</span>
-</div>
-</td>
-<td class="cartfull-table-wrapper-body-row-cell">
-<div class="cartfull-table-wrapper-body-row-cell-quantity">
-<span>${item.quantity}</span>
-</div>
-</td>
-<td class="cartfull-table-wrapper-body-row-cell">
-<div class="cartfull-table-wrapper-body-row-cell-unitprice">
-<span class="cartfull-table-wrapper-body-row-cell-unitprice-symbol">$</span>
-<span class="cartfull-table-wrapper-body-row-cell-unitprice-amount">${formatNumberWithCommas(item.price)}</span>
-</div>
-</td>
-<td class="cartfull-table-wrapper-body-row-cell">
-<div class="cartfull-table-wrapper-body-row-cell-totalprice">
-<span class="cartfull-table-wrapper-body-row-cell-totalprice-symbol">$</span>
-<span class="cartfull-table-wrapper-body-row-cell-totalprice-amount">${formatNumberWithCommas(item.totalprice)}</span>
-</div>
-</td>
-<td class="cartfull-table-wrapper-body-row-cell">
-<div class="cartfull-table-wrapper-body-row-cell-button">
-<button class="cartfull-table-wrapper-body-row-cell-button-remove" onclick="removeFromCart('${item.product}')">X</button>
-</div>
-</td>
-`;
-cartBody.insertBefore(productRow, dividers[1]);
-});
-updateShippingTotal();
-updateSubtotal(); 
-updateTotalFinal();
-updateAddToCartButtons();
-}
-// 2. FUNCIONES DE CÁLCULO Y ACTUALIZACIÓN
-// FUNCIÓN PARA ACTUALIZAR BOTONES (HABILITAR/DESABILITAR)
-function updateAddToCartButtons() {
-document.querySelectorAll('.button-addtocart').forEach(button => {
-const productName = button.getAttribute('data-product');
-const cartItem = cart.find(item => item.product === productName);
-const currentQuantity = cartItem ? cartItem.quantity : 0;
-const maxStock = productStock[productName] || 0;
-// DESABILITAR BOTON SI NO HAY STOK
-if (currentQuantity >= maxStock) {
-button.disabled = true;
-button.style.opacity = '0.5';
-button.style.cursor = 'not-allowed';
-} else {
-button.disabled = false;
-button.style.opacity = '1';
-button.style.cursor = 'pointer';
-}
-});
-}
-// FUNCIÓN ACTUALIZAR SUBTOTAL 
-function updateSubtotal() {
-const subtotal = cart.reduce((sum, item) => {
-return sum + parseFloat(item.totalprice);
-}, 0);
-document.querySelector('.cartfull-table-wrapper-body-row-cell-subtotalprice-amount').textContent = 
-formatNumberWithCommas(subtotal.toFixed(2));
-}
-// FUNCIÓN ACTUALIZAR SHIPPING
-function updateShippingTotal() {
-const shippingTotal = cart.reduce((sum, item) => {
-return sum + (parseFloat(item.shipping) * item.quantity);
-}, 0);
-document.querySelector('.cartfull-table-wrapper-body-row-cell-shippingprice-amount').textContent = 
-formatNumberWithCommas(shippingTotal.toFixed(2));
-}
-// FUNCIÓN ACTUALIZAR TOTAL FINAL
-function updateTotalFinal() {
-const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.totalprice), 0);
-const shipping = cart.reduce((sum, item) => sum + (parseFloat(item.shipping) * item.quantity), 0);
-const totalFinal = subtotal + shipping;
-document.querySelector('.cartfull-table-wrapper-body-row-cell-totalendprice-amount').textContent = 
-formatNumberWithCommas(totalFinal.toFixed(2));
-}
-// 3. FUNCIONES UTILITARIAS
-// FUNCIÓN FORMATEAR NÚMEROS CON COMAS
-function formatNumberWithCommas(number) {
-let parts = number.toString().split('.');
-let integerPart = parts[0];
-let decimalPart = parts[1] || '';
-integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-return decimalPart ? `${integerPart}.${decimalPart}` : integerPart;
-}
-// 4. FUNCIONES GLOBALES (FUERA DEL SCOPE PRINCIPAL)
-window.removeFromCart = function(productName) {
-cart = cart.filter(item => item.product !== productName);
-localStorage.setItem('cart', JSON.stringify(cart));
-updateCartDisplay();
-updateAddToCartButtons();
-updateCartSections();
-};
-// FUNCIÓN ACTUALIZAR VISUALIZACIÓN CARRITO (EMPTY/FULL)
-function updateCartSections() {
-const cartEmpty = document.getElementById('cartempty');
-const cartFull = document.getElementById('cartfull');
-if (cart.length === 0) {
-// MOSTRAR CARRITO VACÍO
-if (cartEmpty) cartEmpty.style.display = 'block';
-if (cartFull) cartFull.style.display = 'none';
-} else {
-// MOSTRAR CARRITO LLENO
-if (cartEmpty) cartEmpty.style.display = 'none';
-if (cartFull) cartFull.style.display = 'block';
-updateCartDisplay(); // Actualizar la tabla con productos
-}
-}
-// FUNCIÓN BOTÓN CART (TOGGLE EMPTY/FULL)
-function setupCartButton() {
-document.querySelectorAll('a.cart-button').forEach(button => {
-button.addEventListener('click', function(e) {
-e.preventDefault();
-// 1. OCULTAR TODAS LAS SECCIONES PRINCIPALES
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-// 2. MOSTRAR LA SECCIÓN CORRECTA DEL CARRITO
-updateCartSections();
-});
-});
-}
-// BOTONES "ADD TO CART"
-document.querySelectorAll('.button-addtocart').forEach(button => {
-button.addEventListener('click', function() {
-const productData = {
-image: this.getAttribute('data-image'),
-product: this.getAttribute('data-product'),
-price: this.getAttribute('data-price'),
-shipping: this.getAttribute('data-shipping') || '0' // ← AGREGAR ESTA LÍNEA
-};
-addToCart(productData);
-});
-});  
-// BOTÓN CLEAR CART CON MODAL
-document.getElementById('cart-full-clear').addEventListener('click', function() {
-if (cart.length > 0) {
-// MOSTRAR MODAL
-document.getElementById('clearCartModal').style.display = 'flex';
-} else {
-alert('The cart is already empty');
-}
-});
-// EVENTOS DEL MODAL
-document.getElementById('modalCancel').addEventListener('click', function() {
-document.getElementById('clearCartModal').style.display = 'none';
-});
-document.getElementById('modalConfirm').addEventListener('click', function() {
-// VACIAR CARRITO
-cart = [];
-localStorage.setItem('cart', JSON.stringify(cart));
-updateCartDisplay();
-updateAddToCartButtons();
-updateCartSections(); // ← AGREGAR ESTA LÍNEA  
-// OCULTAR MODAL
-document.getElementById('clearCartModal').style.display = 'none';
-});
-// CERRAR MODAL HACIENDO CLICK AFUERA
-document.getElementById('clearCartModal').addEventListener('click', function(e) {
-if (e.target === this) {
-this.style.display = 'none';
-}
-}); 
-// INICIALIZAR
-if (cart.length > 0) {
-updateCartDisplay();
-}
-updateAddToCartButtons();
-updateCartSections(); 
-setupCartButton();
-});
-</script>
-<!-- FIN SCRIP: CARRITO -->
+<!-- FIN SCRIP: CARRITO CORREGIDO -->
   
 
 
