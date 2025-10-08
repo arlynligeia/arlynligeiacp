@@ -3153,6 +3153,161 @@ Authorized by Intendancy Resolution N°</p>
 <!-- FIN MODAL: CLEAR CART -->
 
 
+<!-- SCRIPS -->   
+
+<!-- SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🔧 Navegación iniciada');
+function showOnlyOneSection(sectionId) {
+console.log('Mostrando SOLO:', sectionId);
+document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+section.style.display = 'none';
+});
+const mainSection = document.getElementById(sectionId);
+if (mainSection) {
+mainSection.style.display = 'block';
+document.querySelectorAll(`[id^="${sectionId}-"]`).forEach(subsection => {
+subsection.style.display = 'block';
+});
+mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+}
+function goToSubsection(subsectionId) {
+console.log('Yendo a subsección:', subsectionId);
+const mainSectionId = subsectionId.split('-')[0];
+showOnlyOneSection(mainSectionId);
+setTimeout(() => {
+const subsection = document.getElementById(subsectionId);
+if (subsection) {
+subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+}, 100);
+}
+document.querySelectorAll('.menu-button').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+showOnlyOneSection(targetId);
+history.pushState(null, null, `#${targetId}`);
+});
+});
+document.querySelectorAll('.submenu-button').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+goToSubsection(targetId);
+history.pushState(null, null, `#${targetId}`);
+});
+});
+// ✅ NUEVO CÓDIGO PARA MANTENER LA SECCIÓN AL RECARGAR
+function checkInitialHash() {
+const hash = window.location.hash.replace('#', '');
+if (hash) {
+if (hash.includes('-')) {
+goToSubsection(hash);
+} else {
+showOnlyOneSection(hash);
+}
+}
+}
+checkInitialHash();
+console.log('✅ Navegación configurada correctamente');
+});
+</script>
+<!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
+
+
+
+
+
+
+
+  
+<!-- SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
+<script>
+// NAVEGACIÓN JERÁRQUICA PARA TIENDA
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🛍️ Navegación jerárquica de tienda iniciada');
+// ========== FUNCIÓN ÚNICA PARA TODAS LAS NAVEGACIONES ==========
+function navigateToTarget(targetId) {
+console.log('Navegando a:', targetId);
+const targetSection = document.getElementById(targetId);
+if (!targetSection) {
+console.warn('❌ Sección no encontrada:', targetId);
+return;
+}
+// Ocultar TODAS las secciones principales y subsecciones
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
+// Determinar la sección principal a mostrar
+let mainSectionId;
+if (targetSection.classList.contains('subsection')) {
+// Si es subsección, mostrar su sección principal
+mainSectionId = targetId.split('-')[0];
+} else {
+// Si es sección principal, mostrar esa misma
+mainSectionId = targetId;
+}
+const mainSection = document.getElementById(mainSectionId);
+if (mainSection) {
+// Mostrar la sección principal
+mainSection.style.display = 'block';
+// Mostrar TODAS sus subsecciones
+const mainSectionPrefix = mainSectionId + '-';
+document.querySelectorAll('.subsection').forEach(subsection => {
+if (subsection.id.startsWith(mainSectionPrefix)) {
+subsection.style.display = 'block';
+}
+});
+// Hacer scroll a la sección objetivo
+targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+// Actualizar la URL
+history.pushState(null, null, `#${targetId}`);
+}
+}
+// ========== TARJETAS Y BOTONES ==========    
+// 1. TODAS LAS TARJETAS
+document.querySelectorAll('[class*="-columns-grid-card"]').forEach(card => {
+card.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+navigateToTarget(targetId);
+});
+});
+// 2. BOTONES "BACK"
+document.querySelectorAll('[class*="-button-back"]').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+console.log('↩️ Botón BACK - Navegando a:', targetId);
+navigateToTarget(targetId);
+});
+});
+// 3. BOTONES "CONTINUE SHOPPING"
+document.querySelectorAll('[class*="-button-continueshopping"]').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+console.log('🛍️ CONTINUE SHOPPING - Navegando a:', targetId);
+navigateToTarget(targetId);
+});
+});
+// 4. BOTONES "VIEW" 
+document.querySelectorAll('[class*="-button-view"]').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+console.log('📍 Botón VIEW - Navegando a:', targetId);
+navigateToTarget(targetId);
+});
+});
+// AGREGAR MÁS BOTONES
+console.log('✅ Navegación de tienda configurada correctamente');
+});
+</script>
+<!-- FIN SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
 
   
 
