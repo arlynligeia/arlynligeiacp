@@ -464,7 +464,9 @@ margin: 0px;
 .biography-container {
 position: relative;
 width: 800px;
-background-color: #9900CC !important;
+background-color: var(--lila-vapor);
+border: 2px solid var(--cian-neon);
+box-shadow: 0 0 15px var(--lila-vapor);
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
