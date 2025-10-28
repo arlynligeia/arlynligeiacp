@@ -464,45 +464,53 @@ margin: 0px;
 .biography-container {
   position: relative;
   width: 800px;
-  background-color: #C724B1;     /* Lila vapor */
-  border: 2px solid #00FFFF;     /* Cyan neón */
-  box-shadow: 0 0 15px #C724B1;  /* Glow lila */
+  background-color: var(--lila-vapor);     /* Lila vapor */
+  border: 2px solid var(--cian-neon);      /* Cyan neón */
+  box-shadow: 
+    0 0 15px var(--lila-vapor),
+    0 0 30px var(--fucsia-electrico);      /* Glow fucsia adicional */
   border-radius: 20px;
   margin: 40px auto;
   padding: 30px;
 }
+
 .biography-container::before {
-content: "";
-position: absolute;
-z-index: 1; 
-top: 0;
-left: 0;
-width: 100%;
-height: 90px;
-background-color: #8000A8 !important;
-border-radius: 20px 20px 0 0;
+  content: "";
+  position: absolute;
+  z-index: 1; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: var(--lila-oscuro) !important;  /* Lila oscuro para franja */
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 0 10px var(--fucsia-electrico);     /* Glow en la franja */
 }
+
 .biography-title {
-    position: relative;
-    z-index: 2;
-    display: block;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
-    color: white !important;
-    text-decoration: none;
-    line-height: 1.6;
-    text-align: left;
-    margin: 0 0 16px 0;
-    text-shadow: 
-        0 0 10px var(--fucsia-electrico),
-        0 0 20px var(--cian-neon);
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white !important;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+  margin: 0 0 16px 0;
+  text-shadow: 
+    0 0 10px var(--fucsia-electrico),
+    0 0 20px var(--cian-neon),
+    0 0 30px var(--verde-matrix);           /* Verde matrix adicional */
 }
+
 .biography-title a {
-    color: white !important;
-    text-decoration: none;
-    text-shadow: 
-        0 0 10px var(--fucsia-electrico),
-        0 0 20px var(--cian-neon);
+  color: white !important;
+  text-decoration: none;
+  text-shadow: 
+    0 0 10px var(--fucsia-electrico),
+    0 0 20px var(--cian-neon),
+    0 0 30px var(--verde-matrix);           /* Verde matrix adicional */
 }
 /* CONTENEDOR: COLUMNAS */
 .biography-columns {
