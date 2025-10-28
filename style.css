@@ -462,14 +462,14 @@ margin: 0px;
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .biography-container {
-position: relative;
-width: 800px;
-background-color: var(--lila-vapor);
-border: 2px solid var(--cian-neon);
-box-shadow: 0 0 15px var(--lila-vapor);
-border-radius: 20px;
-margin: 40px auto;
-padding: 30px;
+  position: relative;
+  width: 800px;
+  background-color: #C724B1;     /* Lila vapor */
+  border: 2px solid #00FFFF;     /* Cyan neón */
+  box-shadow: 0 0 15px #C724B1;  /* Glow lila */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding: 30px;
 }
 .biography-container::before {
 content: "";
@@ -483,20 +483,26 @@ background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;
 }
 .biography-title {
-position: relative;
-z-index: 2;
-display: block;
-font-family: 'Orbitron', sans-serif;
-font-size: 2.5rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.6;
-text-align: left;
-margin: 0 0 16px 0;
+    position: relative;
+    z-index: 2;
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: white !important;
+    text-decoration: none;
+    line-height: 1.6;
+    text-align: left;
+    margin: 0 0 16px 0;
+    text-shadow: 
+        0 0 10px var(--fucsia-electrico),
+        0 0 20px var(--cian-neon);
 }
 .biography-title a {
-color: white !important;
-text-decoration: none;
+    color: white !important;
+    text-decoration: none;
+    text-shadow: 
+        0 0 10px var(--fucsia-electrico),
+        0 0 20px var(--cian-neon);
 }
 /* CONTENEDOR: COLUMNAS */
 .biography-columns {
