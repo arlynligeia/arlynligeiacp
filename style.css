@@ -612,6 +612,9 @@ border-radius: 15px;
 margin: 0px;
 }
 
+
+
+
 /* ======================================
    FILM
 ====================================== */
@@ -638,6 +641,9 @@ width: 100%;
 height: 100%;
 object-fit: cover;
 }
+
+
+
 
 /* ======================================
    FEATURE FILM
@@ -2339,6 +2345,7 @@ transform: scale(1.05);
 .store-carousel-image.active {
   opacity: 1;
 }
+
 /* TEXTO AL LADO IZQUIERDO EN DOS LÍNEAS */
 .store-carousel-text {
   position: absolute;
