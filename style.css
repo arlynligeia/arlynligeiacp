@@ -262,3 +262,128 @@ background: #000000 !important;
 .inicio-banner { display: none; }
 .inicio-banner-mobile { display: flex; }
 }
+
+/* ======================================
+   INICIO-ACTIVIDADES
+====================================== */
+.inicio-actividades-container {
+position: relative;
+width: 100%;
+box-sizing: border-box;
+background: #006400 !important; /* Verde oscuro */
+border-radius: 0px;
+margin: 40px auto;
+padding: 40px 20px;
+}
+.inicio-actividades-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background: #004d00 !important; /* Verde más oscuro */
+border-radius: 0px;
+}
+.inicio-actividades-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: Arial, sans-serif;
+font-size: 2.5rem;
+color: #FFD700 !important; /* Dorado para contraste con verde oscuro */
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+line-height: 1.6;
+margin: 0 0 30px 0;
+}
+.inicio-actividades-title a {
+color: #FFD700 !important;
+text-decoration: none;
+}
+/* CONTENEDOR: COLUMNAS */
+.inicio-actividades-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 3 COLUMNAS */
+.inicio-actividades-columns-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 30px;
+margin: 0px;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.inicio-actividades-columns-grid-information {
+width: 100%;
+min-width: 0;
+margin: 0px;
+padding: 20px;
+background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+border-radius: 10px;
+}
+/* SUBTÍTULOS (color que contrasta con verde oscuro) */
+.inicio-actividades-columns-grid-information-subtitle {
+font-family: Arial, sans-serif;
+font-size: 1.5rem;
+color: #FFD700 !important; /* Dorado para contraste */
+text-decoration: none;
+text-align: left;   
+line-height: 1.4;
+margin: 0 0 15px 0;
+font-weight: bold;
+}
+/* SUBTÍTULOS DE PROYECTOS */
+.inicio-actividades-columns-grid-information-text-subtitle {
+font-family: Arial, sans-serif;
+font-size: 1.2rem;
+color: #FFA500 !important; /* Naranja para contraste */
+text-decoration: none;
+text-align: left;   
+line-height: 1.3;
+margin: 0 0 10px 0;
+font-weight: bold;
+}
+/* TEXTOS PRINCIPALES (blanco) */
+.inicio-actividades-columns-grid-information-text {
+font-family: Arial, sans-serif;
+font-size: 1rem;
+color: #FFFFFF !important; /* Blanco */
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 15px 0;
+word-break: break-word;
+overflow-wrap: break-word;
+}
+/* TEXTO FINAL */
+.inicio-actividades-columns-grid-information-text-end {
+font-family: Arial, sans-serif;
+font-size: 1rem;
+color: #FFFFFF !important; /* Blanco */
+text-decoration: none;
+text-align: left;   
+line-height: 1.5;
+margin: 15px 0 0 0;
+font-style: italic;
+}
+/* ENLACES */
+.inicio-actividades-columns-grid-information-text-link {
+font-family: Arial, sans-serif;
+font-size: 1rem;
+color: #87CEEB !important; /* Celeste claro para enlaces */
+text-decoration: underline;
+text-align: left;   
+line-height: 1.5;
+margin: 10px 0;
+display: inline-block;
+}
+.inicio-actividades-columns-grid-information-text-link:hover {
+color: #FFFFFF !important; /* Blanco al hover */
+text-decoration: none;
+}
+/* CONTROL */
+.inicio-actividades-container { display: block; }
+.inicio-actividades-container-mobile { display: none; }
