@@ -490,3 +490,115 @@ overflow-wrap: break-word;
 .inicio-mayorinformacion-information-text:last-child {
 margin-bottom: 0;
 }
+
+/* ======================================
+   FOOTER PC
+====================================== */
+.footer {
+position: relative;
+width: 100%;
+box-sizing: border-box; 
+background: #000080 !important; /* AZUL OSCURO */
+margin-top: auto;   
+padding: 30px;
+}
+/* CONTENEDOR: NOMBRE Y COPYRIGHT */
+.footer-brand {
+width: 100%;
+box-sizing: border-box;    
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.footer-brand-name {
+font-family: Arial, sans-serif;
+font-size: 2rem; /* Reducido de 3rem */
+color: #FFFFFF !important; /* BLANCO */
+text-decoration: none;
+text-align: center;
+margin: 0 0 10px 0;
+font-weight: bold;
+}
+.footer-brand-allrightreserved {
+font-family: Arial, sans-serif;
+font-size: 1rem;
+color: #FFFFFF !important; /* BLANCO */
+text-decoration: none;
+line-height: 1.5;
+margin: 0 0 10px 0;   
+}
+/* CONTENEDOR: LINK */
+.footer-link {
+width: 100%;
+box-sizing: border-box;   
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 0 0 20px 0;
+}
+.footer-link-termsandconditions a,
+.footer-link-privacypolicy a,
+.footer-link-mapadelsitio a {
+position: relative;
+z-index: 1;
+font-family: Arial, sans-serif;
+font-size: 1rem;
+color: #FFFFFF !important; /* BLANCO */
+text-decoration: none;
+line-height: 1.5;  
+margin: 0 0 10px 0;
+transition: all 0.3s ease;
+}
+.footer-link-termsandconditions a:hover,
+.footer-link-privacypolicy a:hover,
+.footer-link-mapadelsitio a:hover {
+color: #87CEEB !important; /* Celeste claro al hover */
+text-decoration: underline;
+}
+/* CONTENEDOR: REDES SOCIALES */
+.footer-socialmedia {
+position: relative;
+z-index: 1;
+display: flex;
+flex-direction: column;
+align-items: center;   
+gap: 15px;
+margin: 0 0 20px 0;
+}
+.footer-socialmedia a {
+display: flex;
+align-items: center;
+text-decoration: none;
+}
+.footer-socialmedia-icon {
+width: 25px;
+height: 25px;
+color: #FFFFFF !important; /* BLANCO */
+transition: all 0.3s ease;
+}
+.footer-socialmedia-icon:hover {
+transform: scale(1.2);
+color: #87CEEB !important; /* Celeste claro al hover */
+}
+.footer-contact-info {
+margin-left: 10px;
+font-family: Arial, sans-serif;
+font-size: 1rem;
+color: #FFFFFF !important; /* BLANCO */
+text-decoration: none;
+}
+.footer-socialmedia a:hover .footer-contact-info {
+color: #87CEEB !important; /* Celeste claro al hover */
+}
+/* CONTENEDOR: BOTÓN SCROLL TOP */
+.footer-button {
+width: 100%;
+box-sizing: border-box;   
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 20px 0 0 0;
+}
+/* CONTROL */
+.footer { display: block; }
+.footer-mobile { display: none; }
