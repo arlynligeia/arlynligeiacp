@@ -19,23 +19,28 @@ width: 100%;
 box-sizing: border-box;
 background: white !important;    
 margin: 0;
-padding: 30px 10px 10px 10px;
+padding: 20px 40px;
+display: flex;
+align-items: center;
+justify-content: space-between;
 }
 /* --- TÍTULO --- */
 .site-title {
 font-family: Arial, sans-serif;
-font-size: 5rem; 
+font-size: 2.5rem; 
 color: black !important;
-text-align: center;
-font-weight: 500;
+text-align: left;
+font-weight: bold;
 line-height: 1; 
-margin: 0px;
-padding: 0px;
+margin: 0;
+padding: 0;
+flex-shrink: 0;
 }
-.site-container { display: block; }
+.site-container { display: flex; }
 .site-container-mobile { display: none; }
 .site-title { display: block; }
 .site-title-mobile { display: none; }
+
 /* ======================================
    TÍTULO DE LA PÁGINA MÓVIL
 ====================================== */
@@ -48,19 +53,22 @@ width: 100%;
 box-sizing: border-box;
 background: white !important;    
 margin: 0;
-padding: 20px 10px 10px 10px;
+padding: 15px 20px;
+display: flex;
+align-items: center;
+justify-content: space-between;
 }
 .site-title-mobile {
 font-family: Arial, sans-serif;
-font-size: 3rem; 
+font-size: 1.8rem; 
 color: black !important;
-text-align: center; 
-font-weight: 500;
-margin: 0px;
-padding: 0px;
+text-align: left; 
+font-weight: bold;
+margin: 0;
+padding: 0;
 }
 .site-container { display: none; }
-.site-container-mobile { display: block; }   
+.site-container-mobile { display: flex; }   
 .site-title { display: none; }
 .site-title-mobile { display: block; }
 }
@@ -70,91 +78,84 @@ padding: 0px;
 ====================================== */
 nav {
 text-align: center;
+flex-grow: 1;
 }
 .menu {
 list-style: none;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
-gap: 10px;
-margin: 10px auto 10px auto;
-padding: 0px;
+gap: 30px;
+margin: 0 auto;
+padding: 0;
 }
 .menu li {
 position: relative;
 }
-/* --- BOTONES --- */
+
+/* --- BOTONES DEL MENÚ (SIN RECUADROS) --- */
 .menu-button {
 position: relative;
 display: block;
 background: transparent !important;
-border-radius: 8px;
+border: none !important;
+border-radius: 0;
 font-family: Arial, sans-serif;
-font-size: 1rem;
+font-size: 1.1rem;
 text-decoration: none;
 text-transform: uppercase;
-margin: 10px auto 5px auto;
-padding: 10px;
+margin: 0;
+padding: 8px 0;
 cursor: pointer;
 transition: all 0.3s ease;
-background: 
-repeating-linear-gradient(
-45deg,
-transparent,
-transparent 2px,
-rgba(0, 0, 0, 0.05) 2px,
-rgba(0, 0, 0, 0.05) 4px
-) !important;
-/* ESTILO ÚNICO PARA TODOS LOS BOTONES - COLOR NEGRO */
-border: 2px solid black !important;
 color: black !important;
-box-shadow: 
-0 0 5px rgba(0, 0, 0, 0.5),
-inset 0 0 5px rgba(0, 0, 0, 0.3);
+box-shadow: none !important;
 }
-/* HOVER PARA TODOS LOS BOTONES */
-.menu-button:hover {
-background: rgba(0, 0, 0, 0.1) !important;
-color: black !important;
-transform: translateY(-2px);
-box-shadow: 
-0 0 15px rgba(0, 0, 0, 0.5),
-0 0 25px rgba(0, 0, 0, 0.5),
-inset 0 0 10px rgba(0, 0, 0, 0.5);
-text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-/* PUNTO LED PARA TODOS LOS BOTONES */
+
+/* ELIMINAR PUNTO LED */
 .menu-button::after {
+display: none;
+}
+
+/* HOVER - SUBRAYADO */
+.menu-button:hover {
+background: transparent !important;
+color: black !important;
+transform: none;
+box-shadow: none !important;
+text-shadow: none !important;
+}
+
+/* SUBRAYADO ANIMADO */
+.menu-button::before {
 content: '';
 position: absolute;
-top: 5px;
-right: 5px;
-width: 6px;
-height: 6px;
-border-radius: 50%;
-background: black;
-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-transition: all 0.3s ease;
+bottom: 0;
+left: 0;
+width: 0;
+height: 2px;
+background-color: black;
+transition: width 0.3s ease;
 }
-/* PUNTO LED EN HOVER */
-.menu-button:hover::after {
-box-shadow: 
-0 0 10px rgba(0, 0, 0, 0.5),
-0 0 20px rgba(0, 0, 0, 0.5);
+
+.menu-button:hover::before {
+width: 100%;
 }
 
 /* --- SUBMENÚS DESPLEGABLES --- */
 .submenu {
 position: absolute; 
 display: none;
-top: 40px;
-left: 0;
+top: 100%;
+left: 50%;
+transform: translateX(-50%);
 list-style: none;
 background: white !important;
 z-index: 1000;
 border: 2px solid black !important;
 margin: 0;
 padding: 0;
+min-width: 250px;
 }
 .menu li:hover .submenu {
 display: block;
