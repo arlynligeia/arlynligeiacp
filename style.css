@@ -270,7 +270,7 @@ background: #000000 !important;
 position: relative;
 width: 100%;
 box-sizing: border-box;
-background: #006400 !important; /* VERDE OSCURO */
+background: #004d00 !important;
 border-radius: 0px;
 margin: 0px auto;
 padding: 30px;
@@ -310,24 +310,27 @@ width: 100%;
 min-width: 0;
 margin: 0px;
 }
-/* CAMBIÉ SOLO LOS COLORES DE LAS LETRAS COMO PEDISTE */
-.inicio-actividades-columns-grid-information-subtitle {
+.inicio-actividades-columns-grid-information-subtitle,
+.inicio-actividades-columns-grid-information-subtitle-2 {
 font-family: Arial, sans-serif;
 font-size: 1.5rem;
 color: white !important;
 text-decoration: none;
-text-align: left;   
+text-align: center;   
 line-height: 1.4;
 margin: 0 0 10px 0;
 font-weight: bold;
 }
+.inicio-actividades-columns-grid-information-subtitle-2 {
+text-align: left;
+}   
 .inicio-actividades-columns-grid-information-text-subtitle {
 font-family: Arial, sans-serif;
 font-size: 1.2rem;
-color: #333333 !important; /* Gris oscuro para subtítulos de proyectos */
+color: #FFA500 !important;
 text-decoration: none;
 text-align: left;   
-line-height: 1.3;
+line-height: 1.5;
 margin: 0 0 10px 0;
 font-weight: bold;
 }
@@ -335,7 +338,7 @@ font-weight: bold;
 .inicio-actividades-columns-grid-information-text-end {
 font-family: Arial, sans-serif;
 font-size: 1rem;
-color: white !important; /* Negro para textos */
+color: white !important;
 text-decoration: none;
 text-align: justify;   
 line-height: 1.5;
@@ -345,7 +348,10 @@ overflow-wrap: break-word;
 }
 .inicio-actividades-columns-grid-information-text-end {
 margin-bottom: 0px;
-}
+
+
+
+   
 .inicio-actividades-columns-grid-information-text-link {
 font-family: Arial, sans-serif;
 font-size: 1rem;
