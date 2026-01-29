@@ -205,3 +205,60 @@ transform: scaleX(1);
 .submenu li:not(:last-child) {
 border-bottom: 1px solid black !important;
 }
+
+/* ======================================
+   INICIO BANNER PC
+====================================== */
+.inicio-banner {
+position: relative;
+z-index: 1;   
+width: 100%;
+box-sizing: border-box;
+height: calc(100vh - 220px);
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #000000 !important;
+margin: 0px auto !important; 
+}
+.inicio-banner img {
+position: absolute;
+z-index: 1;
+width: 100%;
+height: 100%;
+object-fit: cover;
+background: #000000 !important;
+}
+/* CONTROL */
+.inicio-banner { display: flex; }
+.inicio-banner-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: FILM
+====================================== */
+@media (max-width: 768px) {  
+.inicio-banner-mobile {
+position: relative;
+z-index: 1; 
+width: 100%;
+height: 500px;
+box-sizing: border-box;   
+overflow: hidden;  
+display: flex;
+justify-content: center;
+align-items: center;   
+background: #000000 !important;
+margin: 0px auto;
+}
+.inicio-banner-mobile img {
+position: absolute;
+z-index: 1;    
+width: 100%;
+height: 100%;
+object-fit: cover;
+background: #000000 !important;   
+}
+/* CONTROL */
+.inicio-banner { display: none; }
+.inicio-banner-mobile { display: flex; }
+}
