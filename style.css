@@ -27,7 +27,7 @@ justify-content: space-between;
 /* --- TÍTULO --- */
 .site-title {
 font-family: Arial, sans-serif;
-font-size: 2.5rem; 
+font-size: 2rem; 
 color: black !important;
 text-align: left;
 font-weight: bold;
@@ -92,7 +92,6 @@ padding: 0;
 .menu li {
 position: relative;
 }
-
 /* --- BOTONES DEL MENÚ (SIN RECUADROS) --- */
 .menu-button {
 position: relative;
@@ -101,7 +100,7 @@ background: transparent !important;
 border: none !important;
 border-radius: 0;
 font-family: Arial, sans-serif;
-font-size: 1.1rem;
+font-size: 1rem;
 text-decoration: none;
 text-transform: uppercase;
 margin: 0;
