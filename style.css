@@ -17,7 +17,7 @@ top: 0;
 left: 0;  
 width: 100%;
 box-sizing: border-box;
-background: #0A2F1C !important; 
+background: #1B4B36 !important; 
 margin: 0;
 padding: 20px 40px;
 display: flex;
@@ -28,7 +28,7 @@ justify-content: space-between;
 .site-title {
 font-family: Arial, sans-serif;
 font-size: 1.5rem; 
-color: black !important;
+color: white !important;
 text-align: left;
 font-weight: bold;
 line-height: 1; 
@@ -40,7 +40,6 @@ flex-shrink: 0;
 .site-container-mobile { display: none; }
 .site-title { display: block; }
 .site-title-mobile { display: none; }
-
 /* ======================================
    TÍTULO DE LA PÁGINA MÓVIL
 ====================================== */
