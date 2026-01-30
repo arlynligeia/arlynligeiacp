@@ -29,7 +29,7 @@ justify-content: space-between;
 .site-title {
 font-family: 'Inter', sans-serif;
 font-size: 1.5rem; 
-color: black !important;
+color: #0C2A1F !important;
 text-align: left;
 font-weight: bold;
 line-height: 1; 
@@ -107,7 +107,7 @@ margin: 0;
 padding: 8px 0;
 cursor: pointer;
 transition: all 0.3s ease;
-color: black !important;
+color: #0C2A1F !important;
 box-shadow: none !important;
 }
 
@@ -398,16 +398,6 @@ transform: scale(1.05);
 .inicio-actividades-container { display: block; }
 .inicio-actividades-container-mobile { display: none; }
 
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    INICIO-MAYORINFORMACION
 ====================================== */
@@ -415,7 +405,7 @@ transform: scale(1.05);
 position: relative;
 width: 100%;
 box-sizing: border-box;
-background: #0A1128 !important; /* Azul marino oscuro */
+background: #0C2A1F !important;
 border-radius: 0px;
 margin: 0px auto;
 padding: 30px;
