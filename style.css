@@ -531,9 +531,25 @@ margin: 0 0 10px 0;
 width: 100%;
 box-sizing: border-box;   
 display: flex;
-flex-direction: column;
+justify-content: space-between; /* Distribuye en toda la fila */
 align-items: center;
-margin: 0 0 20px 0;
+margin: 0 0 30px 0;
+}
+.footer-link-termsandconditions,
+.footer-link-privacypolicy,
+.footer-link-mapadelsitio {
+flex: 1; /* Cada uno ocupa espacio igual */
+display: flex;
+justify-content: center; /* Centra cada elemento en su espacio */
+}
+.footer-link-termsandconditions {
+justify-content: flex-start; /* Izquierda */
+}
+.footer-link-privacypolicy {
+justify-content: center; /* Centro */
+}
+.footer-link-mapadelsitio {
+justify-content: flex-end; /* Derecha */
 }
 .footer-link-termsandconditions a,
 .footer-link-privacypolicy a,
@@ -542,26 +558,28 @@ position: relative;
 z-index: 1;
 font-family: Arial, sans-serif;
 font-size: 1rem;
-color: #FFFFFF !important; /* BLANCO */
+color: #FFFFFF !important;
 text-decoration: none;
 line-height: 1.5;  
-margin: 0 0 10px 0;
+margin: 0;
+padding: 0 10px; /* Espaciado lateral */
 transition: all 0.3s ease;
 }
 .footer-link-termsandconditions a:hover,
 .footer-link-privacypolicy a:hover,
 .footer-link-mapadelsitio a:hover {
-color: #87CEEB !important; /* Celeste claro al hover */
+color: #87CEEB !important;
 text-decoration: underline;
 }
+
 /* CONTENEDOR: REDES SOCIALES */
 .footer-socialmedia {
 position: relative;
 z-index: 1;
 display: flex;
-flex-direction: column;
+justify-content: space-between; /* WhatsApp a la izquierda, email a la derecha */
 align-items: center;   
-gap: 15px;
+width: 100%;
 margin: 0 0 20px 0;
 }
 .footer-socialmedia a {
@@ -569,34 +587,33 @@ display: flex;
 align-items: center;
 text-decoration: none;
 }
+/* WhatsApp - Izquierda */
+.footer-socialmedia a:first-child {
+justify-content: flex-start;
+}
+/* Email - Derecha */
+.footer-socialmedia a:last-child {
+justify-content: flex-end;
+}
 .footer-socialmedia-icon {
 width: 25px;
 height: 25px;
-color: #FFFFFF !important; /* BLANCO */
+color: #FFFFFF !important;
 transition: all 0.3s ease;
 }
 .footer-socialmedia-icon:hover {
 transform: scale(1.2);
-color: #87CEEB !important; /* Celeste claro al hover */
+color: #87CEEB !important;
 }
 .footer-contact-info {
 margin-left: 10px;
 font-family: Arial, sans-serif;
 font-size: 1rem;
-color: #FFFFFF !important; /* BLANCO */
+color: #FFFFFF !important;
 text-decoration: none;
 }
 .footer-socialmedia a:hover .footer-contact-info {
-color: #87CEEB !important; /* Celeste claro al hover */
-}
-/* CONTENEDOR: BOTÓN SCROLL TOP */
-.footer-button {
-width: 100%;
-box-sizing: border-box;   
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 20px 0 0 0;
+color: #87CEEB !important;
 }
 /* CONTROL */
 .footer { display: block; }
