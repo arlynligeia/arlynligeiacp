@@ -465,14 +465,27 @@ transition: all 0.3s ease;
 background: rgba(255, 255, 255, 0.2);
 transform: translateY(-3px);
 }
-/* CONTENEDOR: ESCRÍBEMOS (DEBAJO DE LAS TRES COLUMNAS) */
-.inicio-mayorinformacion-information {
-background: rgba(255, 255, 255, 0.1);
-border-radius: 10px;
+
+
+/* ======================================
+  ESCRIBENOS
+====================================== */
+.inicio-escribenos-container {
+position: relative;
+width: 100%;
+box-sizing: border-box;
+background: whithe !important;
+border-radius: 0px;
+margin: 0px auto;
+padding: 30px;
+}
+.inicio-escribenos-information {
+background: #0C2A1F !important;
+border-radius: 0px;
 padding: 20px;
 margin-top: 20px;
 }
-.inicio-mayorinformacion-information-subtitle {
+.inicio-escribenos-information-subtitle {
 font-family: 'Inter', sans-serif;
 font-size: 1.5rem;
 color: #FFA500 !important;
@@ -482,7 +495,7 @@ line-height: 1.4;
 margin: 0 0 5px 0;
 font-weight: bold;
 }
-.inicio-mayorinformacion-information-text {
+.inicio-escribenos-information-text {
 font-family: 'Inter', sans-serif;
 font-size: 1.2rem;
 color: white !important;
@@ -493,9 +506,14 @@ margin: 0 0 15px 0;
 word-break: break-word;
 overflow-wrap: break-word;
 }
-.inicio-mayorinformacion-information-text:last-child {
+.inicio-escribenos-information-text:last-child {
 margin-bottom: 0;
 }
+
+
+
+
+
 
 /* ======================================
    FOOTER PC
