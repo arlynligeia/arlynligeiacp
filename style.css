@@ -465,7 +465,9 @@ transition: all 0.3s ease;
 background: rgba(255, 255, 255, 0.2);
 transform: translateY(-3px);
 }
-
+/* CONTROL */
+.inicio-mayorinformacion-container { display: block; }
+.inicio-mayorinformacion-container-mobile { display: none; }
 
 /* ======================================
   ESCRIBENOS
@@ -509,7 +511,9 @@ overflow-wrap: break-word;
 .inicio-escribenos-information-text:last-child {
 margin-bottom: 0;
 }
-
+/* CONTROL */
+.inicio-escribenos-container { display: block; }
+.inicio-escribenos-container-mobile { display: none; }
 
 
 
