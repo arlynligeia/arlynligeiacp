@@ -440,7 +440,12 @@ grid-template-columns: repeat(3, 1fr);
 gap: 20px;
 margin: 0px;
 }
-/* CONTENEDORES DE COLUMNAS (TIPO BOTONES PERO NO BOTONES) */
+/* ENLACES DE BOTONES - NUEVO */
+.inicio-mayorinformacion-boton {
+display: block;
+text-decoration: none;
+}
+/* CONTENEDORES DE BOTONES (SIN MODIFICAR ESTILOS) */
 .inicio-mayorinformacion-columns-grid-1,
 .inicio-mayorinformacion-columns-grid-2,
 .inicio-mayorinformacion-columns-grid-3 {
@@ -458,10 +463,11 @@ display: flex;
 align-items: center;
 justify-content: center;
 transition: all 0.3s ease;
+cursor: pointer;
 }
-.inicio-mayorinformacion-columns-grid-1:hover,
-.inicio-mayorinformacion-columns-grid-2:hover,
-.inicio-mayorinformacion-columns-grid-3:hover {
+.inicio-mayorinformacion-boton:hover .inicio-mayorinformacion-columns-grid-1,
+.inicio-mayorinformacion-boton:hover .inicio-mayorinformacion-columns-grid-2,
+.inicio-mayorinformacion-boton:hover .inicio-mayorinformacion-columns-grid-3 {
 background: rgba(255, 255, 255, 0.2);
 transform: translateY(-3px);
 }
