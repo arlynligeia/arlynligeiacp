@@ -538,7 +538,7 @@ text-align: center;
 }
 .footer-link-termsandconditions {
 grid-column: 1; /* Primera columna */
-justify-self: start; /* Alineado a la izquierda dentro de su columna */
+justify-self: center; /* Alineado a la izquierda dentro de su columna */
 }
 .footer-link-privacypolicy {
 grid-column: 2; /* Segunda columna */
@@ -546,8 +546,10 @@ justify-self: center; /* Centrado en su columna */
 }
 .footer-link-mapadelsitio {
 grid-column: 3; /* Tercera columna */
-justify-self: end; /* Alineado a la derecha dentro de su columna */
+justify-self: center; /* Alineado a la derecha dentro de su columna */
 }
+
+
 .footer-link-termsandconditions a,
 .footer-link-privacypolicy a,
 .footer-link-mapadelsitio a {
