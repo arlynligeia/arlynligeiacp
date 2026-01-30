@@ -28,7 +28,7 @@ justify-content: space-between;
 .site-title {
 font-family: Arial, sans-serif;
 font-size: 1.5rem; 
-color: white !important;
+color: black !important;
 text-align: left;
 font-weight: bold;
 line-height: 1; 
@@ -497,7 +497,7 @@ margin-bottom: 0;
 position: relative;
 width: 100%;
 box-sizing: border-box; 
-background: #0A1931 !important; /* AZUL OSCURO */
+background: #1B4B36 !important; 
 margin-top: auto;   
 padding: 30px;
 }
