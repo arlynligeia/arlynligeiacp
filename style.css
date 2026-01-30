@@ -497,7 +497,7 @@ margin-bottom: 0;
 position: relative;
 width: 100%;
 box-sizing: border-box; 
-background: #1B4B36 !important; 
+background: #34495E !important; 
 margin-top: auto;   
 padding: 30px;
 }
@@ -548,8 +548,6 @@ justify-self: center; /* Centrado en su columna */
 grid-column: 3; /* Tercera columna */
 justify-self: center; /* Alineado a la derecha dentro de su columna */
 }
-
-
 .footer-link-termsandconditions a,
 .footer-link-privacypolicy a,
 .footer-link-mapadelsitio a {
@@ -571,7 +569,6 @@ display: inline-block;
 color: #87CEEB !important;
 text-decoration: underline;
 }
-
 /* CONTENEDOR: REDES SOCIALES - 2 COLUMNAS */
 .footer-socialmedia {
 position: relative;
@@ -586,12 +583,12 @@ text-align: center;
 /* WhatsApp - Primera columna */
 .footer-socialmedia a:first-child {
 grid-column: 1;
-justify-self: start; /* Alineado a la izquierda dentro de su columna */
+justify-self: center; /* Alineado a la izquierda dentro de su columna */
 }
 /* Email - Segunda columna */
 .footer-socialmedia a:last-child {
 grid-column: 2;
-justify-self: end; /* Alineado a la derecha dentro de su columna */
+justify-self: center; /* Alineado a la derecha dentro de su columna */
 }
 .footer-socialmedia-icon {
 width: 25px;
