@@ -526,30 +526,27 @@ text-decoration: none;
 line-height: 1.5;
 margin: 0 0 10px 0;   
 }
-/* CONTENEDOR: LINK */
+/* CONTENEDOR: LINK - 3 COLUMNAS */
 .footer-link {
 width: 100%;
 box-sizing: border-box;   
-display: flex;
-justify-content: space-between; /* Distribuye en toda la fila */
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
 align-items: center;
 margin: 0 0 30px 0;
-}
-.footer-link-termsandconditions,
-.footer-link-privacypolicy,
-.footer-link-mapadelsitio {
-flex: 1; /* Cada uno ocupa espacio igual */
-display: flex;
-justify-content: center; /* Centra cada elemento en su espacio */
+text-align: center;
 }
 .footer-link-termsandconditions {
-justify-content: flex-start; /* Izquierda */
+grid-column: 1; /* Primera columna */
+justify-self: start; /* Alineado a la izquierda dentro de su columna */
 }
 .footer-link-privacypolicy {
-justify-content: center; /* Centro */
+grid-column: 2; /* Segunda columna */
+justify-self: center; /* Centrado en su columna */
 }
 .footer-link-mapadelsitio {
-justify-content: flex-end; /* Derecha */
+grid-column: 3; /* Tercera columna */
+justify-self: end; /* Alineado a la derecha dentro de su columna */
 }
 .footer-link-termsandconditions a,
 .footer-link-privacypolicy a,
@@ -562,8 +559,9 @@ color: #FFFFFF !important;
 text-decoration: none;
 line-height: 1.5;  
 margin: 0;
-padding: 0 10px; /* Espaciado lateral */
+padding: 0 15px; /* Espaciado lateral */
 transition: all 0.3s ease;
+display: inline-block;
 }
 .footer-link-termsandconditions a:hover,
 .footer-link-privacypolicy a:hover,
@@ -572,28 +570,26 @@ color: #87CEEB !important;
 text-decoration: underline;
 }
 
-/* CONTENEDOR: REDES SOCIALES */
+/* CONTENEDOR: REDES SOCIALES - 2 COLUMNAS */
 .footer-socialmedia {
 position: relative;
 z-index: 1;
-display: flex;
-justify-content: space-between; /* WhatsApp a la izquierda, email a la derecha */
+display: grid;
+grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
 align-items: center;   
 width: 100%;
 margin: 0 0 20px 0;
+text-align: center;
 }
-.footer-socialmedia a {
-display: flex;
-align-items: center;
-text-decoration: none;
-}
-/* WhatsApp - Izquierda */
+/* WhatsApp - Primera columna */
 .footer-socialmedia a:first-child {
-justify-content: flex-start;
+grid-column: 1;
+justify-self: start; /* Alineado a la izquierda dentro de su columna */
 }
-/* Email - Derecha */
+/* Email - Segunda columna */
 .footer-socialmedia a:last-child {
-justify-content: flex-end;
+grid-column: 2;
+justify-self: end; /* Alineado a la derecha dentro de su columna */
 }
 .footer-socialmedia-icon {
 width: 25px;
