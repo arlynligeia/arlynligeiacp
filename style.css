@@ -446,7 +446,7 @@ margin: 0px;
 .inicio-mayorinformacion-columns-grid-3 {
 background: rgba(255, 255, 255, 0.1);
 border: 2px solid white;
-border-radius: 8px;
+border-radius: 0px;
 font-family: 'Inter', sans-serif;
 font-size: 1.5rem;
 color: white !important;
@@ -493,21 +493,18 @@ font-family: 'Inter', sans-serif;
 font-size: 1.5rem;
 color: #FFA500 !important;
 text-decoration: none;
-text-align: left;   
+text-align: center;   
 line-height: 1.4;
 margin: 0 0 5px 0;
-font-weight: bold;
 }
 .inicio-escribenos-information-text {
 font-family: 'Inter', sans-serif;
 font-size: 1.2rem;
 color: white !important;
 text-decoration: none;
-text-align: left;   
+text-align: center;   
 line-height: 1.5;
 margin: 0 0 15px 0;
-word-break: break-word;
-overflow-wrap: break-word;
 }
 .inicio-escribenos-information-text:last-child {
 margin-bottom: 0;
