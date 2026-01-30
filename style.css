@@ -538,7 +538,7 @@ align-items: center;
 }
 .footer-brand-name {
 font-family: 'Inter', sans-serif;
-font-size: 2rem;
+font-size: 1rem;
 color: #FFFFFF !important;
 text-decoration: none;
 text-align: center;
@@ -547,7 +547,7 @@ font-weight: bold;
 }
 .footer-brand-allrightreserved {
 font-family: 'Inter', sans-serif;
-font-size: 1rem;
+font-size: 0.8rem;
 color: #FFFFFF !important;
 text-decoration: none;
 line-height: 1.5;
@@ -581,7 +581,7 @@ justify-self: center;
 position: relative;
 z-index: 1;
 font-family: 'Inter', sans-serif;
-font-size: 1rem;
+font-size: 0.8rem;
 color: #FFFFFF !important;
 text-decoration: none;
 line-height: 1.5;  
@@ -630,7 +630,7 @@ color: #87CEEB !important;
 .footer-contact-info {
 margin-left: 10px;
 font-family: 'Inter', sans-serif;
-font-size: 1rem;
+font-size: 0.8rem;
 color: #FFFFFF !important;
 text-decoration: none;
 }
