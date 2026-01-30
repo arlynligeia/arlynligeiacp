@@ -440,40 +440,58 @@ grid-template-columns: repeat(3, 1fr);
 gap: 20px;
 margin: 0px;
 }
-/* ENLACES DE BOTONES - NUEVO */
-.inicio-mayorinformacion-boton {
-display: block;
-text-decoration: none;
+/* CONTENEDOR: BOTÓN */
+.inicio-mayorinformacion-columns-grid-button {
+width: 100%;
+box-sizing: border-box;   
+display: flex;
+justify-content: center;
+margin: 0px 0 10px 0;
 }
-/* CONTENEDORES DE BOTONES (SIN MODIFICAR ESTILOS) */
-.inicio-mayorinformacion-columns-grid-1,
-.inicio-mayorinformacion-columns-grid-2,
-.inicio-mayorinformacion-columns-grid-3 {
-background: rgba(255, 255, 255, 0.1);
-border: 2px solid white;
-border-radius: 0px;
+.inicio-mayorinformacion-columns-grid-button-1,
+.inicio-mayorinformacion-columns-grid-button-2,
+.inicio-mayorinformacion-columns-grid-button-3 {
+display: flex;
+justify-content: center;   
+background: rgba(255, 255, 255, 0.1) !important;
+border: 2px solid white !important;
+border-radius: 0px; 
 font-family: 'Inter', sans-serif;
 font-size: 1.5rem;
 color: white !important;
 text-decoration: none;
-text-align: center;
+text-align: center;   
+font-weight: bold;
+margin: 0px;   
 padding: 20px;
 min-height: 100px;
-display: flex;
-align-items: center;
-justify-content: center;
-transition: all 0.3s ease;
 cursor: pointer;
+transition: all 0.3s ease;
 }
-.inicio-mayorinformacion-boton:hover .inicio-mayorinformacion-columns-grid-1,
-.inicio-mayorinformacion-boton:hover .inicio-mayorinformacion-columns-grid-2,
-.inicio-mayorinformacion-boton:hover .inicio-mayorinformacion-columns-grid-3 {
-background: rgba(255, 255, 255, 0.2);
+.inicio-mayorinformacion-columns-grid-button-1:hover,
+.inicio-mayorinformacion-columns-grid-button-2:hover,
+.inicio-mayorinformacion-columns-grid-button-3:hover {
+background: rgba(255, 255, 255, 0.2) !important;
 transform: translateY(-3px);
 }
 /* CONTROL */
 .inicio-mayorinformacion-container { display: block; }
 .inicio-mayorinformacion-container-mobile { display: none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
   ESCRIBENOS
