@@ -452,7 +452,8 @@ margin: 0px 0 10px 0;
 .inicio-mayorinformacion-columns-grid-button-2,
 .inicio-mayorinformacion-columns-grid-button-3 {
 display: flex;
-justify-content: center;   
+align-items: center; /* Centrado vertical */
+justify-content: center; /* Centrado horizontal */   
 background: rgba(255, 255, 255, 0.1) !important;
 border: 2px solid white !important;
 border-radius: 0px; 
@@ -467,6 +468,8 @@ padding: 20px;
 min-height: 100px;
 cursor: pointer;
 transition: all 0.3s ease;
+width: 100%; /* Ocupa todo el ancho de la columna */
+height: 100%; /* Ocupa toda la altura disponible */
 }
 .inicio-mayorinformacion-columns-grid-button-1:hover,
 .inicio-mayorinformacion-columns-grid-button-2:hover,
