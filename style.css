@@ -550,7 +550,7 @@ margin-bottom: 0;
 position: relative;
 width: 100%;
 box-sizing: border-box;
-background: #FFFFFF !important; /* BLANCO */
+background: #0C2A1F !important;
 border-radius: 0px;
 margin: 0px auto;
 padding: 30px;
@@ -560,18 +560,21 @@ position: relative;
 z-index: 2;
 display: block;
 font-family: 'Inter', sans-serif;
-font-size: 2rem;
-color: #0C2A1F !important;
+font-size: 2.5rem;
+color: #FFFFFF !important;
 text-decoration: none;
 text-transform: uppercase;
 text-align: center;   
 line-height: 1.6;
-margin: 0 0 16px 0;
+margin: 0px;
 }
 .investigacion-title a {
-color: #0C2A1F !important;
+color: #FFFFFF !important;
 text-decoration: none;
 }
+/* CONTROL */
+.investigacion-container { display: block; }
+.investigacion-container-mobile { display: none; }
 
 /* ======================================
    NUESTRA PERSPECTIVA DE INVESTIGACIÓN
@@ -612,7 +615,7 @@ margin: 0px;
 .perspectiva-information-text-end {
 font-family: 'Inter', sans-serif;
 font-size: 1rem;
-color: #00FF00 !important;
+color: #000000 !important;
 text-decoration: none;
 text-align: justify;   
 line-height: 1.5;
@@ -672,7 +675,16 @@ width: 100%;
 min-width: 0;
 margin: 0px;
 }
-.inicio-actividades-columns-grid-information-subtitle {
+.areas-information-text {
+font-family: 'Inter', sans-serif;
+font-size: 1rem;
+color: #000000 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.areas-columns-grid-information-subtitle {
 font-family: 'Inter', sans-serif;
 font-size: 1.5rem;
 color: #0A1128 !important;
@@ -694,7 +706,9 @@ height: auto;
 display: block;
 border-radius: 0px;
 }
-
+/* CONTROL */
+.areas-container { display: block; }
+.areas-container-mobile { display: none; }
 
 
 
