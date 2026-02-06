@@ -974,6 +974,22 @@ margin: 0 0 16px 0;
 color: #FFFFFF !important;
 text-decoration: none;
 }
+/* CONTENEDOR: INFORMACIÓN */
+.areas-information {
+width: 100%;
+min-width: 0;
+margin: 0px 0 20px 0;
+}
+.areas-information-text {
+font-family: 'Inter', sans-serif;
+font-size: 1rem;
+color: #000000 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+
 /* CONTENEDOR: COLUMNAS */
 .areas-columns {
 position: relative;
