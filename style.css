@@ -60,7 +60,7 @@ justify-content: space-between;
 }
 .site-title-mobile {
 font-family: 'Inter', sans-serif;
-font-size: 1.2rem; /* Corregí de 1.8rem a 1.2rem para consistencia */
+font-size: 1.2rem;
 color: black !important;
 text-align: left; 
 font-weight: bold;
@@ -205,6 +205,107 @@ transform: scaleX(1);
 .submenu li:not(:last-child) {
 border-bottom: 1px solid black !important;
 }
+
+/* ======================================
+   MENÚ HAMBURGUESA MOVIL
+====================================== */
+.menu-mobile { display: none; }
+.menu-mobile-hamburger-button {
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+z-index: 1001;
+background: transparent !important;
+border-radius: 8px;
+padding: 12px 10px;
+gap: 5px;
+cursor: pointer;
+transition: all 0.3s ease;
+border: 2px solid #0C2A1F !important;
+}
+/* LAS RAYAS DEL BOTÓN */
+.menu-mobile-hamburger-button span {
+display: block;
+width: 25px;
+height: 3px;
+background: #0C2A1F !important;
+transition: all 0.3s ease;
+}
+/* HOVER - Sin efectos especiales */
+.menu-mobile-hamburger-button:hover {
+background: rgba(12, 42, 31, 0.1) !important;
+}
+/* OVERLAY - Color especificado */
+.menu-mobile-hamburger-overlay {
+position: fixed;
+z-index: 1000; 
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+background: #0C2A1F !important;
+display: none;
+}
+.menu-mobile-hamburger-overlay.active {
+display: block;
+}
+.menu-mobile-hamburger-overlay ul {
+list-style: none;
+padding: 0;
+margin: 0;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+/* Elementos del menú */
+.menu-mobile-hamburger-overlay li {
+text-align: center;
+border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+padding: 12px 0;
+width: 80%;
+max-width: 300px;
+}
+.menu-mobile-hamburger-overlay li:last-child {
+border-bottom: none !important;
+}
+.menu-mobile-hamburger-overlay a {
+font-family: 'Inter', sans-serif;
+font-size: 1rem;
+text-decoration: none; 
+text-transform: uppercase;
+padding: 0 20px;
+display: block;
+color: #FFFFFF !important;
+letter-spacing: 1px;
+}
+/* Efecto hover para enlaces */
+.menu-mobile-hamburger-overlay a:hover {
+opacity: 0.8;
+}
+/* --- MEDIA QUERY PARA MÓVIL --- */
+@media (max-width: 768px) {
+.menu-mobile {
+display: block;
+position: fixed;
+top: 15px;
+right: 15px;
+z-index: 1000;
+}
+nav {
+display: none !important;
+}
+}
+
+
+
+
+
+
+
 
 
 
