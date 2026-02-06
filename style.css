@@ -771,45 +771,26 @@ transform: translateY(-3px);
 .mayorinformacion-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
   ESCRIBENOS
 ====================================== */
-.inicio-escribenos-container {
+.escribenos-container {
 position: relative;
 width: 100%;
 box-sizing: border-box;
-background: whithe !important;
+background: white !important;
 border-radius: 0px;
 margin: 0px auto;
 padding: 30px;
 }
-.inicio-escribenos-information {
+.escribenos-information {
 background: #0C2A1F !important;
 width: 500px;   
 border-radius: 0px;
 margin: 20px auto;   
 padding: 30px;
 }
-.inicio-escribenos-information-subtitle {
+.escribenos-information-subtitle {
 font-family: 'Inter', sans-serif;
 font-size: 1.5rem;
 color: #FFA500 !important;
@@ -818,7 +799,7 @@ text-align: center;
 line-height: 1.4;
 margin: 0 0 5px 0;
 }
-.inicio-escribenos-information-text {
+.escribenos-information-text {
 font-family: 'Inter', sans-serif;
 font-size: 1.2rem;
 color: white !important;
@@ -827,12 +808,65 @@ text-align: center;
 line-height: 1.5;
 margin: 0 0 15px 0;
 }
-.inicio-escribenos-information-text:last-child {
+.escribenos-information-text:last-child {
 margin-bottom: 0;
 }
 /* CONTROL */
-.inicio-escribenos-container { display: block; }
-.inicio-escribenos-container-mobile { display: none; }
+.escribenos-container { display: block; }
+.escribenos-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE:  ESCRIBENOS
+====================================== */
+@media (max-width: 768px) {
+.escribenos-container-mobile {
+position: relative;
+width: 100%;
+box-sizing: border-box;
+background: white !important;
+border-radius: 0px;
+margin: 0px auto;
+padding: 20px;
+}
+.escribenos-information-mobile {
+background: #0C2A1F !important;
+width: 70%;   
+border-radius: 0px;
+margin: 20px auto;   
+padding: 20px;
+}
+.escribenos-information-subtitle-mobile {
+font-family: 'Inter', sans-serif;
+font-size: 1.2rem;
+color: #FFA500 !important;
+text-decoration: none;
+text-align: center;   
+line-height: 1.4;
+margin: 0 0 5px 0;
+}
+.escribenos-information-text-mobile {
+font-family: 'Inter', sans-serif;
+font-size: 1rem;
+color: white !important;
+text-decoration: none;
+text-align: center;   
+line-height: 1.5;
+margin: 0 0 15px 0;
+}
+.escribenos-information-text-mobile:last-child {
+margin-bottom: 0;
+}
+/* CONTROL */
+.escribenos-container { display: none; }
+.escribenos-container-mobile { display: block; }
+}
+
+
+
+
+
+
+
+
 
 
 
