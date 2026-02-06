@@ -336,6 +336,155 @@
 </footer>
 <!-- FIN FOOTER PC -->
   
+
+
+
+  
+<!-- SCRIP: MENÚ HAMBURGUESA MÓVIL -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('📱 Menú hamburguesa móvil iniciado');
+const hamburgerBtn = document.getElementById('menu-mobile-hamburger-button');
+const hamburgerMenu = document.getElementById('menu-mobile-hamburger');
+const menuLinks = document.querySelectorAll('.menu-mobile-hamburger-overlay a');
+
+// 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN
+function showOnlyOneSection(sectionId) {
+console.log('📱 Mostrando SOLO:', sectionId);
+
+// OCULTAR TODAS LAS SECCIONES MOBILE  
+document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
+section.style.display = 'none';
+});
+
+// MOSTRAR SECCIÓN PRINCIPAL MOBILE
+const mainSection = document.getElementById(sectionId);
+if (mainSection && mainSection.classList.contains('mobile-only')) {
+mainSection.style.display = 'block';
+
+// MOSTRAR TODAS SUS SUBSECCIONES MOBILE
+const sectionPrefix = sectionId.replace('-mobile', '') + '-';
+document.querySelectorAll('.subsection.mobile-only').forEach(subsection => {
+if (subsection.id.startsWith(sectionPrefix)) {
+subsection.style.display = 'block';
+}
+});
+
+// DESPLAZAMIENTO HACIA LA SECCIÓN
+mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+}
+
+// 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN
+function goToSubsection(subsectionId) {
+console.log('📱 Yendo a subsección:', subsectionId);
+const mainSectionId = subsectionId.split('-')[0] + '-mobile';
+showOnlyOneSection(mainSectionId);
+
+// DESPLAZAMIENTO HACIA LA SUBSECCIÓN
+setTimeout(() => {
+const subsection = document.getElementById(subsectionId);
+if (subsection) {  
+subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+}, 100);
+}
+
+// ABRIR/CERRAR MENÚ HAMBURGUESA
+hamburgerBtn.addEventListener('click', function() {
+hamburgerMenu.classList.toggle('active');
+const spans = this.querySelectorAll('span');
+if (hamburgerMenu.classList.contains('active')) {
+spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+spans[1].style.opacity = '0';
+spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+} else {
+spans[0].style.transform = 'none';
+spans[1].style.opacity = '1';
+spans[2].style.transform = 'none';
+}
+});
+  
+// NAVEGACIÓN PARA ENLACES DEL MENÚ HAMBURGUESA
+menuLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const href = this.getAttribute('href');
+if (href.startsWith('#')) {
+const targetId = href.replace('#', '');
+console.log('📱 Menú móvil: Navegando a:', targetId);
+
+// Navegar a la sección
+showOnlyOneSection(targetId);
+history.pushState(null, null, `#${targetId}`);
+
+// Cerrar menú después de navegar
+hamburgerMenu.classList.remove('active');
+const spans = hamburgerBtn.querySelectorAll('span');
+spans[0].style.transform = 'none';
+spans[1].style.opacity = '1';
+spans[2].style.transform = 'none';
+}
+});
+});
+  
+// 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR
+function checkInitialHash() {
+const hash = window.location.hash.replace('#', '');
+if (hash) {
+if (hash.includes('-')) {
+// Es una subsección
+goToSubsection(hash);
+} else {
+// Es una sección principal
+showOnlyOneSection(hash);
+}
+}
+}
+
+// 4. FUNCIÓN PARA BOTONES DE NAVEGACIÓN DEL NAVEGADOR
+function handleBrowserNavigation(event) {
+const hash = window.location.hash.replace('#', '');
+if (hash) {
+if (hash.includes('-')) {
+goToSubsection(hash);
+} else {
+showOnlyOneSection(hash);
+}
+}
+}
+
+// EVENTO PARA LOS BOTONES DE NAVEGACIÓN DEL NAVEGADOR
+window.addEventListener('popstate', handleBrowserNavigation);
+
+// Cerrar menú al hacer clic fuera
+hamburgerMenu.addEventListener('click', function(e) {
+if (e.target === hamburgerMenu) {
+hamburgerMenu.classList.remove('active');
+const spans = hamburgerBtn.querySelectorAll('span');
+spans[0].style.transform = 'none';
+spans[1].style.opacity = '1';
+spans[2].style.transform = 'none';
+}
+});
+
+// INICIALIZACIÓN
+checkInitialHash();
+console.log('✅ Menú hamburguesa móvil configurado correctamente');
+});
+</script>
+<!-- FIN SCRIP: MENÚ HAMBURGUESA MÓVIL -->
+
+
+
+
+
+
+
+
+
+
+
   
 </header>
   
