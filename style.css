@@ -538,7 +538,6 @@ width: 100%;
 min-width: 0;
 margin: 0px;
 }
-.actividades-information-subtitle,
 .actividades-information-subtitle-mobile {
 font-family: 'Inter', sans-serif;
 font-size: 1.5rem;
@@ -549,7 +548,7 @@ line-height: 1.4;
 margin: 0 0 10px 0;
 font-weight: bold;
 }
-.actividades-information-text-subtitle {
+.actividades-information-text-subtitle-mobile {
 font-family: 'Inter', sans-serif;
 font-size: 1.2rem;
 color: #0C2A1F !important; 
@@ -559,9 +558,8 @@ line-height: 1.5;
 margin: 0 0 10px 0;
 font-weight: bold;
 }
-.actividades-information-text,
-.actividades-informationn-text,
-.actividades-information-text-end {
+.actividades-information-text-mobile,
+.actividades-information-text-end-mobile {
 font-family: 'Inter', sans-serif;
 font-size: 1rem;
 color: #000000 !important;
@@ -572,30 +570,30 @@ margin: 0 0 10px 0;
 word-break: break-word;
 overflow-wrap: break-word;
 }
-.actividades-information-text-end {
+.actividades-information-text-end-mobile {
 margin-bottom: 0px;
 }
 /* CONTENEDOR: IMAGEN */
-.actividades-information-image {
+.actividades-information-image-mobile {
 width: 100%;
 min-width: 0;
 margin: 0 0 15px 0;
 }
-.actividades-information-image img {
+.actividades-information-image-mobile img {
 width: 100%;
 height: auto;
 display: block;
 border-radius: 0px;
 }
 /* CONTENEDOR: BOTÓN */
-.actividades-information-text-button {
+.actividades-information-text-button-mobile {
 width: 100%;
 box-sizing: border-box;   
 display: flex;
 justify-content: center;
 margin: 0px 0 10px 0;
 }
-.actividades-information-text-button-pdf {
+.actividades-information-text-button-pdf-mobile {
 display: flex;
 justify-content: center;   
 background-color: #0C2A1F !important;
@@ -612,7 +610,7 @@ border: none;
 cursor: pointer;
 transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.actividades-information-text-button-pdf:hover {
+.actividades-information-text-button-pdf-mobile:hover {
 transform: scale(1.05);
 }
 /* CONTROL */
@@ -620,33 +618,10 @@ transform: scale(1.05);
 .actividades-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
-   INICIO-MAYORINFORMACION
+   MAYORINFORMACION
 ====================================== */
-.inicio-mayorinformacion-container {
+.mayorinformacion-container {
 position: relative;
 width: 100%;
 box-sizing: border-box;
@@ -655,7 +630,7 @@ border-radius: 0px;
 margin: 0px auto;
 padding: 30px;
 }
-.inicio-mayorinformacion-title {
+.mayorinformacion-title {
 position: relative;
 z-index: 2;
 display: block;
@@ -668,34 +643,34 @@ text-align: center;
 line-height: 1.6;
 margin: 0 0 16px 0;
 }
-.inicio-mayorinformacion-title a {
+.mayorinformacion-title a {
 color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR: COLUMNAS */
-.inicio-mayorinformacion-columns {
+.mayorinformacion-columns {
 position: relative;
 z-index: 2;
 margin-bottom: 30px;
 }
 /* CONTENEDOR: GRID DE 3 */
-.inicio-mayorinformacion-columns-grid {
+.mayorinformacion-columns-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
 margin: 0px;
 }
 /* CONTENEDOR: BOTÓN */
-.inicio-mayorinformacion-columns-grid-button {
+.mayorinformacion-columns-grid-button-mobile {
 width: 100%;
 box-sizing: border-box;   
 display: flex;
 justify-content: center;
 margin: 0px 0 10px 0;
 }
-.inicio-mayorinformacion-columns-grid-button-1,
-.inicio-mayorinformacion-columns-grid-button-2,
-.inicio-mayorinformacion-columns-grid-button-3 {
+.mayorinformacion-columns-grid-button-1-mobile,
+.mayorinformacion-columns-grid-button-2-mobile,
+.mayorinformacion-columns-grid-button-3-mobile {
 display: flex;
 align-items: center; /* Centrado vertical */
 justify-content: center; /* Centrado horizontal */   
@@ -716,15 +691,104 @@ transition: all 0.3s ease;
 width: 100%; /* Ocupa todo el ancho de la columna */
 height: 100%; /* Ocupa toda la altura disponible */
 }
-.inicio-mayorinformacion-columns-grid-button-1:hover,
-.inicio-mayorinformacion-columns-grid-button-2:hover,
-.inicio-mayorinformacion-columns-grid-button-3:hover {
+.mayorinformacion-columns-grid-button-1-mobile:hover,
+.mayorinformacion-columns-grid-button-2-mobile:hover,
+.mayorinformacion-columns-grid-button-3-mobile:hover {
 background: rgba(255, 255, 255, 0.2) !important;
 transform: translateY(-3px);
 }
 /* CONTROL */
-.inicio-mayorinformacion-container { display: block; }
-.inicio-mayorinformacion-container-mobile { display: none; }
+.mayorinformacion-container { display: block; }
+.mayorinformacion-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE:  MAYOR INFORMACIÓN
+====================================== */
+@media (max-width: 768px) {
+.mayorinformacion-container-mobile {
+position: relative;
+width: 100%;
+box-sizing: border-box;
+background: #0C2A1F !important;
+border-radius: 0px;
+margin: 0px auto;
+padding: 20px;   
+}
+.mayorinformacion-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Inter', sans-serif;
+font-size: 1.5rem;
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+margin: 0 0 10px 0;   
+}
+.mayorinformacion-title-mobile a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: BOTÓN */
+.mayorinformacion-button-mobile {
+width: 100%;
+box-sizing: border-box;   
+display: flex;
+justify-content: center;
+margin: 0px 0 10px 0;
+}
+.mayorinformacion-button-1-mobile,
+.mayorinformacion-button-2-mobile,
+.mayorinformacion-button-3-mobile {
+display: flex;
+align-items: center; /* Centrado vertical */
+justify-content: center; /* Centrado horizontal */   
+background: rgba(255, 255, 255, 0.1) !important;
+border: 2px solid white !important;
+border-radius: 0px; 
+font-family: 'Inter', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;   
+font-weight: bold;
+margin: 0px;   
+padding: 20px;
+min-height: 100px;
+cursor: pointer;
+transition: all 0.3s ease;
+width: 100%; /* Ocupa todo el ancho de la columna */
+height: 100%; /* Ocupa toda la altura disponible */
+}
+.mayorinformacion-button-1-mobile:hover,
+.mayorinformacion-button-2-mobile:hover,
+.mayorinformacion-button-3-mobile:hover {
+background: rgba(255, 255, 255, 0.2) !important;
+transform: translateY(-3px);
+}
+/* CONTROL */
+.mayorinformacion-container { display: none; }
+.mayorinformacion-container-mobile { display: block; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
   ESCRIBENOS
