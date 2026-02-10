@@ -892,6 +892,40 @@ text-decoration: none;
 /* CONTROL */
 .investigacion-container { display: block; }
 .investigacion-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE:  INVESTIGACIÓN
+====================================== */
+@media (max-width: 768px) {
+.investigacion-container-mobile {
+position: relative;
+width: 100%;
+box-sizing: border-box;
+background: #0A1128 !important;
+border-radius: 0px;
+margin: 0px auto;
+padding: 20px;
+}
+.investigacion-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Inter', sans-serif;
+font-size: 2rem;
+color: #FFFFFF !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+line-height: 1.6;
+margin: 0px;
+}
+.investigacion-title-mobile a {
+color: #FFFFFF !important;
+text-decoration: none;
+}
+/* CONTROL */
+.investigacion-container { display: none; }
+.investigacion-container-mobile { display: block; }
+}
 
 /* ======================================
    NUESTRA PERSPECTIVA DE INVESTIGACIÓN
@@ -944,6 +978,59 @@ margin-bottom: 0px;
 /* CONTROL */
 .perspectiva-container { display: block; }
 .perspectiva-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE:  PERSPECTIVA
+====================================== */
+@media (max-width: 768px) {
+.perspectiva-container-mobile {
+position: relative;
+width: 100%;
+box-sizing: border-box;
+background: #FFFFFF !important;
+border-radius: 0px;
+margin: 0px auto;
+padding: 30px;
+}
+.perspectiva-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Inter', sans-serif;
+font-size: 2rem;
+color: #0C2A1F !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.perspectiva-title-mobile a {
+color: #0C2A1F !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.perspectiva-information-mobile {
+width: 100%;
+box-sizing: border-box;   
+margin: 0px;
+}
+.perspectiva-information-text-mobile,
+.perspectiva-information-text-end-mobile {
+font-family: 'Inter', sans-serif;
+font-size: 1rem;
+color: #000000 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.perspectiva-information-text-end-mobile {
+margin-bottom: 0px;
+}
+/* CONTROL */
+.perspectiva-container { display: block; }
+.perspectiva-container-mobile { display: none; }
+}
 
 /* ======================================
    ÁREAS DE INVESTIGACIÓN
@@ -1042,6 +1129,106 @@ border-radius: 0px;
 /* CONTROL */
 .areas-container { display: block; }
 .areas-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE:  AREAS
+====================================== */
+@media (max-width: 768px) {
+.areas-container-mobile {
+position: relative;
+width: 100%;
+box-sizing: border-box;
+background: #0A1128 !important;
+border-radius: 0px;
+margin: 0px auto;
+padding: 30px;
+}
+.areas-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Inter', sans-serif;
+font-size: 2rem;
+color: #FFFFFF !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.areas-title-mobile a {
+color: #FFFFFF !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.areas-information-mobile {
+width: 100%;
+min-width: 0;
+margin: 0px 0 20px 0;
+}
+.areas-information-text-mobile {
+font-family: 'Inter', sans-serif;
+font-size: 1rem;
+color: #000000 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.areas-information-subtitle-mobile {
+font-family: 'Inter', sans-serif;
+font-size: 1.5rem;
+color: #FFFFFF !important;
+text-decoration: none;
+text-align: center;   
+line-height: 1.4;
+margin: 0 0 10px 0;
+font-weight: bold;
+}
+/* CONTENEDOR: IMAGEN */
+.areas-information-image-mobile {
+width: 100%;
+min-width: 0;
+margin: 0 0 15px 0;
+}
+.areas-information-image-mobile img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 0px;
+}
+/* CONTROL */
+.areas-container { display: block; }
+.areas-container-mobile { display: none; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    NUESTRA AGENDA DE INVESTIGACIÓN
