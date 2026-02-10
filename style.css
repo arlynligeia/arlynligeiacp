@@ -1162,7 +1162,7 @@ text-decoration: none;
 /* CONTENEDOR: INFORMACIÓN */
 .areas-information-mobile {
 width: 100%;
-min-width: 0;
+display: block;
 margin: 0px 0 20px 0;
 }
 .areas-information-text-mobile {
