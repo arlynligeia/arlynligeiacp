@@ -1168,7 +1168,7 @@ margin: 0px 0 20px 0;
 .areas-information-text-mobile {
 font-family: 'Inter', sans-serif;
 font-size: 1rem;
-color: withe !important;
+color: white !important;
 text-decoration: none;
 text-align: justify;   
 line-height: 1.5;
@@ -1200,35 +1200,6 @@ border-radius: 0px;
 .areas-container { display: none; }
 .areas-container-mobile { display: block; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ======================================
    NUESTRA AGENDA DE INVESTIGACIÓN
@@ -1326,6 +1297,103 @@ margin: 0 0 10px 0;
 /* CONTROL */
 .ejes-container { display: block; }
 .ejes-container-mobile { display: none; }
+/* ======================================
+/* MOVIL RESPONSIVE:  EJES
+====================================== */
+@media (max-width: 768px) {
+.ejes-container-mobile {
+position: relative;
+width: 100%;
+box-sizing: border-box;
+background: #0A1128 !important;
+border-radius: 0px;
+margin: 0px auto;
+padding: 30px;
+}
+.ejes-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Inter', sans-serif;
+font-size: 2rem;
+color: #FFFFFF !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.ejes-title-mobile a {
+color: #FFFFFF !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.ejes-information-mobile {
+width: 100%;
+display: block;
+margin: 0px 0 20px 0;
+}
+.ejes-information-text-mobile {
+font-family: 'Inter', sans-serif;
+font-size: 1rem;
+color: withe !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.ejes-information-subtitle-mobile {
+font-family: 'Inter', sans-serif;
+font-size: 1.5rem;
+color: #FFFFFF !important;
+text-decoration: none;
+text-align: center;   
+line-height: 1.4;
+margin: 0 0 10px 0;
+font-weight: bold;
+}
+/* CONTENEDOR: IMAGEN */
+.ejes-information-image-mobile {
+width: 100%;
+min-width: 0;
+margin: 0 0 15px 0;
+}
+.ejes-information-image-mobile img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 0px;
+}
+/* CONTROL */
+.ejes-container { display: none; }
+.ejes-container-mobile { display: block; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    QUIENES SOMOS
