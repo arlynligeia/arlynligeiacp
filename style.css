@@ -1028,8 +1028,8 @@ margin: 0 0 10px 0;
 margin-bottom: 0px;
 }
 /* CONTROL */
-.perspectiva-container { display: block; }
-.perspectiva-container-mobile { display: none; }
+.perspectiva-container { display: none; }
+.perspectiva-container-mobile { display: block; }
 }
 
 /* ======================================
@@ -1197,8 +1197,8 @@ display: block;
 border-radius: 0px;
 }
 /* CONTROL */
-.areas-container { display: block; }
-.areas-container-mobile { display: none; }
+.areas-container { display: none; }
+.areas-container-mobile { display: block; }
 }
 
 
