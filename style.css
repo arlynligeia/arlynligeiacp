@@ -1530,23 +1530,6 @@ border-radius: 0px;
 margin: 0px auto;
 padding: 30px;
 }
-.vision-title-mobile {
-position: relative;
-z-index: 2;
-display: block;
-font-family: 'Inter', sans-serif;
-font-size: 2rem;
-color: #FFFFFF !important;
-text-decoration: none;
-text-transform: uppercase;
-text-align: center;   
-line-height: 1.6;
-margin: 0 0 16px 0;
-}
-.vision-title-mobile a {
-color: #FFFFFF !important;
-text-decoration: none;
-}
 /* CONTENEDOR: INFORMACIÓN */
 .vision-information-mobile {
 width: 100%;
@@ -1556,7 +1539,7 @@ margin: 0px 0 20px 0;
 .vision-information-text-mobile {
 font-family: 'Inter', sans-serif;
 font-size: 1rem;
-color: white !important;
+color: black !important;
 text-decoration: none;
 text-align: justify;   
 line-height: 1.5;
@@ -1565,7 +1548,7 @@ margin: 0 0 10px 0;
 .vision-information-subtitle-mobile {
 font-family: 'Inter', sans-serif;
 font-size: 1.5rem;
-color: #FFFFFF !important;
+color: black !important;
 text-decoration: none;
 text-align: center;   
 line-height: 1.4;
@@ -1575,7 +1558,7 @@ font-weight: bold;
 .vision-frase-mobile {
 font-family: 'Inter', sans-serif;
 font-size: 1.2rem;
-color: #FFFFFF !important;
+color: black !important;
 text-decoration: none;
 text-align: center;   
 line-height: 1.4;
