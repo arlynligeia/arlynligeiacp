@@ -374,6 +374,8 @@ background: #000000 !important;
 
 
 
+
+
 /* ======================================
    ACTIVIDADES
 ====================================== */
@@ -996,7 +998,7 @@ position: relative;
 z-index: 2;
 display: block;
 font-family: 'Inter', sans-serif;
-font-size: 2rem;
+font-size: 1.5rem;
 color: #0C2A1F !important;
 text-decoration: none;
 text-transform: uppercase;
@@ -1147,7 +1149,7 @@ position: relative;
 z-index: 2;
 display: block;
 font-family: 'Inter', sans-serif;
-font-size: 2rem;
+font-size: 1.5rem;
 color: #FFFFFF !important;
 text-decoration: none;
 text-transform: uppercase;
@@ -1315,8 +1317,8 @@ position: relative;
 z-index: 2;
 display: block;
 font-family: 'Inter', sans-serif;
-font-size: 2rem;
-color: #FFFFFF !important;
+font-size: 1.5rem;
+color: #0C2A1F !important;
 text-decoration: none;
 text-transform: uppercase;
 text-align: center;   
@@ -1331,7 +1333,7 @@ text-decoration: none;
 .ejes-information-mobile {
 width: 100%;
 display: block;
-margin: 0px 0 20px 0;
+margin: 0px;
 }
 .ejes-information-text-mobile {
 font-family: 'Inter', sans-serif;
@@ -1356,7 +1358,7 @@ font-weight: bold;
 .ejes-information-image-mobile {
 width: 100%;
 min-width: 0;
-margin: 0 0 15px 0;
+margin: 0 0 10px 0;
 }
 .ejes-information-image-mobile img {
 width: 100%;
@@ -1419,7 +1421,7 @@ position: relative;
 z-index: 2;
 display: block;
 font-family: 'Inter', sans-serif;
-font-size: 2.5rem;
+font-size: 2rem;
 color: #FFFFFF !important;
 text-decoration: none;
 text-transform: uppercase;
@@ -1427,7 +1429,7 @@ text-align: center;
 line-height: 1.6;
 margin: 0px;
 }
-.quienessomos-titlemobile a {
+.quienessomos-title-mobile a {
 color: #FFFFFF !important;
 text-decoration: none;
 }
