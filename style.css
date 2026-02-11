@@ -2029,18 +2029,18 @@ color: #0C2A1F !important;
 text-decoration: none;
 }
 /* CONTENEDOR: IMAGEN */
-.direccionacademica-columns-grid-colum-image-mobile {
+.direccionacademica-information-image-mobile {
 width: 100%;
 min-width: 0;
 margin: 0 0 10px 0;
 }
-.direccionacademica-columns-grid-colum-image-mobile img {
+.direccionacademica-information-image-mobile img {
 width: 100%;
 height: auto;
 display: block;
 border-radius: 0px;
 }
-.direccionacademica-columns-grid-colum-subtitle-mobile {
+.direccionacademica-information-subtitle-mobile {
 font-family: 'Inter', sans-serif;
 font-size: 1.5rem;
 color: #0A1128 !important;
@@ -2050,7 +2050,7 @@ line-height: 1.4;
 margin: 0 0 10px 0;
 font-weight: bold;
 }
-.direccionacademica-columns-grid-colum-subtitle-2-mobile {
+.direccionacademica-information-subtitle-2-mobile {
 font-family: 'Inter', sans-serif;
 font-size: 1.2rem;
 color: #666666 !important;
