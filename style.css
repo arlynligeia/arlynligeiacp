@@ -1511,9 +1511,8 @@ text-decoration: none;
 text-align: center;   
 font-style: italic;
 font-weight: bold;
-line-height: 1.5;
-margin: 20px 0 0 0;
-padding: 15px;
+margin: 0;
+padding: 20px;
 border-top: 2px solid #0C2A1F;
 }
 /* CONTROL */
