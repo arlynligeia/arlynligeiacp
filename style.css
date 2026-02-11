@@ -1574,10 +1574,6 @@ border-radius: 5px;
 .vision-container-mobile { display: block; }
 }
 
-
-
-
-
 /* ======================================
    SOBRE NOSOTROS
 ====================================== */
@@ -1750,23 +1746,27 @@ line-height: 1.4;
 margin: 0 0 10px 0;
 font-weight: bold;
 }
-.fundacion-frase-mobile {
-font-family: 'Inter', sans-serif;
-font-size: 1.2rem;
-color: black !important;
-text-decoration: none;
-text-align: center;   
-line-height: 1.4;
-margin: 20px 0;
-font-style: italic;
-padding: 15px;
-background: rgba(255,255,255,0.1);
-border-radius: 5px;
-}   
 /* CONTROL */
 .fundacion-container { display: none; }
 .fundacion-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    FUNDADORES
