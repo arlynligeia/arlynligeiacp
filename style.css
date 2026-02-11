@@ -1616,8 +1616,7 @@ text-decoration: none;
 /* CONTENEDOR: INFORMACIÓN */
 .fundacion-information {
 width: 100%;
-min-width: 0;
-margin: 0px 0 20px 0;
+margin: 20px 0 20px 0;
 }
 .vision-information-text {
 font-family: 'Inter', sans-serif;
@@ -1636,8 +1635,8 @@ z-index: 2;
 /* TÍTULO DE SECCIÓN */
 .sobrenosotros-columns-title {
 font-family: 'Inter', sans-serif;
-font-size: 1.5rem;
-color: #0A1128 !important;
+font-size: 2rem;
+color: #0C2A1F !important;
 text-decoration: none;
 text-align: center;   
 line-height: 1.4;
@@ -1655,7 +1654,7 @@ margin: 0px;
 .sobrenosotros-columns-grid-colum {
 width: 100%;
 min-width: 0;
-margin: 0px;
+margin: 20px 0 20px 0;
 }
 /* SUBTÍTULO DE COLUMNA */
 .sobrenosotros-columns-grid-colum-subtitle {
