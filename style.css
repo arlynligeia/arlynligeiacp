@@ -1750,23 +1750,6 @@ font-weight: bold;
 .fundacion-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    FUNDADORES
 ====================================== */
@@ -1888,17 +1871,6 @@ margin: 0 0 16px 0;
 color: #0C2A1F !important;
 text-decoration: none;
 }
-/* CONTENEDOR: COLUMNAS */
-.fundadores-columns-mobile {
-position: relative;
-z-index: 2;
-}
-/* CONTENEDOR: COLUMNA */
-.fundadores-columns-grid-colum-mobile {
-width: 100%;
-min-width: 0;
-margin: 0 0 20px 0;
-}
 /* CONTENEDOR: IMAGEN */
 .fundadores-columns-grid-colum-image-mobile {
 width: 100%;
@@ -1944,6 +1916,29 @@ margin: 0 0 10px 0;
 .fundadores-container { display: none; }
 .fundadores-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    DIRECCIÓN ACADÉMICA
