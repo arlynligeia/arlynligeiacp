@@ -1656,8 +1656,7 @@ padding: 30px;
 /* CONTENEDOR: INFORMACIÓN */
 .fundacion-information {
 width: 100%;
-min-width: 0;
-margin: 0px 0 20px 0;
+margin: 0px 0 20px 0;  
 }
 .fundacion-information-text {
 font-family: 'Inter', sans-serif;
