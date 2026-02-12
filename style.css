@@ -621,7 +621,7 @@ transform: scale(1.05);
 }
 
 /* ======================================
-   MAYORINFORMACION
+   MAYOR INFORMACION
 ====================================== */
 .mayorinformacion-container {
 position: relative;
@@ -789,7 +789,7 @@ padding: 30px;
 background: #0A1128 !important;
 width: 500px;   
 border-radius: 0px;
-margin: 20px auto;   
+margin: 0px auto;   
 padding: 30px;
 }
 .escribenos-information-subtitle {
@@ -833,7 +833,7 @@ padding: 20px;
 background: #0A1128 !important;
 width: 70%;   
 border-radius: 0px;
-margin: 20px auto;   
+margin: 0px auto;   
 padding: 20px;
 }
 .escribenos-information-subtitle-mobile {
@@ -1041,10 +1041,10 @@ margin-bottom: 0px;
 position: relative;
 width: 100%;
 box-sizing: border-box;
-background: #0A1128 !important;
+background: #FFFFFF !important;
 border-radius: 0px;
 margin: 0px auto;
-padding: 30px;
+padding: 0 30px 0 30px;
 }
 .areas-title {
 position: relative;
@@ -1052,7 +1052,7 @@ z-index: 2;
 display: block;
 font-family: 'Inter', sans-serif;
 font-size: 2rem;
-color: #FFFFFF !important;
+color: #0C2A1F !important;
 text-decoration: none;
 text-transform: uppercase;
 text-align: center;   
@@ -1060,25 +1060,23 @@ line-height: 1.6;
 margin: 0 0 16px 0;
 }
 .areas-title a {
-color: #FFFFFF !important;
+color: #0C2A1F !important;
 text-decoration: none;
 }
 /* CONTENEDOR: INFORMACIÓN */
 .areas-information {
 width: 100%;
-min-width: 0;
 margin: 0px 0 20px 0;
 }
 .areas-information-text {
 font-family: 'Inter', sans-serif;
 font-size: 1rem;
-color: #000000 !important;
+color: black !important;
 text-decoration: none;
 text-align: justify;   
 line-height: 1.5;
 margin: 0 0 10px 0;
 }
-
 /* CONTENEDOR: COLUMNAS */
 .areas-columns {
 position: relative;
@@ -1100,7 +1098,7 @@ margin: 0px;
 .areas-information-text {
 font-family: 'Inter', sans-serif;
 font-size: 1rem;
-color: #FFFFFF !important;
+color: black !important;
 text-decoration: none;
 text-align: justify;   
 line-height: 1.5;
@@ -1109,7 +1107,7 @@ margin: 0 0 10px 0;
 .areas-columns-grid-information-subtitle {
 font-family: 'Inter', sans-serif;
 font-size: 1.5rem;
-color: #FFFFFF !important;
+color: #0A1128 !important;
 text-decoration: none;
 text-align: center;   
 line-height: 1.4;
@@ -1139,7 +1137,7 @@ border-radius: 0px;
 position: relative;
 width: 100%;
 box-sizing: border-box;
-background: #0A1128 !important;
+background: #FFFFFF !important;
 border-radius: 0px;
 margin: 0px auto;
 padding: 30px;
@@ -1150,7 +1148,7 @@ z-index: 2;
 display: block;
 font-family: 'Inter', sans-serif;
 font-size: 1.5rem;
-color: #FFFFFF !important;
+color: #0C2A1F !important;
 text-decoration: none;
 text-transform: uppercase;
 text-align: center;   
@@ -1158,7 +1156,7 @@ line-height: 1.6;
 margin: 0 0 16px 0;
 }
 .areas-title-mobile a {
-color: #FFFFFF !important;
+color: #0C2A1F !important;
 text-decoration: none;
 }
 /* CONTENEDOR: INFORMACIÓN */
@@ -1170,7 +1168,7 @@ margin: 0px 0 20px 0;
 .areas-information-text-mobile {
 font-family: 'Inter', sans-serif;
 font-size: 1rem;
-color: white !important;
+color: black !important;
 text-decoration: none;
 text-align: justify;   
 line-height: 1.5;
@@ -1179,7 +1177,7 @@ margin: 0 0 10px 0;
 .areas-information-subtitle-mobile {
 font-family: 'Inter', sans-serif;
 font-size: 1.5rem;
-color: #FFFFFF !important;
+color: #0A1128 !important;
 text-decoration: none;
 text-align: center;   
 line-height: 1.4;
