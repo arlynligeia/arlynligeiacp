@@ -2218,10 +2218,9 @@ margin: 0 0 10px 0;
 
 /* DEJAR SOLO LA SECCIÓN HOME */
 #inicio { display: block; }
-#inicio-investigacion,
-#inicio-perspectivadeinvestigacion,
-#inicio-areasdeinvestigacion,
-#inicio-ejestematicos { display: block; }
+#inicio-actividades,
+#inicio-mayorinformacion,
+#inicio-escribenos { display: block; }
 
 /* ======================================
    OCULTAR TODAS LAS SECCIONES MOBILE
@@ -2232,10 +2231,9 @@ margin: 0 0 10px 0;
 
 /* DEJAR SOLO LA SECCIÓN HOME MOBILE */
 #inicio-mobile { display: flex; }
-#inicio-investigacion-mobile,
-#inicio-perspectivadeinvestigacion-mobile,
-#inicio-areasdeinvestigacion-mobile,   
-#inicio-ejestematicos-mobile { display: block; }
+#inicio-actividades-mobile,
+#inicio-mayorinformacion-mobile,  
+#inicio-escribenos-mobile { display: block; }
 }
 
 
