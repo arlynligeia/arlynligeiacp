@@ -1405,7 +1405,7 @@ box-sizing: border-box;
 background: #0A1128 !important;
 border-radius: 0px;
 margin: 0px auto;
-padding: 30px;
+padding: 20px;
 }
 .quienessomos-title-mobile {
 position: relative;
@@ -1520,7 +1520,7 @@ box-sizing: border-box;
 background: white !important;
 border-radius: 0px;
 margin: 0px auto;
-padding: 30px;
+padding: 20px;
 }
 /* CONTENEDOR: INFORMACIÓN */
 .vision-information-mobile {
@@ -1539,13 +1539,13 @@ margin: 0 0 10px 0;
 }
 .vision-information-subtitle-mobile {
 font-family: 'Inter', sans-serif;
-font-size: 1.5rem;
+font-size: 1.2rem;
 color: black !important;
 text-decoration: none;
-text-align: center;   
-line-height: 1.4;
-margin: 0 0 10px 0;
+text-align: center;
 font-weight: bold;
+line-height: 1.5;
+margin: 0 0 10px 0;
 }
 .vision-frase-mobile {
 font-family: 'Inter', sans-serif;
@@ -1553,12 +1553,10 @@ font-size: 1.2rem;
 color: black !important;
 text-decoration: none;
 text-align: center;   
-line-height: 1.4;
-margin: 20px 0;
+line-height: 1.5;
+padding: 20px;   
+margin: 0;
 font-style: italic;
-padding: 15px;
-background: rgba(255,255,255,0.1);
-border-radius: 5px;
 }   
 /* CONTROL */
 .vision-container { display: none; }
@@ -1608,7 +1606,7 @@ box-sizing: border-box;
 background: #0A1128 !important;
 border-radius: 0px;
 margin: 0px auto;
-padding: 30px;
+padding: 20px;
 }
 .sobrenosotros-title-mobile {
 position: relative;
@@ -1709,7 +1707,7 @@ box-sizing: border-box;
 background: white !important;
 border-radius: 0px;
 margin: 0px auto;
-padding: 30px;
+padding: 20px;
 }
 /* CONTENEDOR: INFORMACIÓN */
 .fundacion-information-mobile {
@@ -1842,7 +1840,7 @@ box-sizing: border-box;
 background: white !important;
 border-radius: 0px;
 margin: 0px auto;
-padding: 30px;
+padding: 0px 20px 20px 20px;
 }
 .fundadores-title-mobile {
 position: relative;
@@ -1862,18 +1860,18 @@ color: #0C2A1F !important;
 text-decoration: none;
 }
 /* CONTENEDOR: IMAGEN */
-.fundadores-columns-grid-colum-image-mobile {
+.fundadores-information-image-mobile {
 width: 100%;
 min-width: 0;
 margin: 0 0 10px 0;
 }
-.fundadores-columns-grid-colum-image-mobile img {
+.fundadores-information-image-mobile img {
 width: 100%;
 height: auto;
 display: block;
 border-radius: 0px;
 }
-.fundadores-columns-grid-colum-subtitle-mobile {
+.fundadores-information-subtitle-mobile {
 font-family: 'Inter', sans-serif;
 font-size: 1.5rem;
 color: #0A1128 !important;
@@ -1883,7 +1881,7 @@ line-height: 1.4;
 margin: 0 0 10px 0;
 font-weight: bold;
 }
-.fundadores-columns-grid-colum-subtitle-2-mobile {
+.fundadores-information-subtitle-2-mobile {
 font-family: 'Inter', sans-serif;
 font-size: 1.2rem;
 color: #666666 !important;
@@ -1893,7 +1891,7 @@ line-height: 1.4;
 margin: 0 0 5px 0;
 font-style: italic;
 }
-.fundadores-columns-grid-colum-text-mobile {
+.fundadores-information-text-mobile {
 font-family: 'Inter', sans-serif;
 font-size: 1rem;
 color: #000000 !important;
@@ -2206,6 +2204,13 @@ margin: 0 0 10px 0;
 .investigadoresprincipales-container { display: none; }
 .investigadoresprincipales-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
 
 /* ======================================
    OCULTAR TODAS LAS SECCIONES PC
