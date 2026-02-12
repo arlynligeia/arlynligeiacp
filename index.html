@@ -904,7 +904,7 @@ const hamburgerBtn = document.getElementById('menu-mobile-hamburger-button');
 const hamburgerMenu = document.getElementById('menu-mobile-hamburger');
 const menuLinks = document.querySelectorAll('.menu-mobile-hamburger-overlay a');
 
-// 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN
+// 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN (SIN EXCEPCIONES)
 function showOnlyOneSection(sectionId) {
 console.log('📱 Mostrando SOLO:', sectionId);
 
@@ -931,9 +931,10 @@ mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 }
 
-// 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN
+// 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN (SIN EXCEPCIONES)
 function goToSubsection(subsectionId) {
 console.log('📱 Yendo a subsección:', subsectionId);
+
 const mainSectionId = subsectionId.split('-')[0] + '-mobile';
 showOnlyOneSection(mainSectionId);
 
@@ -960,7 +961,7 @@ spans[1].style.opacity = '1';
 spans[2].style.transform = 'none';
 }
 });
-  
+
 // NAVEGACIÓN PARA ENLACES DEL MENÚ HAMBURGUESA
 menuLinks.forEach(link => {
 link.addEventListener('click', function(e) {
@@ -969,11 +970,9 @@ const href = this.getAttribute('href');
 if (href.startsWith('#')) {
 const targetId = href.replace('#', '');
 console.log('📱 Menú móvil: Navegando a:', targetId);
-
-// Navegar a la sección
+// Navegar a la sección principal mobile
 showOnlyOneSection(targetId);
-history.pushState(null, null, `#${targetId}`);
-
+history.pushState(null, null, `#${targetId.replace('-mobile', '')}`);
 // Cerrar menú después de navegar
 hamburgerMenu.classList.remove('active');
 const spans = hamburgerBtn.querySelectorAll('span');
@@ -983,18 +982,23 @@ spans[2].style.transform = 'none';
 }
 });
 });
-  
+
 // 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR
 function checkInitialHash() {
 const hash = window.location.hash.replace('#', '');
 if (hash) {
 if (hash.includes('-')) {
 // Es una subsección
-goToSubsection(hash);
+const mobileSubsectionId = hash + '-mobile';
+goToSubsection(mobileSubsectionId);
 } else {
 // Es una sección principal
-showOnlyOneSection(hash);
+const mobileSectionId = hash + '-mobile';
+showOnlyOneSection(mobileSectionId);
 }
+} else {
+// Mostrar inicio por defecto
+showOnlyOneSection('inicio-mobile');
 }
 }
 
@@ -1003,10 +1007,12 @@ function handleBrowserNavigation(event) {
 const hash = window.location.hash.replace('#', '');
 if (hash) {
 if (hash.includes('-')) {
-goToSubsection(hash);
+goToSubsection(hash + '-mobile');
 } else {
-showOnlyOneSection(hash);
+showOnlyOneSection(hash + '-mobile');
 }
+} else {
+showOnlyOneSection('inicio-mobile');
 }
 }
 
@@ -1024,8 +1030,8 @@ spans[2].style.transform = 'none';
 }
 });
 
-// INICIALIZACIÓN
-checkInitialHash();
+// INICIALIZACIÓN - Mostrar inicio por defecto
+showOnlyOneSection('inicio-mobile');
 console.log('✅ Menú hamburguesa móvil configurado correctamente');
 });
 </script>
