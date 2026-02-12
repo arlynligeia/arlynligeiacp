@@ -2065,23 +2065,6 @@ font-style: italic;
 .direccionacademica-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    INVESTIGADORES PRINCIPALES
 ====================================== */
@@ -2193,37 +2176,25 @@ margin: 0 0 16px 0;
 color: #0C2A1F !important;
 text-decoration: none;
 }
-/* CONTENEDOR: COLUMNAS */
-.investigadoresprincipales-columns-mobile {
-position: relative;
-z-index: 2;
-}
-/* CONTENEDOR: GRID DE 1 COLUMNA PARA MOBILE */
-.investigadoresprincipales-columns-grid-mobile {
-display: grid;
-grid-template-columns: 1fr;
-gap: 20px;
-margin: 0px;
-}
 /* CONTENEDOR: COLUMNA MOBILE */
-.investigadoresprincipales-columns-grid-colum-mobile {
+.investigadoresprincipales-information-mobile {
 width: 100%;
 min-width: 0;
 margin: 0 0 20px 0;
 }
 /* CONTENEDOR: IMAGEN MOBILE */
-.investigadoresprincipales-columns-grid-colum-image-mobile {
+.investigadoresprincipales-information-image-mobile {
 width: 100%;
 min-width: 0;
 margin: 0 0 10px 0;
 }
-.investigadoresprincipales-columns-grid-colum-image-mobile img {
+.investigadoresprincipales-information-image-mobile img {
 width: 100%;
 height: auto;
 display: block;
 border-radius: 0px;
 }
-.investigadoresprincipales-columns-grid-colum-subtitle-mobile {
+.investigadoresprincipales-information-subtitle-mobile {
 font-family: 'Inter', sans-serif;
 font-size: 1.5rem;
 color: #0A1128 !important;
@@ -2233,7 +2204,7 @@ line-height: 1.4;
 margin: 0 0 10px 0;
 font-weight: bold;
 }
-.investigadoresprincipales-columns-grid-colum-text-mobile {
+.investigadoresprincipales-information-text-mobile {
 font-family: 'Inter', sans-serif;
 font-size: 1rem;
 color: #000000 !important;
