@@ -2210,6 +2210,33 @@ margin: 0 0 10px 0;
 .investigadoresprincipales-container-mobile { display: block; }
 }
 
+/* ======================================
+   OCULTAR TODAS LAS SECCIONES PC
+====================================== */
+.main-section:not(#inicio),
+.subsection:not([id^="inicio-"]) { display: none; }
+
+/* DEJAR SOLO LA SECCIÓN HOME */
+#inicio { display: block; }
+#inicio-investigacion,
+#inicio-perspectivadeinvestigacion,
+#inicio-areasdeinvestigacion,
+#inicio-ejestematicos { display: block; }
+
+/* ======================================
+   OCULTAR TODAS LAS SECCIONES MOBILE
+====================================== */
+@media (max-width: 768px) {
+.main-section.mobile-only:not(#inicio),
+.subsection.mobile-only:not([id^="inicio-"]) { display: none; }
+
+/* DEJAR SOLO LA SECCIÓN HOME MOBILE */
+#inicio-mobile { display: flex; }
+#inicio-investigacion-mobile,
+#inicio-perspectivadeinvestigacion-mobile,
+#inicio-areasdeinvestigacion-mobile,   
+#inicio-ejestematicos-mobile { display: block; }
+}
 
 
 
