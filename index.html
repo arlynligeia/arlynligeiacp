@@ -812,82 +812,6 @@ console.log('🔧 Navegación iniciada');
 // 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN
 function showOnlyOneSection(sectionId) {
 console.log('Mostrando SOLO:', sectionId);
-// === EXCEPCIÓN PARA INICIO ===
-if (sectionId === 'inicio') {
-// OCULTAR TODAS LAS SECCIONES  
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-// MOSTRAR SOLO LA SECCIÓN INICIO
-const mainSection = document.getElementById(sectionId);
-if (mainSection) {
-mainSection.style.display = 'block';
-// MOSTRAR SUBSECCIONES DE INICIO
-document.querySelectorAll(`[id^="inicio-"]`).forEach(subsection => {
-subsection.style.display = 'block';
-});
-mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-return; // Salir de la función aquí
-}
-// === FIN EXCEPCIÓN ===
-// === EXCEPCIÓN PARA INVESTIGACION ===
-if (sectionId === 'investigacion') {
-// OCULTAR TODAS LAS SECCIONES  
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-// MOSTRAR SOLO LA SECCIÓN INVESTIGACIÓN
-const mainSection = document.getElementById(sectionId);
-if (mainSection) {
-mainSection.style.display = 'block';
-// MOSTRAR SUBSECCIONES DE INVESTIGACIÓN
-document.querySelectorAll(`[id^="investigacion-"]`).forEach(subsection => {
-subsection.style.display = 'block';
-});
-mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-return; // Salir de la función aquí
-}
-// === FIN EXCEPCIÓN ===
-// === EXCEPCIÓN PARA MAGISTERSCIENCEJOURNAL ===
-if (sectionId === 'magistersciencejournal') {
-// OCULTAR TODAS LAS SECCIONES  
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-// MOSTRAR SOLO LA SECCIÓN MAGISTER SCIENCE JOURNAL
-const mainSection = document.getElementById(sectionId);
-if (mainSection) {
-mainSection.style.display = 'block';
-// MOSTRAR SUBSECCIONES DE MAGISTER SCIENCE JOURNAL
-document.querySelectorAll(`[id^="magistersciencejournal-"]`).forEach(subsection => {
-subsection.style.display = 'block';
-});
-mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-return; // Salir de la función aquí
-}
-// === FIN EXCEPCIÓN ===
-// === EXCEPCIÓN PARA MAS ===
-if (sectionId === 'mas') {
-// OCULTAR TODAS LAS SECCIONES  
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-// MOSTRAR SOLO LA SECCIÓN MÁS
-const mainSection = document.getElementById(sectionId);
-if (mainSection) {
-mainSection.style.display = 'block';
-// MOSTRAR SUBSECCIONES DE MÁS
-document.querySelectorAll(`[id^="mas-"]`).forEach(subsection => {
-subsection.style.display = 'block';
-});
-mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-return; // Salir de la función aquí
-}
-// === FIN EXCEPCIÓN ===
 // OCULTAR TODAS LAS SECCIONES  
 document.querySelectorAll('.main-section, .subsection').forEach(section => {
 section.style.display = 'none';
@@ -896,7 +820,7 @@ section.style.display = 'none';
 const mainSection = document.getElementById(sectionId);
 if (mainSection) {
 mainSection.style.display = 'block';
-// MOSTRAR SUBSECCIONES
+// MOSTRAR TODAS SUS SUBSECCIONES
 document.querySelectorAll(`[id^="${sectionId}-"]`).forEach(subsection => {
 subsection.style.display = 'block';
 });
@@ -907,151 +831,6 @@ mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 // 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN
 function goToSubsection(subsectionId) {
 console.log('Yendo a subsección:', subsectionId);
-// === EXCEPCIÓN PARA INICIO-ACTIVIDADES ===
-if (subsectionId === 'inicio-actividades') {
-// OCULTAR TODAS LAS SECCIONES  
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-// MOSTRAR SOLO LA SUBSECCIÓN
-const subsection = document.getElementById(subsectionId);
-if (subsection) {
-subsection.style.display = 'block';
-subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-return; // Salir de la función aquí
-}
-// === FIN EXCEPCIÓN ===
-// === EXCEPCIÓN PARA INICIO-MAYORINFORMACION ===
-if (subsectionId === 'inicio-mayorinformacion') {
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-const subsection = document.getElementById(subsectionId);
-if (subsection) {
-subsection.style.display = 'block';
-subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-return;
-}
-// === FIN EXCEPCIÓN ===
-// === EXCEPCIÓN PARA INICIO-ESCRIBENOS ===
-if (subsectionId === 'inicio-escribenos') {
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-const subsection = document.getElementById(subsectionId);
-if (subsection) {
-subsection.style.display = 'block';
-subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-return;
-}
-// === FIN EXCEPCIÓN ===
-// === EXCEPCIÓN PARA INVESTIGACION-PERSPECTIVADEINVESTIGACION ===
-if (subsectionId === 'investigacion-perspectivadeinvestigacion') {
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-const subsection = document.getElementById(subsectionId);
-if (subsection) {
-subsection.style.display = 'block';
-subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-return;
-}
-// === FIN EXCEPCIÓN ===
-// === EXCEPCIÓN PARA INVESTIGACION-AREASDEINVESTIGACION ===
-if (subsectionId === 'investigacion-areasdeinvestigacion') {
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-const subsection = document.getElementById(subsectionId);
-if (subsection) {
-subsection.style.display = 'block';
-subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-return;
-}
-// === FIN EXCEPCIÓN ===
-// === EXCEPCIÓN PARA INVESTIGACION-EJESTEMATICOS ===
-if (subsectionId === 'investigacion-ejestematicos') {
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-const subsection = document.getElementById(subsectionId);
-if (subsection) {
-subsection.style.display = 'block';
-subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-return;
-}
-// === FIN EXCEPCIÓN ===
-// === EXCEPCIÓN PARA MAGISTERSCIENCEJOURNAL-1 ===
-if (subsectionId === 'magistersciencejournal-1') {
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-const subsection = document.getElementById(subsectionId);
-if (subsection) {
-subsection.style.display = 'block';
-subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-return;
-}
-// === FIN EXCEPCIÓN ===
-// === EXCEPCIÓN PARA MAGISTERSCIENCEJOURNAL-2 ===
-if (subsectionId === 'magistersciencejournal-2') {
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-const subsection = document.getElementById(subsectionId);
-if (subsection) {
-subsection.style.display = 'block';
-subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-return;
-}
-// === FIN EXCEPCIÓN ===
-// === EXCEPCIÓN PARA MAGISTERSCIENCEJOURNAL-2-2 ===
-if (subsectionId === 'magistersciencejournal-2-2') {
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-const subsection = document.getElementById(subsectionId);
-if (subsection) {
-subsection.style.display = 'block';
-subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-return;
-}
-// === FIN EXCEPCIÓN ===
-// === EXCEPCIÓN PARA MAS-SERVICIOS ===
-if (subsectionId === 'mas-servicios') {
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-const subsection = document.getElementById(subsectionId);
-if (subsection) {
-subsection.style.display = 'block';
-subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-return;
-}
-// === FIN EXCEPCIÓN ===
-// === EXCEPCIÓN PARA MAS-CONTACTOS ===
-if (subsectionId === 'mas-contactos') {
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-const subsection = document.getElementById(subsectionId);
-if (subsection) {
-subsection.style.display = 'block';
-subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-return;
-}
-// === FIN EXCEPCIÓN ===
 const mainSectionId = subsectionId.split('-')[0];
 showOnlyOneSection(mainSectionId);
 // DESPLAZAMIENTO HACIA LA SUBSECCIÓN
@@ -1089,6 +868,9 @@ goToSubsection(hash);
 } else {
 showOnlyOneSection(hash);
 }
+} else {
+// Mostrar inicio por defecto
+showOnlyOneSection('inicio');
 }
 }
 // 4. FUNCIÓN PARA BOTONES DE NAVEGACIÓN DEL NAVEGADOR
@@ -1100,6 +882,8 @@ goToSubsection(hash);
 } else {
 showOnlyOneSection(hash);
 }
+} else {
+showOnlyOneSection('inicio');
 }
 }
 // EVENTO PARA LOS BOTONES DE NAVEGACIÓN DEL NAVEGADOR
