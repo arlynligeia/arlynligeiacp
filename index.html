@@ -101,6 +101,15 @@
 </section>
 <!-- FIN BANNER PC -->
 
+<!-- BANNER PC -->
+<section class="inicio-section main-section mobile-only" id="inicio">
+<div class="inicio-banner-mobile">
+<img id="inicio-banner-1-mobile" src="assets/assets/Fondociudad.png" alt="Banner"/>
+</div>
+</div>
+</section>
+<!-- FIN BANNER PC -->
+
 <!-- ACTIVIDADES PC -->  
 <section class="subsection" id="inicio-actividades">  
 <div class="actividades-container">
@@ -904,7 +913,7 @@ const hamburgerBtn = document.getElementById('menu-mobile-hamburger-button');
 const hamburgerMenu = document.getElementById('menu-mobile-hamburger');
 const menuLinks = document.querySelectorAll('.menu-mobile-hamburger-overlay a');
 
-// 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN (SIN EXCEPCIONES)
+// 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN (IDÉNTICA A PC)
 function showOnlyOneSection(sectionId) {
 console.log('📱 Mostrando SOLO:', sectionId);
 
@@ -918,7 +927,7 @@ const mainSection = document.getElementById(sectionId);
 if (mainSection && mainSection.classList.contains('mobile-only')) {
 mainSection.style.display = 'block';
 
-// MOSTRAR TODAS SUS SUBSECCIONES MOBILE
+// MOSTRAR TODAS SUS SUBSECCIONES MOBILE (igual que en PC)
 const sectionPrefix = sectionId.replace('-mobile', '') + '-';
 document.querySelectorAll('.subsection.mobile-only').forEach(subsection => {
 if (subsection.id.startsWith(sectionPrefix)) {
@@ -931,7 +940,7 @@ mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 }
 
-// 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN (SIN EXCEPCIONES)
+// 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN (IDÉNTICA A PC)
 function goToSubsection(subsectionId) {
 console.log('📱 Yendo a subsección:', subsectionId);
 
@@ -962,7 +971,7 @@ spans[2].style.transform = 'none';
 }
 });
 
-// NAVEGACIÓN PARA ENLACES DEL MENÚ HAMBURGUESA
+// NAVEGACIÓN PARA ENLACES DEL MENÚ HAMBURGUESA (SOLO SECCIONES PRINCIPALES)
 menuLinks.forEach(link => {
 link.addEventListener('click', function(e) {
 e.preventDefault();
@@ -970,9 +979,11 @@ const href = this.getAttribute('href');
 if (href.startsWith('#')) {
 const targetId = href.replace('#', '');
 console.log('📱 Menú móvil: Navegando a:', targetId);
+// Convertir a ID mobile (ej: #home → #home-mobile)
+const mobileSectionId = targetId.endsWith('-mobile') ? targetId : targetId + '-mobile';
 // Navegar a la sección principal mobile
-showOnlyOneSection(targetId);
-history.pushState(null, null, `#${targetId.replace('-mobile', '')}`);
+showOnlyOneSection(mobileSectionId);
+history.pushState(null, null, `#${targetId}`);
 // Cerrar menú después de navegar
 hamburgerMenu.classList.remove('active');
 const spans = hamburgerBtn.querySelectorAll('span');
@@ -983,16 +994,16 @@ spans[2].style.transform = 'none';
 });
 });
 
-// 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR
+// 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR (IGUAL A PC)
 function checkInitialHash() {
 const hash = window.location.hash.replace('#', '');
 if (hash) {
 if (hash.includes('-')) {
-// Es una subsección
+// Es una subsección (ej: home-socialmediacontent)
 const mobileSubsectionId = hash + '-mobile';
 goToSubsection(mobileSubsectionId);
 } else {
-// Es una sección principal
+// Es una sección principal (ej: home)
 const mobileSectionId = hash + '-mobile';
 showOnlyOneSection(mobileSectionId);
 }
@@ -1007,12 +1018,10 @@ function handleBrowserNavigation(event) {
 const hash = window.location.hash.replace('#', '');
 if (hash) {
 if (hash.includes('-')) {
-goToSubsection(hash + '-mobile');
+goToSubsection(hash);
 } else {
-showOnlyOneSection(hash + '-mobile');
+showOnlyOneSection(hash);
 }
-} else {
-showOnlyOneSection('inicio-mobile');
 }
 }
 
@@ -1030,8 +1039,8 @@ spans[2].style.transform = 'none';
 }
 });
 
-// INICIALIZACIÓN - Mostrar inicio por defecto
-showOnlyOneSection('inicio-mobile');
+// INICIALIZACIÓN
+checkInitialHash();
 console.log('✅ Menú hamburguesa móvil configurado correctamente');
 });
 </script>
