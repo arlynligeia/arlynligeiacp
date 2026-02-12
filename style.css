@@ -989,7 +989,7 @@ box-sizing: border-box;
 background: #FFFFFF !important;
 border-radius: 0px;
 margin: 0px auto;
-padding: 30px;
+padding: 20px;
 }
 .perspectiva-title-mobile {
 position: relative;
@@ -1001,8 +1001,7 @@ color: #0C2A1F !important;
 text-decoration: none;
 text-transform: uppercase;
 text-align: center;   
-line-height: 1.6;
-margin: 0 0 16px 0;
+margin: 0 0 10px 0;
 }
 .perspectiva-title-mobile a {
 color: #0C2A1F !important;
@@ -1137,7 +1136,7 @@ box-sizing: border-box;
 background: #FFFFFF !important;
 border-radius: 0px;
 margin: 0px auto;
-padding: 30px;
+padding: 0 20px 0 20px;
 }
 .areas-title-mobile {
 position: relative;
@@ -1149,8 +1148,7 @@ color: #0C2A1F !important;
 text-decoration: none;
 text-transform: uppercase;
 text-align: center;   
-line-height: 1.6;
-margin: 0 0 16px 0;
+margin: 0 0 10px 0;
 }
 .areas-title-mobile a {
 color: #0C2A1F !important;
@@ -1176,10 +1174,10 @@ font-family: 'Inter', sans-serif;
 font-size: 1.5rem;
 color: #0A1128 !important;
 text-decoration: none;
-text-align: center;   
-line-height: 1.4;
+text-align: center;
+font-weight: bold;   
+line-height: 1.5;
 margin: 0 0 10px 0;
-font-weight: bold;
 }
 /* CONTENEDOR: IMAGEN */
 .areas-information-image-mobile {
@@ -1316,11 +1314,10 @@ color: #0C2A1F !important;
 text-decoration: none;
 text-transform: uppercase;
 text-align: center;   
-line-height: 1.6;
-margin: 0 0 16px 0;
+margin: 0 0 10px 0;
 }
 .ejes-title-mobile a {
-color: #FFFFFF !important;
+color: #0C2A1F !important;
 text-decoration: none;
 }
 /* CONTENEDOR: INFORMACIÓN */
@@ -1332,7 +1329,7 @@ margin: 0px;
 .ejes-information-text-mobile {
 font-family: 'Inter', sans-serif;
 font-size: 1rem;
-color: withe !important;
+color: black !important;
 text-decoration: none;
 text-align: justify;   
 line-height: 1.5;
@@ -1341,10 +1338,10 @@ margin: 0 0 10px 0;
 .ejes-information-subtitle-mobile {
 font-family: 'Inter', sans-serif;
 font-size: 1.5rem;
-color: #FFFFFF !important;
+color: #0A1128 !important;
 text-decoration: none;
 text-align: center;   
-line-height: 1.4;
+line-height: 1.5;
 margin: 0 0 10px 0;
 font-weight: bold;
 }
