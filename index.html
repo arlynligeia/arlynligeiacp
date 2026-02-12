@@ -799,7 +799,160 @@
 <!-- FIN FOOTER PC -->
   
 
-
+<!-- SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🔧 Navegación iniciada');
+// 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN
+function showOnlyOneSection(sectionId) {
+console.log('Mostrando SOLO:', sectionId);
+// === EXCEPCIÓN PARA INICIO ===
+if (sectionId === 'inicio') {
+// OCULTAR TODAS LAS SECCIONES  
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
+// MOSTRAR SOLO LA SECCIÓN INICIO
+const mainSection = document.getElementById(sectionId);
+if (mainSection) {
+mainSection.style.display = 'block';
+mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+return; // Salir de la función aquí
+}
+// === FIN EXCEPCIÓN ===
+// === EXCEPCIÓN PARA MAS ===
+if (sectionId === 'mas') {
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
+const mainSection = document.getElementById(sectionId);
+if (mainSection) {
+mainSection.style.display = 'block';
+mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+return;
+}
+// === FIN EXCEPCIÓN ===
+// === EXCEPCIÓN PARA MAGISTERSCIENCEJOURNAL ===
+if (sectionId === 'magistersciencejournal') {
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
+const mainSection = document.getElementById(sectionId);
+if (mainSection) {
+mainSection.style.display = 'block';
+document.querySelectorAll('[id^="magistersciencejournal-"]').forEach(subsection => {
+subsection.style.display = 'block';
+});
+mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+return;
+}
+// === FIN EXCEPCIÓN ===
+// OCULTAR TODAS LAS SECCIONES  
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
+// MOSTRAR SECCIÓN
+const mainSection = document.getElementById(sectionId);
+if (mainSection) {
+mainSection.style.display = 'block';
+// MOSTRAR SUBSECCIONES
+document.querySelectorAll(`[id^="${sectionId}-"]`).forEach(subsection => {
+subsection.style.display = 'block';
+});
+// DESPLAZAMIENTO HACIA LA SECCIÓN
+mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+}
+// 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN
+function goToSubsection(subsectionId) {
+console.log('Yendo a subsección:', subsectionId);
+// === EXCEPCIÓN PARA MAS-CONTACTOS ===
+if (subsectionId === 'mas-contactos') {
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
+const subsection = document.getElementById(subsectionId);
+if (subsection) {
+subsection.style.display = 'block';
+subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+return; // Salir de la función aquí
+}
+// === FIN EXCEPCIÓN ===
+// === EXCEPCIÓN PARA MAS-SERVICIOS ===
+if (subsectionId === 'mas-servicios') {
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
+const subsection = document.getElementById(subsectionId);
+if (subsection) {
+subsection.style.display = 'block';
+subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+return;
+}
+// === FIN EXCEPCIÓN ===
+const mainSectionId = subsectionId.split('-')[0];
+showOnlyOneSection(mainSectionId);
+// DESPLAZAMIENTO HACIA LA SUBSECCIÓN
+setTimeout(() => {
+const subsection = document.getElementById(subsectionId);
+if (subsection) {  
+subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+}, 100);
+}
+// EVENTOS PARA BOTONES DEL MENÚ PRINCIPAL
+document.querySelectorAll('.menu-button').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+showOnlyOneSection(targetId);
+history.pushState(null, null, `#${targetId}`);
+});
+});
+// EVENTOS PARA BOTONES DEL SUBMENÚ
+document.querySelectorAll('.submenu-button').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+goToSubsection(targetId);
+history.pushState(null, null, `#${targetId}`);
+});
+});
+// 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR LA PÁGINA
+function checkInitialHash() {
+const hash = window.location.hash.replace('#', '');
+if (hash) {
+if (hash.includes('-')) {
+goToSubsection(hash);
+} else {
+showOnlyOneSection(hash);
+}
+}
+}
+// 4. FUNCIÓN PARA BOTONES DE NAVEGACIÓN DEL NAVEGADOR
+function handleBrowserNavigation(event) {
+const hash = window.location.hash.replace('#', '');
+if (hash) {
+if (hash.includes('-')) {
+goToSubsection(hash);
+} else {
+showOnlyOneSection(hash);
+}
+}
+}
+// EVENTO PARA LOS BOTONES DE NAVEGACIÓN DEL NAVEGADOR
+window.addEventListener('popstate', handleBrowserNavigation);  
+// INICIALIZACIÓN
+checkInitialHash();
+console.log('✅ Navegación configurada correctamente');
+});
+</script>
+<!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
 
   
 <!-- SCRIP: MENÚ HAMBURGUESA MÓVIL -->
