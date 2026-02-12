@@ -1926,7 +1926,7 @@ box-sizing: border-box;
 background: #FFFFFF !important;
 border-radius: 0px;
 margin: 0px auto;
-padding: 30px;
+padding: 0 30px 0 30px;
 }
 .direccionacademica-title {
 position: relative;
