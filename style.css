@@ -356,7 +356,7 @@ align-items: center;
 background: #000000 !important;
 margin: 0px auto;
 }
-.inicio-banner-mobile img {
+.inicio-banner-mobile-1 img {
 position: absolute;
 z-index: 1;    
 width: 100%;
@@ -2206,6 +2206,80 @@ margin: 0 0 10px 0;
 }
 
 
+
+
+
+
+
+
+
+
+/* ======================================
+   SERVICIOS
+====================================== */
+.servicios-container {
+position: relative;
+width: 100%;
+box-sizing: border-box;
+background: #0A1128 !important;
+border-radius: 0px;
+margin: 0px auto;
+padding: 30px;
+}
+.servicios-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Inter', sans-serif;
+font-size: 2.5rem;
+color: #FFFFFF !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+line-height: 1.6;
+margin: 0px;
+}
+.servicios-title a {
+color: #FFFFFF !important;
+text-decoration: none;
+}
+/* CONTROL */
+.servicios-container { display: block; }
+.servicios-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE:  SERVICIOS
+====================================== */
+@media (max-width: 768px) {
+.servicios-container-mobile {
+position: relative;
+width: 100%;
+box-sizing: border-box;
+background: #0A1128 !important;
+border-radius: 0px;
+margin: 0px auto;
+padding: 20px;
+}
+.servicios-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Inter', sans-serif;
+font-size: 2rem;
+color: #FFFFFF !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+line-height: 1.6;
+margin: 0px;
+}
+.servicios-title-mobile a {
+color: #FFFFFF !important;
+text-decoration: none;
+}
+/* CONTROL */
+.servicios-container { display: none; }
+.servicios-container-mobile { display: block; }
+}
 
 
 
