@@ -2296,7 +2296,7 @@ padding: 30px;
 /* CONTENEDOR: INFORMACIÓN */
 .informacionservicios-information {
 width: 100%;
-margin: 0px 0 20px 0;  
+margin: 0px;  
 }
 .informacionservicios-information-text {
 font-family: 'Inter', sans-serif;
@@ -2305,7 +2305,7 @@ color: #000000 !important;
 text-decoration: none;
 text-align: justify;   
 line-height: 1.5;
-margin: 0 0 10px 0;
+margin: 0px;
 }
 /* CONTROL */
 .informacionservicios-container { display: block; }
