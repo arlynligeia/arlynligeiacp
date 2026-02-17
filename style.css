@@ -2281,6 +2281,69 @@ text-decoration: none;
 .servicios-container-mobile { display: block; }
 }
 
+/* ======================================
+   INFORMACIÓN SERVICIOS
+====================================== */
+.informacionservicios-container {
+position: relative;
+width: 100%;
+box-sizing: border-box;
+background: #FFFFFF !important;
+border-radius: 0px;
+margin: 0px auto;
+padding: 30px;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.informacionservicios-information {
+width: 100%;
+margin: 0px 0 20px 0;  
+}
+.informacionservicios-information-text {
+font-family: 'Inter', sans-serif;
+font-size: 1rem;
+color: #000000 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+/* CONTROL */
+.informacionservicios-container { display: block; }
+.informacionservicios-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: INFORMACIÓN SERVICIOS
+====================================== */
+@media (max-width: 768px) {
+.informacionservicios-container-mobile {
+position: relative;
+width: 100%;
+box-sizing: border-box;
+background: white !important;
+border-radius: 0px;
+margin: 0px auto;
+padding: 20px;
+}
+/* CONTENEDOR: INFORMACIÓN MOBILE */
+.informacionservicios-information-mobile {
+width: 100%;
+display: block;
+margin: 0px 0 20px 0;
+}
+.informacionservicios-information-text-mobile {
+font-family: 'Inter', sans-serif;
+font-size: 1rem;
+color: black !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+/* CONTROL */
+.informacionservicios-container { display: none; }
+.informacionservicios-container-mobile { display: block; }
+}
+
+
 
 
 
