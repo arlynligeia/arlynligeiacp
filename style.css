@@ -2343,6 +2343,101 @@ margin: 0 0 10px 0;
 .informacionservicios-container-mobile { display: block; }
 }
 
+/* ======================================
+   CONSULTORIA
+====================================== */
+.consultoria-container {
+position: relative;
+width: 100%;
+box-sizing: border-box;
+background: #FFFFFF !important;
+border-radius: 0px;
+margin: 0px auto;
+padding: 30px;
+}
+.consultoria-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Inter', sans-serif;
+font-size: 2rem;
+color: #0C2A1F !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+margin: 0 0 10px 0;
+}
+.consultoria-title a {
+color: #0C2A1F !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.consultoria-information {
+width: 100%;
+margin: 0px;  
+}
+.consultoria-information-text {
+font-family: 'Inter', sans-serif;
+font-size: 1rem;
+color: #000000 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0px;
+}
+/* CONTROL */
+.consultoria-container { display: block; }
+.consultoria-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: CONSULTORIA
+====================================== */
+@media (max-width: 768px) {
+.consultoria-container-mobile {
+position: relative;
+width: 100%;
+box-sizing: border-box;
+background: white !important;
+border-radius: 0px;
+margin: 0px auto;
+padding: 20px;
+}
+.consultoria-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Inter', sans-serif;
+font-size: 1.5rem;
+color: #0C2A1F !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.consultoria-title-mobile a {
+color: #0C2A1F !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN MOBILE */
+.consultoria-information-mobile {
+width: 100%;
+display: block;
+margin: 0px 0 20px 0;
+}
+.consultoria-information-text-mobile {
+font-family: 'Inter', sans-serif;
+font-size: 1rem;
+color: black !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+/* CONTROL */
+.consultoria-container { display: none; }
+.consultoria-container-mobile { display: block; }
+}
+
 
 
 
