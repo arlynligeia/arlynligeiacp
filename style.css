@@ -2438,6 +2438,93 @@ margin: 0 0 10px 0;
 .consultoria-container-mobile { display: block; }
 }
 
+/* ======================================
+   CONSULTORIA INFORMACION
+====================================== */
+.consultoriainformacion-container {
+position: relative;
+width: 100%;
+box-sizing: border-box;
+background: #0A1128 !important;
+border-radius: 0px;
+margin: 0px auto;
+padding: 30px;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.consultoriainformacion-information {
+width: 100%;
+margin: 0px;  
+}
+.consultoriainformacion-information-subtitle {
+font-family: 'Inter', sans-serif;
+font-size: 1.5rem;
+color: white !important;
+text-decoration: none;
+text-align: left;   
+line-height: 1.4;
+margin: 0 0 10px 0;
+font-weight: bold;
+}
+.consultoriainformacion-information-text {
+font-family: 'Inter', sans-serif;
+font-size: 1rem;
+color: white !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 20px 0;
+}
+.consultoriainformacion-information-text:last-child {
+margin-bottom: 0;
+}
+/* CONTROL */
+.consultoriainformacion-container { display: block; }
+.consultoriainformacion-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: CONSULTORIA INFORMACION
+====================================== */
+@media (max-width: 768px) {
+.consultoriainformacion-container-mobile {
+position: relative;
+width: 100%;
+box-sizing: border-box;
+background: #0A1128 !important;
+border-radius: 0px;
+margin: 0px auto;
+padding: 20px;
+}
+/* CONTENEDOR: INFORMACIÓN MOBILE */
+.consultoriainformacion-information-mobile {
+width: 100%;
+display: block;
+margin: 0px;
+}
+.consultoriainformacion-information-subtitle-mobile {
+font-family: 'Inter', sans-serif;
+font-size: 1.3rem;
+color: white !important;
+text-decoration: none;
+text-align: left;   
+line-height: 1.4;
+margin: 0 0 8px 0;
+font-weight: bold;
+}
+.consultoriainformacion-information-text-mobile {
+font-family: 'Inter', sans-serif;
+font-size: 1rem;
+color: white !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 16px 0;
+}
+.consultoriainformacion-information-text-mobile:last-child {
+margin-bottom: 0;
+}
+/* CONTROL */
+.consultoriainformacion-container { display: none; }
+.consultoriainformacion-container-mobile { display: block; }
+}
 
 
 
