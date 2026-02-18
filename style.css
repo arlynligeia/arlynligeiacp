@@ -2715,7 +2715,96 @@ transform: scale(1.05);
 /* CONTROL */
 .cursos-container { display: block; }
 .cursos-container-mobile { display: none; }
-
+/* ======================================
+   MOVIL RESPONSIVE: CURSOS
+====================================== */
+@media (max-width: 768px) {
+.cursos-container-mobile {
+position: relative;
+width: 100%;
+box-sizing: border-box;
+background: #FFFFFF !important;
+border-radius: 0px;
+margin: 0px auto;
+padding: 20px;   
+}
+.cursos-information-mobile {
+width: 100%;
+min-width: 0;
+margin: 0px;
+}
+.cursos-information-subtitle-mobile {
+font-family: 'Inter', sans-serif;
+font-size: 1.5rem;
+color: #0A1128 !important;
+text-decoration: none;
+text-align: center;   
+line-height: 1.4;
+margin: 20px 0 10px 0;
+font-weight: bold;
+}
+.cursos-information-subtitle-mobile:first-of-type {
+margin-top: 0;
+}
+.cursos-information-image-mobile {
+width: 100%;
+min-width: 0;
+margin: 0 0 15px 0;
+}
+.cursos-information-image-mobile img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 0px;
+}
+.cursos-information-text-mobile {
+font-family: 'Inter', sans-serif;
+font-size: 1rem;
+color: #000000 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 15px 0;
+word-break: break-word;
+overflow-wrap: break-word;
+}
+/* CONTENEDOR: BOTÓN */
+.cursos-information-button-mobile {
+width: 100%;
+box-sizing: border-box;   
+display: flex;
+justify-content: center;
+margin: 0px 0 30px 0;
+}
+.cursos-information-button-mobile:last-of-type {
+margin-bottom: 0;
+}
+.cursos-information-masinformacion-mobile,
+.cursos-information-button-masinformacion-mobile {
+display: flex;
+justify-content: center;   
+background-color: #0C2A1F !important;
+border-radius: 0px; 
+font-family: 'Inter', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;   
+font-weight: bold;
+margin: 0px;   
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.cursos-information-masinformacion-mobile:hover,
+.cursos-information-button-masinformacion-mobile:hover {
+transform: scale(1.05);
+}
+/* CONTROL */
+.cursos-container { display: none; }
+.cursos-container-mobile { display: block; }
+}
 
 
 
