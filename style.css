@@ -12,6 +12,213 @@ min-height: 100vh;
 }
 
 /* ======================================
+   CONTENEDOR DEL TÍTULO GRANDE PC
+====================================== */
+.site-container-background {
+width: 100%;
+box-sizing: border-box;
+margin: 40px auto;      
+padding: 190px 20px 30px 20px;
+}
+/* ======================================
+   TÍTULO GRANDE PC (DEBAJO DEL MENÚ)
+====================================== */
+.site-container-background-title {
+font-family: 'Bebas Neue', cursive;
+font-size: 20rem; 
+color: #ff00a9 !important;
+text-align: center;
+font-weight: 400;
+line-height: 1; 
+margin: 0;
+padding: 0;
+display: block;
+position: relative;   
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#ff00a9, #ff00a9);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+/* ======================================
+   CONTENEDOR DEL TÍTULO PEQUEÑO PC
+====================================== */
+.site-container-header {
+display: flex;
+align-items: center;
+width: 100%;
+max-width: 1400px;
+margin: 0 auto;
+padding: 10px 20px;
+box-sizing: border-box;
+}
+/* En HOME: menú centrado */
+body.home-page .site-container-header {
+justify-content: center;
+}
+/* En el resto de secciones: título y menú juntos */
+body:not(.home-page) .site-container-header {
+justify-content: center;
+}
+/* ======================================
+   TÍTULO PEQUEÑO PC (2 FILAS)
+====================================== */
+.site-container-header-title {
+display: flex;
+flex-direction: column;
+line-height: 1;
+margin-right: 30px;
+}
+.site-container-header-title h1 {
+font-family: 'Bebas Neue', cursive;
+font-size: 3.5rem;
+color: #00ffff !important;
+font-weight: 400;
+margin: 0;
+padding: 0;
+letter-spacing: 2px;
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#00ffff, #00ffff);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+/* ======================================
+   CONTROL: OCULTAR/MOSTRAR TÍTULOS PC
+====================================== */
+/* OCULTAR TÍTULO GRANDE EN SECCIONES QUE NO SEAN HOME */
+body:not(.home-page) .site-container-background {
+display: none;
+}
+/* OCULTAR TÍTULO PEQUEÑO SOLO EN HOME */
+body.home-page .site-container-header-title {
+display: none !important;
+}
+/* MOSTRAR TÍTULO PEQUEÑO EN EL RESTO DE SECCIONES */
+body:not(.home-page) .site-container-header-title {
+display: flex !important;
+}
+
+/* ======================================
+  CONTENEDOR DE TÍTULO MOBILE
+====================================== */
+@media (max-width: 768px) {
+.site-container-mobile { 
+position: relative;
+top: 0;
+left: 0;  
+width: 100%;
+box-sizing: border-box;
+background: transparent !important;    
+margin: 0;
+padding: 20px 15px 10px 15px;
+}
+/* TÍTULO GRANDE MÓVIL (SOLO EN HOME) */
+.site-container-title-mobile {
+font-family: 'Bebas Neue', cursive;
+font-size: 10rem;
+color: #ff00a9 !important;
+text-align: center;
+font-weight: 400;
+line-height: 1;
+margin: 0;
+padding: 80px 0 20px 0;
+display: block;
+position: relative;
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#ff00a9, #ff00a9);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+   
+/* CONTENEDOR TÍTULO PEQUEÑO MÓVIL */
+.site-container-header-mobile {
+display: flex;
+align-items: center;
+justify-content: flex-start;
+padding: 0;
+width: 100%;
+box-sizing: border-box;
+}
+   /* TÍTULO PEQUEÑO MÓVIL (UNA SOLA FILA) */
+.site-container-header-title-mobile {
+font-family: 'Bebas Neue', cursive;
+font-size: 2.5rem;
+color: #00ffff !important;
+font-weight: 400;
+margin: 0;
+padding: 10px 0;
+letter-spacing: 2px;
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#00ffff, #00ffff);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+display: block;
+}
+/* OCULTAR PC Y MOSTRAR MÓVIL */
+.site-container { display: none; }
+.site-container-mobile { display: block; }   
+
+   
+/* OCULTAR TÍTULO GRANDE EN SECCIONES QUE NO SEAN HOME */
+body:not(.home-page) .site-container-title-mobile {
+display: none !important;
+}
+
+/* MOSTRAR TÍTULO GRANDE SOLO EN HOME */
+body.home-page .site-container-title-mobile {
+display: block !important;
+}
+
+/* OCULTAR TÍTULO PEQUEÑO EN HOME */
+body.home-page .site-container-header-mobile {
+display: none !important;
+}
+
+/* MOSTRAR TÍTULO PEQUEÑO EN EL RESTO DE SECCIONES */
+body:not(.home-page) .site-container-header-mobile {
+display: flex !important;
+}
+}
+
+
+
+
+
+
+
+/* ======================================
    CONTENEDOR DEL MENÚ PC (SIN FONDO MORADO)
 ====================================== */
 .site-container {
@@ -302,107 +509,6 @@ display: none !important;
 
 
 
-/* ======================================
-   CONTENEDOR DEL TÍTULO GRANDE PC
-====================================== */
-.site-container-background {
-width: 100%;
-box-sizing: border-box;
-margin: 40px auto;      
-padding: 190px 20px 30px 20px;
-}
-/* ======================================
-   TÍTULO GRANDE PC (DEBAJO DEL MENÚ)
-====================================== */
-.site-container-background-title {
-font-family: 'Bebas Neue', cursive;
-font-size: 20rem; 
-color: #ff00a9 !important;
-text-align: center;
-font-weight: 400;
-line-height: 1; 
-margin: 0;
-padding: 0;
-display: block;
-position: relative;   
-background: 
-repeating-linear-gradient(
-0deg,
-rgba(0, 0, 0, 0.3) 0px,
-rgba(0, 0, 0, 0.3) 2px,
-transparent 2px,
-transparent 4px
-),
-linear-gradient(#ff00a9, #ff00a9);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-/* ======================================
-   CONTENEDOR DEL TÍTULO PEQUEÑO PC
-====================================== */
-.site-container-header {
-display: flex;
-align-items: center;
-width: 100%;
-max-width: 1400px;
-margin: 0 auto;
-padding: 10px 20px;
-box-sizing: border-box;
-}
-/* En HOME: menú centrado */
-body.home-page .site-container-header {
-justify-content: center;
-}
-/* En el resto de secciones: título y menú juntos */
-body:not(.home-page) .site-container-header {
-justify-content: center;
-}
-/* ======================================
-   TÍTULO PEQUEÑO PC (2 FILAS)
-====================================== */
-.site-container-header-title {
-display: flex;
-flex-direction: column;
-line-height: 1;
-margin-right: 30px;
-}
-.site-container-header-title h1 {
-font-family: 'Bebas Neue', cursive;
-font-size: 3.5rem;
-color: #00ffff !important;
-font-weight: 400;
-margin: 0;
-padding: 0;
-letter-spacing: 2px;
-background: 
-repeating-linear-gradient(
-0deg,
-rgba(0, 0, 0, 0.3) 0px,
-rgba(0, 0, 0, 0.3) 2px,
-transparent 2px,
-transparent 4px
-),
-linear-gradient(#00ffff, #00ffff);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-/* ======================================
-   CONTROL: OCULTAR/MOSTRAR TÍTULOS PC
-====================================== */
-/* OCULTAR TÍTULO GRANDE EN SECCIONES QUE NO SEAN HOME */
-body:not(.home-page) .site-container-background {
-display: none;
-}
-/* OCULTAR TÍTULO PEQUEÑO SOLO EN HOME */
-body.home-page .site-container-header-title {
-display: none !important;
-}
-/* MOSTRAR TÍTULO PEQUEÑO EN EL RESTO DE SECCIONES */
-body:not(.home-page) .site-container-header-title {
-display: flex !important;
-}
 
 
 
@@ -419,108 +525,6 @@ display: flex !important;
 
 
 
-/* ======================================
-   HEADER MÓVIL
-====================================== */
-@media (max-width: 768px) {
-/* Ocultar el header PC en móvil */
-.site-container {
-display: none !important;
-}
-
-/* Mostrar contenedor móvil */
-.site-container-mobile {
-display: block !important;
-position: relative;
-width: 100%;
-box-sizing: border-box;
-padding: 20px 15px 10px 15px;
-}
-
-/* TÍTULO GRANDE MÓVIL - SOLO EN HOME */
-.site-title-mobile {
-font-family: 'Bebas Neue', cursive;
-font-size: 10rem;
-color: #ff00a9 !important;
-text-align: center;
-font-weight: 400;
-line-height: 1;
-margin: 0;
-padding: 80px 0 20px 0;
-display: block;
-position: relative;
-background: 
-repeating-linear-gradient(
-0deg,
-rgba(0, 0, 0, 0.3) 0px,
-rgba(0, 0, 0, 0.3) 2px,
-transparent 2px,
-transparent 4px
-),
-linear-gradient(#ff00a9, #ff00a9);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-
-/* OCULTAR TÍTULO GRANDE EN SECCIONES QUE NO SEAN HOME */
-body:not(.home-page) .site-title-mobile {
-display: none !important;
-}
-
-/* HEADER MÓVIL CON TÍTULO PEQUEÑO */
-.header-content-mobile {
-display: none; /* Oculto por defecto */
-align-items: center;
-justify-content: flex-start;
-padding: 10px 0;
-width: 100%;
-box-sizing: border-box;
-}
-
-/* MOSTRAR HEADER MÓVIL EN SECCIONES QUE NO SEAN HOME */
-body:not(.home-page) .header-content-mobile {
-display: flex !important;
-}
-
-/* TÍTULO PEQUEÑO MÓVIL - UNA SOLA FILA */
-.site-title-header-mobile {
-font-family: 'Bebas Neue', cursive;
-font-size: 2rem;
-color: #00ffff !important;
-font-weight: 400;
-margin: 0;
-padding: 0;
-letter-spacing: 2px;
-background: 
-repeating-linear-gradient(
-0deg,
-rgba(0, 0, 0, 0.3) 0px,
-rgba(0, 0, 0, 0.3) 2px,
-transparent 2px,
-transparent 4px
-),
-linear-gradient(#00ffff, #00ffff);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
-display: block;
-}
-
-/* BOTÓN HAMBURGUESA SIEMPRE VISIBLE */
-.menu-mobile {
-display: block !important;
-position: fixed;
-top: 15px;
-right: 15px;
-z-index: 1000;
-}
-
-/* OCULTAR NAV PC EN MÓVIL */
-nav {
-display: none !important;
-}
-}
 
 
 
