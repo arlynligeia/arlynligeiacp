@@ -593,7 +593,7 @@ transform: translateX(-100%);
 @media (max-width: 768px) {
 .caorusel-container-carousel-mobile {
 position: relative;
-width: 100%;
+width: 90%;
 height: 500px;
 box-sizing: border-box;   
 overflow: hidden;  
@@ -601,6 +601,7 @@ display: flex;
 justify-content: center;
 align-items: center;   
 background: #000000 !important;
+margin: 30px auto;   
 }
 .caorusel-container-carousel-image-mobile {
 position: absolute;  
@@ -618,7 +619,7 @@ opacity: 1;
 .caorusel-container-marquee-mobile {
 width: 100%;
 box-sizing: border-box;  
-background: #320046 !important;
+background: #3f00a8 !important;
 padding: 10px;
 overflow: hidden;
 white-space: nowrap; 
