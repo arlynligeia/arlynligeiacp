@@ -522,9 +522,8 @@ overflow-wrap: break-word;
 .home-container-mobile { display: block; }
 }
 
-
 /* ======================================
-    HOME CARRUSEL PC
+    CARRUSEL PC
 ====================================== */
 .caorusel-container {
 width: 800px;
@@ -560,7 +559,7 @@ opacity: 1;
 .caorusel-container-marquee {
 width: 100%;
 box-sizing: border-box;  
-background: #320046 !important;
+background: #3f00a8 !important;
 padding: 20px;
 overflow: hidden;
 white-space: nowrap; 
@@ -586,6 +585,8 @@ transform: translateX(0);
 transform: translateX(-100%);
 }
 }
+.caorusel-container { display: flex; }
+.caurosel-container-mobile { display: none; } 
 
 
 
