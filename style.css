@@ -450,6 +450,118 @@ display: flex !important;
 
 
 
+/* ======================================
+   HEADER MÓVIL
+====================================== */
+@media (max-width: 768px) {
+/* Ocultar el header PC en móvil */
+.site-container {
+display: none !important;
+}
+
+/* Mostrar contenedor móvil */
+.site-container-mobile {
+display: block !important;
+position: relative;
+width: 100%;
+box-sizing: border-box;
+padding: 20px 15px 10px 15px;
+}
+
+/* TÍTULO GRANDE MÓVIL - SOLO EN HOME */
+.site-title-mobile {
+font-family: 'Bebas Neue', cursive;
+font-size: 10rem;
+color: #ff00a9 !important;
+text-align: center;
+font-weight: 400;
+line-height: 1;
+margin: 0;
+padding: 80px 0 20px 0;
+display: block;
+position: relative;
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#ff00a9, #ff00a9);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+/* OCULTAR TÍTULO GRANDE EN SECCIONES QUE NO SEAN HOME */
+body:not(.home-page) .site-title-mobile {
+display: none !important;
+}
+
+/* HEADER MÓVIL CON TÍTULO PEQUEÑO */
+.header-content-mobile {
+display: none; /* Oculto por defecto */
+align-items: center;
+justify-content: flex-start;
+padding: 10px 0;
+width: 100%;
+box-sizing: border-box;
+}
+
+/* MOSTRAR HEADER MÓVIL EN SECCIONES QUE NO SEAN HOME */
+body:not(.home-page) .header-content-mobile {
+display: flex !important;
+}
+
+/* TÍTULO PEQUEÑO MÓVIL - UNA SOLA FILA */
+.site-title-header-mobile {
+font-family: 'Bebas Neue', cursive;
+font-size: 2rem;
+color: #00ffff !important;
+font-weight: 400;
+margin: 0;
+padding: 0;
+letter-spacing: 2px;
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#00ffff, #00ffff);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+display: block;
+}
+
+/* BOTÓN HAMBURGUESA SIEMPRE VISIBLE */
+.menu-mobile {
+display: block !important;
+position: fixed;
+top: 15px;
+right: 15px;
+z-index: 1000;
+}
+
+/* OCULTAR NAV PC EN MÓVIL */
+nav {
+display: none !important;
+}
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
