@@ -1159,12 +1159,27 @@ align-items: center;
 }
 .footer-brand-name {
 font-family: 'Bebas Neue', cursive;
-font-size: 2.5rem;
+font-size: 3rem;
 color: #ff00a9 !important;
 text-decoration: none;
 text-align: center;
 margin: 0 0 10px 0;
+display: inline-block;
+position: relative;
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#ff00a9, #ff00a9);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
 }
+
 .footer-brand-allrightreserved {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
@@ -1225,7 +1240,7 @@ margin: 0 0 10px 0;
 .footer-socialmedia-icon {
 width: 25px;
 height: 25px;
-color: #FF66CC !important;
+color: #ff00a9 !important;
 transition: all 0.3s ease;
 }
 .footer-socialmedia-icon:hover {
