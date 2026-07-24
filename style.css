@@ -388,13 +388,26 @@ background-clip: text;
 .header-content {
 display: flex;
 align-items: center;
-justify-content: space-between;
 width: 100%;
 max-width: 1400px;
 margin: 0 auto;
 padding: 10px 20px;
 box-sizing: border-box;
 }
+
+/* En HOME: menú centrado */
+body.home-page .header-content {
+justify-content: center;
+}
+
+/* En el resto de secciones: menú al lado del título */
+body:not(.home-page) .header-content {
+justify-content: space-between;
+}
+
+
+
+
 
 /* ======================================
    TÍTULO PEQUEÑO EN EL HEADER (2 FILAS)
