@@ -250,7 +250,7 @@ width: 100%;
 height: 100%;
 top: 0;
 left: 0;
-background: #320046 !important;
+background: #2a0070 !important;
 display: none;
 }
 .menu-mobile-hamburger-overlay.active {
@@ -269,7 +269,7 @@ align-items: center;
 /* Elementos del menú - SOLO TEXTO */
 .menu-mobile-hamburger-overlay li {
 text-align: center;
-border-bottom: 1px solid #FF66CC !important;
+border-bottom: 1px solid #ff00a9 !important;
 padding: 12px 0;
 }
 .menu-mobile-hamburger-overlay li:last-child {
