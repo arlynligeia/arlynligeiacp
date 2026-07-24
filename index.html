@@ -28,6 +28,12 @@
   
 <div class="site-container">
   
+<div class="header-content">
+<div class="header-title">
+<h1 class="site-title-header">ARLYN</h1>
+<h1 class="site-title-header">LIGEIA</h1>
+</div>
+  
   
 <nav>
   
@@ -606,6 +612,44 @@ allowfullscreen></iframe>
 
 
 <!-- SCRIPS -->   
+
+<!-- SCRIPS: CONTROL DE TÍTULOS -->   
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Función para actualizar el estado del título
+function updateTitleVisibility() {
+const currentHash = window.location.hash || '#home';
+const isHome = currentHash === '#home' || currentHash === '';
+const body = document.body;
+const homeTitle = document.getElementById('home-title');
+if (isHome) {
+body.classList.add('home-page');
+if (homeTitle) homeTitle.style.display = 'block';
+} else {
+body.classList.remove('home-page');
+if (homeTitle) homeTitle.style.display = 'none';
+}
+}
+// Escuchar cambios en el hash
+window.addEventListener('hashchange', updateTitleVisibility);
+// Escuchar clics en los botones del menú
+document.querySelectorAll('.menu-button, .submenu-button').forEach(button => {
+button.addEventListener('click', function(e) {
+setTimeout(updateTitleVisibility, 100);
+});
+});
+// Inicializar
+updateTitleVisibility();
+});
+</script>
+<!-- FIN SCRIPS: CONTROL DE TÍTULOS -->
+
+
+
+
+
+
+  
 
 <!-- NAVEGACIÓN -->  
 
