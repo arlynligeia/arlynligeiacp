@@ -377,6 +377,8 @@ background-clip: text;
 .site-title-mobile { display: block; }
 }
 
+
+
 /* ======================================
    HOME
 ====================================== */
@@ -460,7 +462,6 @@ margin-bottom: 0px;
 /* CONTROL */
 .home-container { display:block ; }
 .home-container-mobile { display: none; }  
-
 /* ======================================
    MOVIL RESPONSIVE: HOME
 ====================================== */
@@ -521,6 +522,8 @@ overflow-wrap: break-word;
 .home-container { display: none; }
 .home-container-mobile { display: block; }
 }
+
+
 
 /* ======================================
     CARRUSEL PC
@@ -655,6 +658,8 @@ transform: translateX(-100%);
 .caorusel-container { display: none; }
 .caorusel-container-mobile { display: flex; }
 }
+
+
 
 /* ======================================
    SOCIAL MEDIA CONTENT
@@ -920,6 +925,208 @@ margin: 0 0 10px 0;
 .socialmediacontent-container-mobile { display: block; }
 }
 
+
+
+/* ======================================
+   YOUTUBE HIGHLIGHT
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.youtubehighlight-container {
+position: relative;
+width: 800px;
+background: #3f00a8 !important;
+border-radius: 20px;
+margin: 40px auto;   
+padding: 30px; 
+}
+.youtubehighlight-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+background: #2a0070 !important;
+border-radius: 20px 20px 0 0;
+height: 90px;
+}
+/* TÍTULO Y BOTÓN */
+.youtubehighlight-header {
+position: relative;
+z-index: 2;
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin: 0 0 16px 0;
+}
+/* TÍTULO */
+.youtubehighlight-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #ff00a9 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0; 
+}
+.youtubehighlight-title a {
+color: #ff00a9 !important;
+text-decoration: none;
+}
+/* BOTÓN: FOLLOW */
+.youtubehighlight-button-follow {
+z-index: 2;
+display: inline-block;
+background-color: #ff00a9 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+font-weight: bold;
+margin: 0 0 16px 0;    
+padding: 10px 20px; 
+border: none;
+cursor: pointer; 
+transition: transform 0.3s ease, background-color 0.3s ease;  
+}
+.youtubehighlight-button-follow:hover {
+transform: scale(1.05);
+}
+/* CONTENEDOR: COLUMNAS */
+.youtubehighlight-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 2 */
+.youtubehighlight-columns-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-auto-rows: 250px;
+gap: 20px;
+margin: 0px; 
+}
+/* CONTENEDOR: VIDEO */
+.youtubehighlight-columns-grid-video {
+position: relative;
+overflow: hidden;
+margin: 0px; 
+}
+.youtubehighlight-columns-grid-video iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 0px;
+border: none;
+}
+/* CONTROL */
+.youtubehighlight-container { display: block; }
+.youtubehighlight-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: YOUTUBE HIGHLIGHT
+====================================== */
+@media (max-width: 768px) {
+.youtubehighlight-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3f00a8 !important;
+border-radius: 20px;
+margin: 30px auto;
+padding: 20px;
+}
+ .youtubehighlight-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background: #2a0070 !important;
+border-radius: 20px 20px 0 0;
+}
+.youtubehighlight-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #ff00a9 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.youtubehighlight-title-mobile a {
+color: #ff00a9!important;
+text-decoration: none;
+}
+/* CONTENEDOR: BOTÓN FOLLOW */
+.youtubehighlight-button-mobile {
+width: 100%;
+box-sizing: border-box;
+display: flex;
+justify-content: center;
+}
+.youtubehighlight-button-follow-mobile {
+display: inline-block;
+background: #ff00a9 !important;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+font-weight: bold;   
+margin: 0 0 10px 0;    
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.youtubehighlight-button-follow-mobile:hover {
+transform: scale(1.05);
+}
+/* CONTENEDOR: VIDEOS */
+.youtubehighlight-content-mobile {
+width: 100%;
+box-sizing: border-box;
+display: block;
+margin: 0px;
+}
+.youtubehighlight-content-video-mobile {
+position: relative;
+width: 100%;
+height: 200px;
+overflow: hidden;  
+margin: 0 0 10px 0;
+}
+.youtubehighlight-content-video-mobile:last-child {
+margin-bottom: 0PX;
+}
+.youtubehighlight-content-video-mobile iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 0px;
+border: none;
+}
+/* CONTROL */
+.youtubehighlight-container { display: none; }
+.youtubehighlight-container-mobile { display: block; }
+}
 
 
 
