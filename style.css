@@ -298,14 +298,16 @@ display: none !important;
 }
 }
 
+
+
 /* ======================================
    CONTENEDOR DEL TÍTULO PRINCIPAL
 ====================================== */
 .site-title-container {
 width: 100%;
-margin: 40px auto;      
-padding: 180px 20px 30px 20px;
 box-sizing: border-box;
+margin: 40px auto;      
+padding: 190px 20px 30px 20px;
 }
 /* ======================================
    TÍTULO PRINCIPAL (DEBAJO DEL MENÚ)
@@ -338,7 +340,6 @@ background-clip: text;
 .site-container-mobile { display: none; }
 .site-title { display: block; }
 .site-title-mobile { display: none; }
-
 /* ======================================
    TÍTULO DE LA PÁGINA MÓVIL
 ====================================== */
@@ -389,7 +390,7 @@ background: transparent !important;
 box-sizing: border-box;
 border-radius: 0px;
 margin: 40px auto;
-padding: 30px;
+padding: 0px;
 }
 /* CONTENEDOR: COLUMNAS */
 .home-columns {
@@ -473,7 +474,7 @@ box-sizing: border-box;
 background: transparent !important;
 border-radius: 0px;
 margin: 30px auto;
-padding: 20px;
+padding: 0px;
 }
 /* CONTENEDOR: IMAGEN */
 .home-container-image-mobile {
