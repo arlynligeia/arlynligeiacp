@@ -341,8 +341,8 @@ background-clip: text;
 ====================================== */
 @media (max-width: 768px) {
 .site-title-container {
-margin: 20px auto;
-padding: 80px 20px 30px 20px;
+margin: 30px auto;
+padding: 150px 20px 20px 20px;
 }
 
 .site-title-mobile {
