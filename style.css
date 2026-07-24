@@ -342,11 +342,11 @@ background-clip: text;
 @media (max-width: 768px) {
 .site-title-container {
 margin: 30px auto;
-padding: 150px 20px 20px 20px;
+padding: 170px 20px 20px 20px;
 }
 .site-title-mobile {
 font-family: 'Bebas Neue', cursive;
-font-size: 12rem; 
+font-size: 10rem; 
 color: #ff00a9 !important;
 text-align: center;
 font-weight: 400;
