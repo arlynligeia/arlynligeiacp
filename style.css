@@ -384,6 +384,7 @@ background-clip: text;
 position: relative;
 width: 800px;
 background: transparent !important;
+box-sizing: border-box;
 border-radius: 0px;
 margin: 40px auto;
 padding: 30px;
@@ -398,6 +399,7 @@ box-sizing: border-box;
 .home-columns-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
+box-sizing: border-box;
 gap: 0px;
 margin: 0px;
 }
