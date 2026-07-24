@@ -127,8 +127,9 @@ background: transparent !important;
 margin: 0;
 padding: 20px 15px 10px 15px;
 }
+
 /* TÍTULO GRANDE MÓVIL (SOLO EN HOME) */
-.site-container-title-mobile {
+.site-container-wrapper-title-mobile {
 font-family: 'Bebas Neue', cursive;
 font-size: 10rem;
 color: #ff00a9 !important;
@@ -153,9 +154,8 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 }
 
-   
 /* CONTENEDOR TÍTULO PEQUEÑO MÓVIL */
-.site-container-header-mobile {
+.site-container-wrapper-header-mobile {
 display: flex;
 align-items: center;
 justify-content: flex-start;
@@ -163,8 +163,9 @@ padding: 0;
 width: 100%;
 box-sizing: border-box;
 }
-   /* TÍTULO PEQUEÑO MÓVIL (UNA SOLA FILA) */
-.site-container-header-title-mobile {
+
+/* TÍTULO PEQUEÑO MÓVIL (UNA SOLA FILA) */
+.site-container-wrapper-header-title-mobile {
 font-family: 'Bebas Neue', cursive;
 font-size: 2.5rem;
 color: #00ffff !important;
@@ -186,28 +187,27 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 display: block;
 }
+
 /* OCULTAR PC Y MOSTRAR MÓVIL */
 .site-container { display: none; }
 .site-container-mobile { display: block; }   
 
-   
 /* OCULTAR TÍTULO GRANDE EN SECCIONES QUE NO SEAN HOME */
-body:not(.home-page) .site-container-title-mobile {
+body:not(.home-page) .site-container-wrapper-title-mobile {
 display: none !important;
 }
 
 /* MOSTRAR TÍTULO GRANDE SOLO EN HOME */
-body.home-page .site-container-title-mobile {
+body.home-page .site-container-wrapper-title-mobile {
 display: block !important;
 }
 
 /* OCULTAR TÍTULO PEQUEÑO EN HOME */
-body.home-page .site-container-header-mobile {
+body.home-page .site-container-wrapper-header-mobile {
 display: none !important;
 }
-
 /* MOSTRAR TÍTULO PEQUEÑO EN EL RESTO DE SECCIONES */
-body:not(.home-page) .site-container-header-mobile {
+body:not(.home-page) .site-container-wrapper-header-mobile {
 display: flex !important;
 }
 }
