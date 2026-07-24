@@ -345,7 +345,7 @@ background-clip: text;
 @media (max-width: 768px) {
 .site-title-container {
 margin: 30px auto;
-padding: 200px 20px 20px 20px;
+padding: 230px 20px 20px 20px;
 }
 .site-title-mobile {
 font-family: 'Bebas Neue', cursive;
@@ -478,7 +478,7 @@ padding: 20px;
 .home-container-image-mobile {
 width: 100%;
 min-width: 0;
-margin: 0 0 20px 0;
+margin: 0px;
 }
 .home-container-image-poster-mobile {
 width: 100%;
