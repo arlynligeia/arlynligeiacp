@@ -433,7 +433,7 @@ padding: 40px;
 }
 .home-columns-grid-information-description-title {
 font-family: 'Bebas Neue', cursive;
-font-size: 2rem;
+font-size: 2.5rem;
 color: #00FF00 !important;
 text-decoration: none;
 text-align: center;   
@@ -496,7 +496,7 @@ padding: 30px;
 }
 .home-information-title-mobile {
 font-family: 'Bebas Neue', cursive;
-font-size: 1.5rem;
+font-size: 2rem;
 color: #00FF00 !important;
 text-align: center;
 font-weight: 400;
@@ -572,8 +572,8 @@ content: "Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a
 display: inline-block;
 padding-left: 100%;
 animation: marquee 30s linear infinite;
-font-family: 'Fuggles', cursive;
-font-size: 3rem;
+font-family: 'Bebas Neue', cursive;
+font-size: 2rem;
 color: #00FF00 !important;
 }
 /* ANIMACIÓN */
