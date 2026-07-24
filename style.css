@@ -392,6 +392,7 @@ padding: 30px;
 .home-columns {
 position: relative;
 z-index: 2;
+box-sizing: border-box;
 }
 /* CONTENEDOR: GRID DE 2 */
 .home-columns-grid {
