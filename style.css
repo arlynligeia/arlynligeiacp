@@ -340,7 +340,6 @@ background-clip: text;
 .site-container-mobile { display: none; }
 .site-title { display: block; }
 .site-title-mobile { display: none; }
-
 /* ======================================
    TÍTULO DE LA PÁGINA MÓVIL
 ====================================== */
@@ -379,9 +378,6 @@ background-clip: text;
 .site-title-mobile { display: block; }
 }
 
-
-
-
 /* ======================================
    HEADER: CONTENEDOR FLEX PARA TÍTULO Y MENÚ
 ====================================== */
@@ -394,20 +390,14 @@ margin: 0 auto;
 padding: 10px 20px;
 box-sizing: border-box;
 }
-
 /* En HOME: menú centrado */
 body.home-page .header-content {
 justify-content: center;
 }
-
 /* En el resto de secciones: menú al lado del título */
 body:not(.home-page) .header-content {
 justify-content: center;
 }
-
-
-
-
 
 /* ======================================
    TÍTULO PEQUEÑO EN EL HEADER (2 FILAS)
@@ -420,7 +410,7 @@ margin-right: 30px;
 }
 .site-title-header {
 font-family: 'Bebas Neue', cursive;
-font-size: 3rem;
+font-size: 3.5rem;
 color: #00ffff !important;
 font-weight: 400;
 margin: 0;
