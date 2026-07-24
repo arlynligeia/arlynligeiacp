@@ -427,6 +427,7 @@ box-sizing: border-box;
 width: 100%;   
 min-width: 0;
 background: #3f00a8 !important;
+box-sizing: border-box;
 margin: 0px;
 padding: 40px;   
 }
