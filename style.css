@@ -400,40 +400,6 @@ grid-template-columns: repeat(2, 1fr);
 gap: 0px;
 margin: 0px;
 }
-/* CONTENEDOR: INFORMACIÓN */
-.home-columns-grid-information {
-width: 100%;   
-min-width: 0;
-background: #3f00a8 !important;
-margin: 0px;
-padding: 40px 40px;   
-}
-.home-columns-grid-information-title {
-font-family: 'Orbitron', sans-serif;
-font-size: 1rem;
-color: #00FF00 !important;
-text-decoration: none;
-text-align: justify;   
-line-height: 1.5;
-margin: 0 0 10px 0;
-word-break: break-word;
-overflow-wrap: break-word;
-}
-.home-columns-grid-information-text,
-.home-columns-grid-information-text-end {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: #00FF00 !important;
-text-decoration: none;
-text-align: justify;   
-line-height: 1.5;
-margin: 0 0 10px 0;
-word-break: break-word;
-overflow-wrap: break-word;
-}
-.home-columns-grid-information-text-end {
-margin-bottom: 0px;
-}
 /* CONTENEDOR: IMAGEN */
 .home-columns-grid-image {
 width: 100%;
@@ -445,6 +411,47 @@ width: 100%;
 height: auto;
 display: block;
 border-radius: 0px;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.home-columns-grid-information {
+width: 100%;   
+min-width: 0;
+background: #3f00a8 !important;
+margin: 0px;
+padding: 0px;   
+}
+.home-columns-grid-information-description {
+width: 100%;   
+min-width: 0;
+background: #3f00a8 !important;
+margin: 0px;
+padding: 40px;   
+}
+.home-columns-grid-information-description-title {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+word-break: break-word;
+overflow-wrap: break-word;
+}
+.home-columns-grid-information-description-text,
+.home-columns-grid-information-description-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+word-break: break-word;
+overflow-wrap: break-word;
+}
+.home-columns-grid-information-description-end {
+margin-bottom: 0px;
 }
 /* CONTROL */
 .home-container { display:block ; }
