@@ -591,9 +591,16 @@ transform: translateX(-100%);
    MOVIL RESPONSIVE: CARRUSEL
 ====================================== */
 @media (max-width: 768px) {
+.caorusel-container-mobile {
+width: 90%;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+margin: 30px auto;
+}   
 .caorusel-container-carousel-mobile {
 position: relative;
-width: 90%;
+width: 100%;
 height: 500px;
 box-sizing: border-box;   
 overflow: hidden;  
@@ -601,7 +608,7 @@ display: flex;
 justify-content: center;
 align-items: center;   
 background: #000000 !important;
-margin: 30px auto;   
+margin: 0px auto;   
 }
 .caorusel-container-carousel-image-mobile {
 position: absolute;  
