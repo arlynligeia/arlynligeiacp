@@ -377,6 +377,73 @@ background-clip: text;
 .site-title-mobile { display: block; }
 }
 
+/* ======================================
+    HOME PC
+====================================== */
+.home-container {
+width: 100%;
+max-width: 1400px;
+box-sizing: border-box;
+margin: 100px auto 40px auto;
+padding: 0 20px;
+}
+.home-content {
+display: flex;
+align-items: stretch;
+gap: 0;
+min-height: 80vh;
+}
+/* POSTER IZQUIERDA */
+.home-poster {
+flex: 0 0 40%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.home-poster-image {
+width: 100%;
+height: auto;
+max-height: 80vh;
+object-fit: contain;
+display: block;
+}
+/* TEXTO DERECHA */
+.home-text-box {
+flex: 1;
+background: #3f00a8 !important;
+padding: 60px 50px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+}
+.home-title {
+font-family: 'Bebas Neue', cursive;
+font-size: 4rem;
+color: #00ff00 !important;
+text-align: left;
+font-weight: 400;
+line-height: 1.1;
+margin: 0 0 30px 0;
+padding: 0;
+letter-spacing: 2px;
+}
+.home-description {
+font-family: 'Rajdhani', sans-serif;
+font-size: 1.2rem;
+color: #00ff00 !important;
+text-align: left;
+line-height: 1.6;
+margin: 0;
+padding: 0;
+font-weight: 400;
+}
+/* CONTROL */
+.home-container { display:block ; }
+.home-container-mobile { display: none; }  
+.home-content { display: block; }  
+.home-content-mobile { display: none; }
+
 
 
 
