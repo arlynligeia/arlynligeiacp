@@ -384,7 +384,7 @@ background-clip: text;
 position: relative;
 width: 800px;
 background: transparent !important;
-border-radius: 20px;
+border-radius: 0px;
 margin: 40px auto;
 padding: 30px;
 }
@@ -398,23 +398,6 @@ width: 100%;
 height: 90px;
 background: transparent !important;
 border-radius: 20px 20px 0 0;
-}
-.home-title {
-position: relative;
-z-index: 2;
-display: block;
-font-family: 'Orbitron', sans-serif;
-font-size: 2.5rem;
-color: #FF66CC !important;
-text-decoration: none;
-text-transform: uppercase;
-text-align: left;   
-line-height: 1.6;
-margin: 0 0 16px 0;
-}
-.home-title a {
-color: #FF66CC !important;
-text-decoration: none;
 }
 /* CONTENEDOR: COLUMNAS */
 .home-columns {
@@ -430,10 +413,12 @@ margin: 0px;
 }
 /* CONTENEDOR: INFORMACIÓN */
 .home-columns-grid-information {
-width: 100%;
+width: 100%;   
 min-width: 0;
+background: #3f00a8 !important;
 margin: 0px;
 }
+.home-columns-grid-information-tittle,
 .home-columns-grid-information-text,
 .home-columns-grid-information-text-end {
 font-family: 'Share Tech Mono', monospace;
