@@ -664,6 +664,49 @@ updateTitleVisibility();
 
 
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Función para actualizar el estado del título en móvil
+function updateMobileTitleVisibility() {
+const currentHash = window.location.hash || '#home';
+const isHome = currentHash === '#home' || currentHash === '#home-mobile' || currentHash === '';
+const body = document.body;
+const mobileTitle = document.querySelector('.site-title-mobile');
+const mobileHeader = document.querySelector('.header-content-mobile');
+
+if (isHome) {
+body.classList.add('home-page');
+if (mobileTitle) mobileTitle.style.display = 'block';
+if (mobileHeader) mobileHeader.style.display = 'none';
+} else {
+body.classList.remove('home-page');
+if (mobileTitle) mobileTitle.style.display = 'none';
+if (mobileHeader) mobileHeader.style.display = 'flex';
+}
+}
+
+// Escuchar cambios en el hash
+window.addEventListener('hashchange', updateMobileTitleVisibility);
+
+// Escuchar clics en los botones del menú móvil
+document.querySelectorAll('.menu-mobile-hamburger-overlay a').forEach(button => {
+button.addEventListener('click', function(e) {
+setTimeout(updateMobileTitleVisibility, 150);
+});
+});
+
+// Inicializar
+updateMobileTitleVisibility();
+});
+</script>
+
+
+
+
+
+
+
+
 
 
 
