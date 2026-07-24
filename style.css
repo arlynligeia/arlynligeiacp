@@ -200,6 +200,32 @@ line-height: 1;
 margin: 0;
 padding: 0;
 display: block;
-text-shadow: 0 0 30px rgba(255, 102, 204, 0.5);
-letter-spacing: 2px;
+   
+text-shadow: 
+    0 0 10px #ff00a9,
+    0 0 20px #ff00a9,
+    0 0 40px #ff00a9,
+    0 0 80px #ff00a9;
+letter-spacing: 4px;
+animation: glitch 3s infinite;
 }
+
+@keyframes glitch {
+    0%, 100% { transform: skew(0deg, 0deg); opacity: 1; }
+    95% { transform: skew(0deg, 0deg); opacity: 1; }
+    96% { transform: skew(2deg, 0deg); opacity: 0.8; }
+    97% { transform: skew(-2deg, 0deg); opacity: 0.9; }
+    98% { transform: skew(0deg, 0deg); opacity: 1; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
