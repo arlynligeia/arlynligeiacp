@@ -378,6 +378,75 @@ background-clip: text;
 .site-title { display: none; }
 .site-title-mobile { display: block; }
 }
+/* ======================================
+   HEADER: CONTENEDOR FLEX PARA TÍTULO Y MENÚ
+====================================== */
+.header-content {
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 100%;
+max-width: 1400px;
+margin: 0 auto;
+padding: 10px 20px;
+box-sizing: border-box;
+}
+
+/* ======================================
+   TÍTULO PEQUEÑO EN EL HEADER (2 FILAS)
+====================================== */
+.header-title {
+display: flex;
+flex-direction: column;
+line-height: 1;
+margin-right: 30px;
+}
+
+.site-title-header {
+font-family: 'Bebas Neue', cursive;
+font-size: 2.5rem;
+color: #ff00a9 !important;
+font-weight: 400;
+margin: 0;
+padding: 0;
+letter-spacing: 2px;
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#ff00a9, #ff00a9);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+/* ======================================
+   CONTROL: OCULTAR/MOSTRAR TÍTULOS
+====================================== */
+.header-title { display: flex; }
+.site-title-container { display: block; }
+
+/* OCULTAR TÍTULO GRANDE EN SECCIONES QUE NO SEAN HOME */
+body:not(.home-page) .site-title-container {
+display: none;
+}
+
+/* MOSTRAR TÍTULO PEQUEÑO EN EL HEADER SIEMPRE */
+.site-title-header { display: block; }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
