@@ -344,10 +344,9 @@ background-clip: text;
 margin: 30px auto;
 padding: 150px 20px 20px 20px;
 }
-
 .site-title-mobile {
 font-family: 'Bebas Neue', cursive;
-font-size: 6rem; 
+font-size: 12rem; 
 color: #ff00a9 !important;
 text-align: center;
 font-weight: 400;
