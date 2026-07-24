@@ -531,7 +531,7 @@ max-width: 100%;
 box-sizing: border-box;
 display: flex;
 flex-direction: column;
-margin: 0 auto;
+margin: 30px auto;
 }
 .caorusel-container-carousel {
 position: relative;
