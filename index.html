@@ -115,6 +115,16 @@
 <h1 class="site-container-background-title">Arlyn Ligeia</h1>
 </div>
 
+<!-- CONTENEDOR MÓVIL -->
+<div class="site-container-mobile">
+
+<!-- TÍTULO GRANDE MÓVIL (SOLO EN HOME) -->
+<h1 class="site-container-title-mobile">Arlyn<br>Ligeia</h1>
+
+<!-- TÍTULO PEQUEÑO MÓVIL (SOLO EN OTRAS SECCIONES) -->
+<div class="site-container-header-mobile">
+<h1 class="site-container-header-title-mobile">ARLYN LIGEIA</h1>
+</div>
 
 
 
@@ -260,7 +270,9 @@
 
 
 
-<!-- SCRIPS -->   
+<!-- SCRIPS -->
+
+<!-- TÍTULOS --> 
 
 <!-- SCRIPS: CONTROL DE TÍTULOS PC -->   
 <script>
@@ -293,6 +305,34 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- FIN SCRIPS: CONTROL DE TÍTULOS PC -->
 
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    function updateMobileTitleVisibility() {
+        var currentHash = window.location.hash || '#home-mobile';
+        var homeSections = ['#home-mobile', '#home-socialmediacontent-mobile', '#home-youtubehighlight-mobile', '#home-sociallinks-mobile'];
+        var isHome = homeSections.indexOf(currentHash) !== -1 || currentHash === '#home-mobile' || currentHash === '';
+        var body = document.body;
+
+        if (isHome) {
+            body.classList.add('home-page');
+        } else {
+            body.classList.remove('home-page');
+        }
+    }
+
+    window.addEventListener('hashchange', updateMobileTitleVisibility);
+
+    var menuButtons = document.querySelectorAll('.menu-mobile-hamburger-overlay a');
+    for (var i = 0; i < menuButtons.length; i++) {
+        menuButtons[i].addEventListener('click', function() {
+            setTimeout(updateMobileTitleVisibility, 150);
+        });
+    }
+
+    updateMobileTitleVisibility();
+});
+</script>
+
 
 
 
@@ -308,6 +348,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
   
 
+
+
+
+
+
+
+
+
+  
 <!-- NAVEGACIÓN -->  
 
 <!-- SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
