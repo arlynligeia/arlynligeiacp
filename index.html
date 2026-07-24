@@ -1,49 +1,38 @@
 <!DOCTYPE html>
-
 <html lang="es">
-  
 <head>
-  
 <meta charset="UTF-8">
-  
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <!-- TÍTULO DEL SITIO WEB -->
 <title>ARLYN LIGEIA</title>
-  
 <!-- FUENTES -->
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Fuggles&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet">
-
 <!-- CSS -->
 <link rel="stylesheet" href="style.css">
-  
 </head>
-  
 <body>
 
 <header>
-  
 <div class="site-container">
-  
-<div class="header-content">
-<div class="header-title">
-<h1 class="site-title-header">ARLYN</h1>
-<h1 class="site-title-header">LIGEIA</h1>
+
+<!-- TÍTULO PEQUEÑO PC -->
+<div class="site-container-header">
+<div class="site-container-header-title">
+<h1>ARLYN</h1>
+<h1>LIGEIA</h1>
 </div>
-  
-  
+
 <nav>
-  
+<!-- MENÚ PC -->
 <ul class="menu" id="menu">
-  
 <!-- HOME -->
 <li>
 <a class="menu-button" href="#home" data-section="home">Home</a>
-<ul class="submenu">
+<ul class="submenu">  
 <li><a class="submenu-button" href="#home-socialmediacontent">Social Media Content</a></li>  
 <li><a class="submenu-button" href="#home-youtubehighlight">Youtube Highlight</a></li>
 <li><a class="submenu-button" href="#home-sociallinks">Social Links</a></li>
@@ -116,17 +105,25 @@
 </ul>
 </li>
 </ul>
-  
 </nav>
-  
-</div>  
-
+</div>
+</div>
 </header>
 
-<div class="site-title-container">
-<h1 class="site-title">Arlyn Ligeia</h1>
+<!-- TÍTULO GRANDE PC -->
+<div class="site-container-background">
+<h1 class="site-container-background-title">Arlyn Ligeia</h1>
 </div>
 
+
+
+
+
+
+
+
+
+  
 <!-- MENÚ HAMBURGUESA MOBILE -->
 <div class="menu-mobile">
 <button class="menu-mobile-hamburger-button" id="menu-mobile-hamburger-button">
@@ -150,12 +147,7 @@
 </div>
 </div>
 
-<div class="site-container-mobile">  
-<h1 class="site-title-mobile">Arlyn<br>Ligeia</h1> 
-<!-- HEADER MÓVIL CON TÍTULO PEQUEÑO (SOLO EN OTRAS SECCIONES) -->
-<div class="header-content-mobile">
-<h1 class="site-title-header-mobile">ARLYN LIGEIA</h1>
-</div>
+
 </div>
 
 
@@ -270,74 +262,39 @@
 
 <!-- SCRIPS -->   
 
-<!-- SCRIPS: CONTROL DE TÍTULOS -->   
+<!-- SCRIPS: CONTROL DE TÍTULOS PC -->   
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-// Función para actualizar el estado del título
-function updateTitleVisibility() {
-const currentHash = window.location.hash || '#home';
-const isHome = currentHash === '#home' || currentHash === '';
-const body = document.body;
-const homeTitle = document.getElementById('home-title');
-if (isHome) {
-body.classList.add('home-page');
-if (homeTitle) homeTitle.style.display = 'block';
-} else {
-body.classList.remove('home-page');
-if (homeTitle) homeTitle.style.display = 'none';
-}
-}
-// Escuchar cambios en el hash
-window.addEventListener('hashchange', updateTitleVisibility);
-// Escuchar clics en los botones del menú
-document.querySelectorAll('.menu-button, .submenu-button').forEach(button => {
-button.addEventListener('click', function(e) {
-setTimeout(updateTitleVisibility, 100);
-});
-});
-// Inicializar
-updateTitleVisibility();
-});
-</script>
-<!-- FIN SCRIPS: CONTROL DE TÍTULOS -->
+    function updateTitleVisibility() {
+        var currentHash = window.location.hash || '#home';
+        var homeSections = ['#home', '#home-socialmediacontent', '#home-youtubehighlight', '#home-sociallinks'];
+        var isHome = homeSections.indexOf(currentHash) !== -1 || currentHash === '';
+        var body = document.body;
 
+        if (isHome) {
+            body.classList.add('home-page');
+        } else {
+            body.classList.remove('home-page');
+        }
+    }
 
+    window.addEventListener('hashchange', updateTitleVisibility);
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-// Función para actualizar el estado del título en móvil
-function updateMobileTitleVisibility() {
-const currentHash = window.location.hash || '#home';
-const isHome = currentHash === '#home' || currentHash === '#home-mobile' || currentHash === '';
-const body = document.body;
-const mobileTitle = document.querySelector('.site-title-mobile');
-const mobileHeader = document.querySelector('.header-content-mobile');
+    var menuButtons = document.querySelectorAll('.menu-button, .submenu-button');
+    for (var i = 0; i < menuButtons.length; i++) {
+        menuButtons[i].addEventListener('click', function() {
+            setTimeout(updateTitleVisibility, 100);
+        });
+    }
 
-if (isHome) {
-body.classList.add('home-page');
-if (mobileTitle) mobileTitle.style.display = 'block';
-if (mobileHeader) mobileHeader.style.display = 'none';
-} else {
-body.classList.remove('home-page');
-if (mobileTitle) mobileTitle.style.display = 'none';
-if (mobileHeader) mobileHeader.style.display = 'flex';
-}
-}
-
-// Escuchar cambios en el hash
-window.addEventListener('hashchange', updateMobileTitleVisibility);
-
-// Escuchar clics en los botones del menú móvil
-document.querySelectorAll('.menu-mobile-hamburger-overlay a').forEach(button => {
-button.addEventListener('click', function(e) {
-setTimeout(updateMobileTitleVisibility, 150);
-});
-});
-
-// Inicializar
-updateMobileTitleVisibility();
+    updateTitleVisibility();
 });
 </script>
+<!-- FIN SCRIPS: CONTROL DE TÍTULOS PC -->
+
+
+
+
 
 
 
