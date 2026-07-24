@@ -307,7 +307,6 @@ margin: 40px auto;
 padding: 180px 20px 30px 20px;
 box-sizing: border-box;
 }
-
 /* ======================================
    TÍTULO PRINCIPAL (DEBAJO DEL MENÚ)
 ====================================== */
@@ -335,6 +334,10 @@ linear-gradient(#ff00a9, #ff00a9);
 background-clip: text;
 -webkit-text-fill-color: transparent;
 }
+.site-container { display: block; }
+.site-container-mobile { display: none; }
+.site-title { display: block; }
+.site-title-mobile { display: none; }
 
 /* ======================================
    TÍTULO DE LA PÁGINA MÓVIL
@@ -368,7 +371,6 @@ linear-gradient(#ff00a9, #ff00a9);
 background-clip: text;
 -webkit-text-fill-color: transparent;
 }
-
 .site-container { display: none; }
 .site-container-mobile { display: block; }   
 .site-title { display: none; }
