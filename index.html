@@ -167,6 +167,19 @@
 </main>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 <!-- FOOTER PC -->
 <footer class="footer">
@@ -277,9 +290,15 @@
 <!-- SCRIPS: CONTROL DE TÍTULOS PC -->   
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    function updateTitleVisibility() {
+    function updateAllTitles() {
         var currentHash = window.location.hash || '#home';
-        var homeSections = ['#home', '#home-socialmediacontent', '#home-youtubehighlight', '#home-sociallinks'];
+        
+        // TODAS las secciones que pertenecen a HOME (PC y móvil)
+        var homeSections = [
+            '#home', '#home-socialmediacontent', '#home-youtubehighlight', '#home-sociallinks',
+            '#home-mobile', '#home-socialmediacontent-mobile', '#home-youtubehighlight-mobile', '#home-sociallinks-mobile'
+        ];
+        
         var isHome = homeSections.indexOf(currentHash) !== -1 || currentHash === '';
         var body = document.body;
 
@@ -290,46 +309,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    window.addEventListener('hashchange', updateTitleVisibility);
+    window.addEventListener('hashchange', updateAllTitles);
 
+    // Botones PC
     var menuButtons = document.querySelectorAll('.menu-button, .submenu-button');
     for (var i = 0; i < menuButtons.length; i++) {
         menuButtons[i].addEventListener('click', function() {
-            setTimeout(updateTitleVisibility, 100);
+            setTimeout(updateAllTitles, 100);
         });
     }
 
-    updateTitleVisibility();
-});
-</script>
-<!-- FIN SCRIPS: CONTROL DE TÍTULOS PC -->
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    function updateMobileTitleVisibility() {
-        var currentHash = window.location.hash || '#home-mobile';
-        var homeSections = ['#home-mobile', '#home-socialmediacontent-mobile', '#home-youtubehighlight-mobile', '#home-sociallinks-mobile'];
-        var isHome = homeSections.indexOf(currentHash) !== -1 || currentHash === '#home-mobile' || currentHash === '';
-        var body = document.body;
-
-        if (isHome) {
-            body.classList.add('home-page');
-        } else {
-            body.classList.remove('home-page');
-        }
-    }
-
-    window.addEventListener('hashchange', updateMobileTitleVisibility);
-
-    var menuButtons = document.querySelectorAll('.menu-mobile-hamburger-overlay a');
-    for (var i = 0; i < menuButtons.length; i++) {
-        menuButtons[i].addEventListener('click', function() {
-            setTimeout(updateMobileTitleVisibility, 150);
+    // Botones Móvil
+    var mobileButtons = document.querySelectorAll('.menu-mobile-hamburger-overlay a');
+    for (var j = 0; j < mobileButtons.length; j++) {
+        mobileButtons[j].addEventListener('click', function() {
+            setTimeout(updateAllTitles, 150);
         });
     }
 
-    updateMobileTitleVisibility();
+    updateAllTitles();
 });
 </script>
 
@@ -646,6 +644,23 @@ console.log('✅ Menú hamburguesa móvil configurado correctamente');
 </script>
 <!-- FIN SCRIP: MENÚ HAMBURGUESA MÓVIL -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 <!-- SCRIP: CARRUSEL HOME PC-->
 <script>
