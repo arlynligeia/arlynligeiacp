@@ -406,9 +406,19 @@ width: 100%;
 min-width: 0;
 background: #3f00a8 !important;
 margin: 0px;
-padding: 30px 30px;   
+padding: 40px 40px;   
 }
-.home-columns-grid-information-title,
+.home-columns-grid-information-title {
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+word-break: break-word;
+overflow-wrap: break-word;
+}
 .home-columns-grid-information-text,
 .home-columns-grid-information-text-end {
 font-family: 'Share Tech Mono', monospace;
