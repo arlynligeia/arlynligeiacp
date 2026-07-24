@@ -176,45 +176,6 @@ transform: scaleX(1);
 .submenu li:not(:last-child) {
 border-bottom: 1px solid white !important;
 }
-
-/* ======================================
-   CONTENEDOR DEL TÍTULO PRINCIPAL
-====================================== */
-.site-title-container {
-width: 100%;
-margin: 40px auto;      
-padding: 180px 20px 30px 20px;
-box-sizing: border-box;
-}
-
-/* ======================================
-   TÍTULO PRINCIPAL (DEBAJO DEL MENÚ)
-====================================== */
-.site-title {
-font-family: 'Bebas Neue', cursive;
-font-size: 20rem; 
-color: #ff00a9 !important;
-text-align: center;
-font-weight: 400;
-line-height: 1; 
-margin: 0;
-padding: 0;
-display: block;
-position: relative;   
-background: 
-repeating-linear-gradient(
-0deg,
-rgba(0, 0, 0, 0.3) 0px,
-rgba(0, 0, 0, 0.3) 2px,
-transparent 2px,
-transparent 4px
-),
-linear-gradient(#ff00a9, #ff00a9);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-
 /* ======================================
    MENÚ HAMBURGUESA MOVIL
 ====================================== */
@@ -338,33 +299,94 @@ display: none !important;
 }
 
 /* ======================================
+   CONTENEDOR DEL TÍTULO PRINCIPAL
+====================================== */
+.site-title-container {
+width: 100%;
+margin: 40px auto;      
+padding: 180px 20px 30px 20px;
+box-sizing: border-box;
+}
+
+/* ======================================
+   TÍTULO PRINCIPAL (DEBAJO DEL MENÚ)
+====================================== */
+.site-title {
+font-family: 'Bebas Neue', cursive;
+font-size: 20rem; 
+color: #ff00a9 !important;
+text-align: center;
+font-weight: 400;
+line-height: 1; 
+margin: 0;
+padding: 0;
+display: block;
+position: relative;   
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#ff00a9, #ff00a9);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+/* ======================================
    TÍTULO DE LA PÁGINA MÓVIL
 ====================================== */
 @media (max-width: 768px) {
-.site-container-mobile { 
-position: relative;
-top: 0;
-left: 0;  
-width: 100%;
-box-sizing: border-box;
-background: #320046 !important;    
-margin: 0;
-padding: 20px 10px 10px 10px;
+.site-title-container {
+margin: 20px auto;
+padding: 80px 20px 30px 20px;
 }
+
 .site-title-mobile {
-font-family: 'Comforter Brush', cursive;
-font-size: 3rem; 
-color: #FF66CC !important;
-text-align: center; 
-font-weight: 500;
-margin: 0px;
-padding: 0px;
+font-family: 'Bebas Neue', cursive;
+font-size: 6rem; 
+color: #ff00a9 !important;
+text-align: center;
+font-weight: 400;
+line-height: 1; 
+margin: 0;
+padding: 0;
+display: block;
+position: relative;   
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#ff00a9, #ff00a9);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
 }
+
 .site-container { display: none; }
 .site-container-mobile { display: block; }   
 .site-title { display: none; }
 .site-title-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
