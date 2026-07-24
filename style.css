@@ -1318,14 +1318,6 @@ box-shadow:
 /* CONTROL */
 .footer { display: block; }
 .footer-mobile { display: none; }
-
-
-
-
-
-
-
-
 /* ======================================
    MOVIL RESPONSIVE: FOOTER
 ====================================== */
@@ -1345,12 +1337,26 @@ align-items: center;
 }
 .footer-brand-name-mobile {
 font-family: 'Bebas Neue', cursive;
-font-size: 1.5rem;
+font-size: 2rem;
 color: #ff00a9 !important;
 text-decoration: none;
 text-align: center;
-margin: 0 0 10px 0;
-}
+margin: 0 0 5px 0;
+display: inline-block;
+position: relative;
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#ff00a9, #ff00a9);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}   
 .footer-brand-allrightreserved-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 0.8rem;
@@ -1392,7 +1398,7 @@ margin: 0 0 10px 0;
 .footer-socialmedia-icon-mobile {
 width: 20px;
 height: 20px;
-color: #FF66CC !important;
+color: #ff00a9 !important;
 transition: all 0.3s ease;
 }
 .footer-socialmedia-icon-mobile:hover {
