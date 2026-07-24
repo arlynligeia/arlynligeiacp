@@ -119,11 +119,17 @@
 <div class="site-container-mobile">
 
 <!-- TÍTULO GRANDE MÓVIL (SOLO EN HOME) -->
-<h1 class="site-container-title-mobile">Arlyn<br>Ligeia</h1>
+<div class="site-container-wrapper-mobile">
+<h1 class="site-container-wrapper-title-mobile">Arlyn<br>Ligeia</h1>
+</div>
 
 <!-- TÍTULO PEQUEÑO MÓVIL (SOLO EN OTRAS SECCIONES) -->
-<div class="site-container-header-mobile">
-<h1 class="site-container-header-title-mobile">ARLYN LIGEIA</h1>
+<div class="site-container-wrapper-mobile">
+<div class="site-container-wrapper-header-mobile">
+<h1 class="site-container-wrapper-header-title-mobile">ARLYN LIGEIA</h1>
+</div>
+</div>
+  
 </div>
 
 
@@ -292,13 +298,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     function updateAllTitles() {
         var currentHash = window.location.hash || '#home';
-        
-        // TODAS las secciones que pertenecen a HOME (PC y móvil)
         var homeSections = [
             '#home', '#home-socialmediacontent', '#home-youtubehighlight', '#home-sociallinks',
             '#home-mobile', '#home-socialmediacontent-mobile', '#home-youtubehighlight-mobile', '#home-sociallinks-mobile'
         ];
-        
         var isHome = homeSections.indexOf(currentHash) !== -1 || currentHash === '';
         var body = document.body;
 
@@ -330,7 +333,6 @@ document.addEventListener('DOMContentLoaded', function() {
     updateAllTitles();
 });
 </script>
-
 
 
 
