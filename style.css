@@ -587,7 +587,6 @@ transform: translateX(-100%);
 }
 .caorusel-container { display: flex; }
 .caurosel-container-mobile { display: none; } 
-
 /* ======================================
    MOVIL RESPONSIVE: CARRUSEL
 ====================================== */
@@ -643,7 +642,6 @@ transform: translateX(0);
 }
 100% {
 transform: translateX(-100%);
-}
 }
 }
 .caorusel-container { display: none; }
