@@ -1159,7 +1159,7 @@ align-items: center;
 }
 .footer-brand-name {
 font-family: 'Bebas Neue', cursive;
-font-size: 3rem;
+font-size: 5rem;
 color: #ff00a9 !important;
 text-decoration: none;
 text-align: center;
@@ -1179,7 +1179,6 @@ linear-gradient(#ff00a9, #ff00a9);
 background-clip: text;
 -webkit-text-fill-color: transparent;
 }
-
 .footer-brand-allrightreserved {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
