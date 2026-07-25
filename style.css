@@ -238,36 +238,74 @@ border-bottom: 1px solid white !important;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ======================================
+   CONTENEDOR: ENCABEZADO MOBILE
+====================================== */
+@media (max-width: 768px) {
+.site-wrapper-mobile {
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 100%;
+background: transparent !important;
+padding: 10px;
+box-sizing: border-box;
+}
 
 /* ======================================
-   MENÚ HAMBURGUESA MOVIL
+   CONTENEDOR: TÍTULO PEQUEÑO MOBILE
 ====================================== */
-.menu-mobile { display: none; }
-.menu-mobile-hamburger-button {
-position: relative; /* Necesario para el punto LED */
+.site-wrapper-header-mobile {
+position: relative;
+width: auto;  /* CAMBIADO: antes era 100% */
+box-sizing: border-box;
+background: transparent !important;
+margin: 10px;
+padding: 0px;
+}  
+
+.site-wrapper-header-title-mobile {
+font-family: 'Bebas Neue', cursive;
+font-size: 2.5rem;
+color: #00FFFF !important;   
+font-weight: 400;
+margin: 0px;
+padding: 0px;
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#00FFFF, #00FFFF);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}   
+
+/* ======================================
+   CONTENEDOR: MENÚ HAMBURGUESA MOBILE
+====================================== */
+nav {
+display: none !important;
+}
+
+.site-wrapper-menuhamburger-mobile {
+display: flex;
+align-items: center;
+position: fixed;
+top: 15px;
+right: 15px;
+z-index: 1000;
+}
+
+/* ======================================
+   CONTENEDOR: BOTON MENÚ HAMBURGUESA
+====================================== */
+.site-wrapper-menuhamburger-button {
+position: relative;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -292,16 +330,18 @@ box-shadow:
 0 0 5px #00FFFF,
 inset 0 0 5px rgba(0, 255, 255, 0.3);
 }
+
 /* LAS RAYAS DEL BOTÓN EN COLOR TURQUESA */
-.menu-mobile-hamburger-button span {
+.site-wrapper-menuhamburger-button span {
 display: block;
 width: 25px;
 height: 3px;
-background: #00FFFF !important; /* Cambiado a turquesa */
+background: #00FFFF !important;
 transition: all 0.3s ease;
 }
+
 /* HOVER - MISMO EFECTO QUE MENÚ PRINCIPAL */
-.menu-mobile-hamburger-button:hover {
+.site-wrapper-menuhamburger-button:hover {
 background: rgba(0, 255, 255, 0.1) !important;
 transform: translateY(-2px);
 box-shadow: 
@@ -309,8 +349,9 @@ box-shadow:
 0 0 25px #00FFFF,
 inset 0 0 10px rgba(0, 255, 255, 0.5);
 }
+
 /* PUNTO LED - ESQUINA SUPERIOR DERECHA */
-.menu-mobile-hamburger-button::after {
+.site-wrapper-menuhamburger-button::after {
 content: '';
 position: absolute;
 top: 5px;
@@ -322,14 +363,18 @@ background: #00FFFF;
 box-shadow: 0 0 5px #00FFFF;
 transition: all 0.3s ease;
 }
+
 /* PUNTO LED EN HOVER */
-.menu-mobile-hamburger-button:hover::after {
+.site-wrapper-menuhamburger-button:hover::after {
 box-shadow: 
 0 0 10px #00FFFF,
 0 0 20px #00FFFF;
 }
-/* OVERLAY - MORADO */
-.menu-mobile-hamburger-overlay {
+
+/* ======================================
+   CONTENEDOR: OVERLAY MENU HAMBURGUESA
+====================================== */
+.site-wrapper-menuhamburger-overlay {
 position: fixed;
 z-index: 1000; 
 width: 100%;
@@ -339,10 +384,12 @@ left: 0;
 background: #2a0070 !important;
 display: none;
 }
-.menu-mobile-hamburger-overlay.active {
+
+.site-wrapper-menuhamburger-overlay.active {
 display: block;
 }
-.menu-mobile-hamburger-overlay ul {
+
+.site-wrapper-menuhamburger-overlay ul {
 list-style: none;
 padding: 0;
 margin: 0;
@@ -352,16 +399,19 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 }
+
 /* Elementos del menú - SOLO TEXTO */
-.menu-mobile-hamburger-overlay li {
+.site-wrapper-menuhamburger-overlay li {
 text-align: center;
 border-bottom: 1px solid #ff00a9 !important;
 padding: 12px 0;
 }
-.menu-mobile-hamburger-overlay li:last-child {
+
+.site-wrapper-menuhamburger-overlay li:last-child {
 border-bottom: none !important;
 }
-.menu-mobile-hamburger-overlay a {
+
+.site-wrapper-menuhamburger-overlay a {
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
 text-decoration: none; 
@@ -370,19 +420,20 @@ padding: 0 20px;
 display: block;
 color: #00FFFF !important; 
 }
-/* --- MEDIA QUERY PARA MÓVIL --- */
-@media (max-width: 768px) {
-.menu-mobile {
-display: block;
-position: fixed;
-top: 15px;
-right: 15px;
-z-index: 1000;
-}
-nav {
-display: none !important;
-}
-}
+} /* FIN DEL MEDIA QUERY */
+
+/* FUERA DEL MEDIA QUERY - ESTADO POR DEFECTO (PC) */
+.site-wrapper-mobile { display: none; }
+
+
+
+
+
+
+
+
+
+
 
 
 
