@@ -44,7 +44,8 @@ gap: 20px;
 ====================================== */
 .site-wrapper-header {
 display: block;
-width: auto;   
+width: 100%;
+box-sizing: border-box;
 background: transparent !important;  
 margin: 0;
 padding: 0;
@@ -76,9 +77,6 @@ display: inline-block;
 .site-wrapper-header-mobile{ display: none; }
 .site-wrapper-header-title { display: block; }
 .site-wrapper-header-title-mobile { display: none; }
-
-
-
 /* ======================================
    CONTENEDOR: TÍTULO PEQUEÑO MOBILE
 ====================================== */
@@ -217,6 +215,18 @@ box-shadow:
 0 0 10px #00FFFF,
 0 0 20px #00FFFF;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 /* ======================================
    SUBMENÚS DESPLEGABLES
 ====================================== */
