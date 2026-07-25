@@ -357,6 +357,46 @@ display: none !important;
 }
 
 
+/* ======================================
+   CONTENEDOR: TÍTULO PEQUEÑO MOBILE
+====================================== */
+@media (max-width: 768px) {
+.site-wrapper-header-mobile {
+position: relative;
+width: 100%;
+box-sizing: border-box;
+background: transparent !important;
+text-align: center;
+margin: 10px;
+padding: 0px;
+}  
+.site-wrapper-header-title-mobile {
+font-family: 'Bebas Neue', cursive;
+font-size: 2.5rem;
+color: #00FFFF !important;   
+text-align: center; 
+font-weight: 400;
+margin: 0px;
+padding: 0px;
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#00FFFF, #00FFFF);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.site-wrapper-header-mobile { display: block; }
+.site-wrapper-header-title-mobile  { display: block; }
+}
+.site-wrapper-header-mobile { display: none; }
+.site-wrapper-header-title-mobile  { display: none; }
+
 
 
 
