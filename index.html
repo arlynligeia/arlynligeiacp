@@ -324,63 +324,66 @@ console.log('Mostrando SOLO:', sectionId);
 
 // === CONTROL DEL TÍTULO PEQUEÑO PC ===
 const mainTitle = document.getElementById('main-title-pc');
-// OCULTAR TÍTULO PEQUEÑO si es HOME o sus hijos
 if (sectionId === 'home' || sectionId.startsWith('home-')) {
 if (mainTitle) {
 mainTitle.classList.add('hidden');
 }
 } else {
-// MOSTRAR TÍTULO PEQUEÑO en cualquier otra sección
 if (mainTitle) {
 mainTitle.classList.remove('hidden');
 }
 }
-// === FIN CONTROL DEL TÍTULO PEQUEÑO ===
+// === FIN CONTROL DEL TÍTULO PEQUEÑO PC ===
 
 // === CONTROL DEL TÍTULO GRANDE PC ===
 const siteTitle = document.querySelector('.site-title');
-// MOSTRAR TÍTULO GRANDE solo en HOME o sus hijos
 if (sectionId === 'home' || sectionId.startsWith('home-')) {
 if (siteTitle) {
 siteTitle.classList.remove('hidden');
 }
 } else {
-// OCULTAR TÍTULO GRANDE en cualquier otra sección
 if (siteTitle) {
 siteTitle.classList.add('hidden');
 }
 }
-// === FIN CONTROL DEL TÍTULO GRANDE ===
+// === FIN CONTROL DEL TÍTULO GRANDE PC ===
+
+// === CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
+const titlesmallMobile = document.querySelector('.titlesmall-mobile');
+if (sectionId === 'home' || sectionId.startsWith('home-')) {
+if (titlesmallMobile) {
+titlesmallMobile.classList.add('hidden');
+}
+} else {
+if (titlesmallMobile) {
+titlesmallMobile.classList.remove('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
 
 // === EXCEPCIÓN PARA CONTACT ===
 if (sectionId === 'contact') {
-// OCULTAR TODAS LAS SECCIONES  
 document.querySelectorAll('.main-section, .subsection').forEach(section => {
 section.style.display = 'none';
 });
-// MOSTRAR SOLO LA SECCIÓN CONTACT (NO sus subsecciones)
 const mainSection = document.getElementById(sectionId);
 if (mainSection) {
 mainSection.style.display = 'block';
-// NO mostrar subsecciones automáticamente
 mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
-return; // Salir de la función aquí
+return;
 }
 // === FIN EXCEPCIÓN === 
-// OCULTAR TODAS LAS SECCIONES  
+
 document.querySelectorAll('.main-section, .subsection').forEach(section => {
 section.style.display = 'none';
 });
-// MOSTRAR SECCIÓN
 const mainSection = document.getElementById(sectionId);
 if (mainSection) {
 mainSection.style.display = 'block';
-// MOSTRAR SUBSECCIONES
 document.querySelectorAll(`[id^="${sectionId}-"]`).forEach(subsection => {
 subsection.style.display = 'block';
 });
-// DESPLAZAMIENTO HACIA LA SECCIÓN
 mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 }
@@ -391,52 +394,58 @@ console.log('Yendo a subsección:', subsectionId);
 
 // === CONTROL DEL TÍTULO PEQUEÑO PC ===
 const mainTitle = document.getElementById('main-title-pc');
-// OCULTAR TÍTULO PEQUEÑO si es HOME o sus hijos
 if (subsectionId === 'home' || subsectionId.startsWith('home-')) {
 if (mainTitle) {
 mainTitle.classList.add('hidden');
 }
 } else {
-// MOSTRAR TÍTULO PEQUEÑO en cualquier otra sección
 if (mainTitle) {
 mainTitle.classList.remove('hidden');
 }
 }
-// === FIN CONTROL DEL TÍTULO PEQUEÑO ===
+// === FIN CONTROL DEL TÍTULO PEQUEÑO PC ===
 
 // === CONTROL DEL TÍTULO GRANDE PC ===
 const siteTitle = document.querySelector('.site-title');
-// MOSTRAR TÍTULO GRANDE solo en HOME o sus hijos
 if (subsectionId === 'home' || subsectionId.startsWith('home-')) {
 if (siteTitle) {
 siteTitle.classList.remove('hidden');
 }
 } else {
-// OCULTAR TÍTULO GRANDE en cualquier otra sección
 if (siteTitle) {
 siteTitle.classList.add('hidden');
 }
 }
-// === FIN CONTROL DEL TÍTULO GRANDE ===
+// === FIN CONTROL DEL TÍTULO GRANDE PC ===
+
+// === CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
+const titlesmallMobile = document.querySelector('.titlesmall-mobile');
+if (subsectionId === 'home' || subsectionId.startsWith('home-')) {
+if (titlesmallMobile) {
+titlesmallMobile.classList.add('hidden');
+}
+} else {
+if (titlesmallMobile) {
+titlesmallMobile.classList.remove('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
 
 // === EXCEPCIÓN PARA CONTACT-FOR-FANS ===
 if (subsectionId === 'contact-contactforfans') {
-// OCULTAR TODAS LAS SECCIONES  
 document.querySelectorAll('.main-section, .subsection').forEach(section => {
 section.style.display = 'none';
 });
-// MOSTRAR SOLO LA SUBSECCIÓN CONTACT-FOR-FANS
 const subsection = document.getElementById(subsectionId);
 if (subsection) {
 subsection.style.display = 'block';
 subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
-return; // Salir de la función aquí
+return;
 }
 // === FIN EXCEPCIÓN ===
 const mainSectionId = subsectionId.split('-')[0];
 showOnlyOneSection(mainSectionId);
-// DESPLAZAMIENTO HACIA LA SUBSECCIÓN
 setTimeout(() => {
 const subsection = document.getElementById(subsectionId);
 if (subsection) {  
@@ -468,6 +477,7 @@ history.pushState(null, null, `#${targetId}`);
 // 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR LA PÁGINA
 function checkInitialHash() {
 const hash = window.location.hash.replace('#', '');
+const titlesmallMobile = document.querySelector('.titlesmall-mobile');
 if (hash) {
 if (hash.includes('-')) {
 goToSubsection(hash);
@@ -475,7 +485,7 @@ goToSubsection(hash);
 showOnlyOneSection(hash);
 }
 } else {
-// Si no hay hash, estamos en HOME → ocultar título pequeño y mostrar título grande
+// Si no hay hash, estamos en HOME
 const mainTitle = document.getElementById('main-title-pc');
 if (mainTitle) {
 mainTitle.classList.add('hidden');
@@ -483,6 +493,9 @@ mainTitle.classList.add('hidden');
 const siteTitle = document.querySelector('.site-title');
 if (siteTitle) {
 siteTitle.classList.remove('hidden');
+}
+if (titlesmallMobile) {
+titlesmallMobile.classList.add('hidden');
 }
 }
 }
@@ -490,6 +503,7 @@ siteTitle.classList.remove('hidden');
 // 4. FUNCIÓN PARA BOTONES DE NAVEGACIÓN DEL NAVEGADOR
 function handleBrowserNavigation(event) {
 const hash = window.location.hash.replace('#', '');
+const titlesmallMobile = document.querySelector('.titlesmall-mobile');
 if (hash) {
 if (hash.includes('-')) {
 goToSubsection(hash);
@@ -497,7 +511,6 @@ goToSubsection(hash);
 showOnlyOneSection(hash);
 }
 } else {
-// Si no hay hash, estamos en HOME → ocultar título pequeño y mostrar título grande
 const mainTitle = document.getElementById('main-title-pc');
 if (mainTitle) {
 mainTitle.classList.add('hidden');
@@ -505,6 +518,9 @@ mainTitle.classList.add('hidden');
 const siteTitle = document.querySelector('.site-title');
 if (siteTitle) {
 siteTitle.classList.remove('hidden');
+}
+if (titlesmallMobile) {
+titlesmallMobile.classList.add('hidden');
 }
 }
 }
