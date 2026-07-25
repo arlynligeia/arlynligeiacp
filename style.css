@@ -355,6 +355,7 @@ display: none !important;
 }
 
 
+
 /* ======================================
    CONTENEDOR: TÍTULO PEQUEÑO MOBILE
 ====================================== */
@@ -362,7 +363,7 @@ display: none !important;
 @media (max-width: 768px) {
 .site-wrapper-header-mobile {
 display: block;
-position: fixed;
+position: relative;
 width: 100%;
 box-sizing: border-box;
 background: transparent !important;
@@ -372,7 +373,7 @@ padding: 0px;
 }  
 .site-wrapper-header-title-mobile {
 font-family: 'Bebas Neue', cursive;
-font-size: 2.5rem;
+font-size: 3 rem;
 color: #00FFFF !important;   
 text-align: center; 
 font-weight: 400;
