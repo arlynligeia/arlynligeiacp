@@ -117,34 +117,28 @@
 </div>   
 </div>  
 </header>
-   
-<!-- CONTENEDOR: SITIO WEB MOBILE -->
-<div class="site-wrapper-mobile">
-<!-- CONTENEDOR: TÍTULO PEQUEÑO MOBILE -->
-<div class="site-wrapper-header-mobile"> 
-<div class="site-wrapper-header-title-mobile">ARLYN LIGEIA</div>
-</div>   
-<!-- CONTENEDOR: MENU HAMBURGUESA -->   
-<div class="site-wrapper-menuhamburger-mobile">
-<button class="site-wrapper-menuhamburger-button" id="site-wrapper-menuhamburger-button">
+
+<!-- MENÚ HAMBURGUESA MOBILE -->
+<div class="menu-mobile">
+<button class="menu-mobile-hamburger-button" id="menu-mobile-hamburger-button">
 <span></span>
 <span></span>
 <span></span>
-</button>   
-<div class="site-wrapper-menuhamburger-overlay" id="site-wrapper-menuhamburger-overlay"> 
-<ul>  
-<li><a href="#home-mobile" data-section="home">HOME</a></li>
-<li><a href="#universe-mobile" data-section="universe">UNIVERSE</a></li>  
-<li><a href="#about-mobile" data-section="about">ABOUT</a></li>
-<li><a href="#film-mobile" data-section="film">FILM</a></li>
-<li><a href="#music-mobile" data-section="music">MUSIC</a></li>
-<li><a href="#fashion-mobile" data-section="fashion">FASHION</a></li>
-<li><a href="#science-mobile" data-section="science">SCIENCE</a></li>
-<li><a href="#bemypatron-mobile" data-section="bemypatron">BE MY PATRON</a></li>
-<li><a href="#contact-mobile" data-section="contact">CONTACT</a></li>
-<li><a href="#shop-mobile" data-section="shop">SHOP</a></li>
-</ul>  
-</div>   
+</button>
+<div class="menu-mobile-hamburger-overlay" id="menu-mobile-hamburger"> 
+<ul>
+<li><a href="#home-mobile" data-section="home">Home</a></li>
+<li><a href="#universe-mobile" data-section="universe">Universe</a></li>  
+<li><a href="#about-mobile" data-section="about">About</a></li>
+<li><a href="#film-mobile" data-section="film">Film</a></li>
+<li><a href="#music-mobile" data-section="music">Music</a></li>
+<li><a href="#fashion-mobile" data-section="fashion">Fashion</a></li>
+<li><a href="#science-mobile" data-section="science">Science</a></li>
+<li><a href="#bemypatron-mobile" data-section="bemypatron">Be my Patron</a></li>
+<li><a href="#contact-mobile" data-section="contact">Contact</a></li>
+<li><a href="#shop-mobile" data-section="shop">Store</a></li>
+<li><a class="cart-mobile-button" href="https://arlynligeiastore.myshopify.com/cart" target="_blank">Cart</a></li> 
+</ul>
 </div>
 </div>
 
@@ -443,28 +437,31 @@ console.log('✅ Navegación configurada correctamente');
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 console.log('📱 Menú hamburguesa móvil iniciado');
-const hamburgerBtn = document.getElementById('site-wrapper-menuhamburger-button');
-const hamburgerMenu = document.getElementById('site-wrapper-menuhamburger-overlay');
-const menuLinks = document.querySelectorAll('.site-wrapper-menuhamburger-overlay a');
-
+const hamburgerBtn = document.getElementById('menu-mobile-hamburger-button');
+const hamburgerMenu = document.getElementById('menu-mobile-hamburger');
+const menuLinks = document.querySelectorAll('.menu-mobile-hamburger-overlay a');
 // 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN (IDÉNTICA A PC)
 function showOnlyOneSection(sectionId) {
 console.log('📱 Mostrando SOLO:', sectionId);
+
+
 // === EXCEPCIÓN PARA CONTACT MOBILE ===
-if (sectionId === 'contact-mobile') {
-// OCULTAR TODAS LAS SECCIONES MOBILE  
-document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
-section.style.display = 'none';
-});
-// MOSTRAR SOLO CONTACT MOBILE (NO sus subsecciones)
-const mainSection = document.getElementById(sectionId);
-if (mainSection && mainSection.classList.contains('mobile-only')) {
-mainSection.style.display = 'block';
-mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-return; // Salir de la función aquí
-}
-// === FIN EXCEPCIÓN ===
+  if (sectionId === 'contact-mobile') {
+    // OCULTAR TODAS LAS SECCIONES MOBILE  
+    document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
+      section.style.display = 'none';
+    });
+    // MOSTRAR SOLO CONTACT MOBILE (NO sus subsecciones)
+    const mainSection = document.getElementById(sectionId);
+    if (mainSection && mainSection.classList.contains('mobile-only')) {
+      mainSection.style.display = 'block';
+      mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    return; // Salir de la función aquí
+  }
+  // === FIN EXCEPCIÓN ===
+
+ 
 // OCULTAR TODAS LAS SECCIONES MOBILE  
 document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
 section.style.display = 'none';
@@ -484,25 +481,31 @@ subsection.style.display = 'block';
 mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 }
-
 // 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN (IDÉNTICA A PC)
 function goToSubsection(subsectionId) {
 console.log('📱 Yendo a subsección:', subsectionId);
+
+
 // === EXCEPCIÓN PARA CONTACT-FOR-FANS MOBILE ===
-if (subsectionId === 'contact-mobile-contactforfans') {
-// OCULTAR TODAS LAS SECCIONES MOBILE  
-document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
-section.style.display = 'none';
-});
-// MOSTRAR SOLO CONTACT-FOR-FANS MOBILE
-const subsection = document.getElementById(subsectionId);
-if (subsection) {  
-subsection.style.display = 'block';
-subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-return; // Salir de la función aquí
-}
-// === FIN EXCEPCIÓN === 
+  if (subsectionId === 'contact-mobile-contactforfans') {
+    // OCULTAR TODAS LAS SECCIONES MOBILE  
+    document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
+      section.style.display = 'none';
+    });
+    // MOSTRAR SOLO CONTACT-FOR-FANS MOBILE
+    const subsection = document.getElementById(subsectionId);
+    if (subsection) {  
+      subsection.style.display = 'block';
+      subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    return; // Salir de la función aquí
+  }
+  // === FIN EXCEPCIÓN ===
+
+
+
+
+  
 const mainSectionId = subsectionId.split('-')[0] + '-mobile';
 showOnlyOneSection(mainSectionId);
 // DESPLAZAMIENTO HACIA LA SUBSECCIÓN
@@ -513,7 +516,6 @@ subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 }, 100);
 }
-
 // ABRIR/CERRAR MENÚ HAMBURGUESA
 hamburgerBtn.addEventListener('click', function() {
 hamburgerMenu.classList.toggle('active');
@@ -528,41 +530,44 @@ spans[1].style.opacity = '1';
 spans[2].style.transform = 'none';
 }
 });
-
+  
 // NAVEGACIÓN PARA ENLACES DEL MENÚ HAMBURGUESA (SOLO SECCIONES PRINCIPALES)
 menuLinks.forEach(link => {
-link.addEventListener('click', function(e) {
-// EXCEPCIÓN: Si es el botón Cart, NO prevenir el comportamiento por defecto
-if (this.classList.contains('cart-mobile-button')) {
-// Solo cerrar el menú y dejar que el navegador siga el link normalmente
-hamburgerMenu.classList.remove('active');
-const spans = hamburgerBtn.querySelectorAll('span');
-spans[0].style.transform = 'none';
-spans[1].style.opacity = '1';
-spans[2].style.transform = 'none';
-return; // Salir sin preventDefault
-}
-// Para TODOS los demás links, aplicar preventDefault
-e.preventDefault();
-const href = this.getAttribute('href');
-if (href.startsWith('#')) {
-const targetId = href.replace('#', '');
-console.log('📱 Menú móvil: Navegando a:', targetId);
-// Convertir a ID mobile (ej: #home → #home-mobile)
-const mobileSectionId = targetId.endsWith('-mobile') ? targetId : targetId + '-mobile';
-// Navegar a la sección principal mobile
-showOnlyOneSection(mobileSectionId);
-history.pushState(null, null, `#${targetId}`);
-// Cerrar menú después de navegar
-hamburgerMenu.classList.remove('active');
-const spans = hamburgerBtn.querySelectorAll('span');
-spans[0].style.transform = 'none';
-spans[1].style.opacity = '1';
-spans[2].style.transform = 'none';
-}
+  link.addEventListener('click', function(e) {
+    // EXCEPCIÓN: Si es el botón Cart, NO prevenir el comportamiento por defecto
+    if (this.classList.contains('cart-mobile-button')) {
+      // Solo cerrar el menú y dejar que el navegador siga el link normalmente
+      hamburgerMenu.classList.remove('active');
+      const spans = hamburgerBtn.querySelectorAll('span');
+      spans[0].style.transform = 'none';
+      spans[1].style.opacity = '1';
+      spans[2].style.transform = 'none';
+      return; // Salir sin preventDefault
+    }
+    
+    // Para TODOS los demás links, aplicar preventDefault
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    if (href.startsWith('#')) {
+      const targetId = href.replace('#', '');
+      console.log('📱 Menú móvil: Navegando a:', targetId);
+      // Convertir a ID mobile (ej: #home → #home-mobile)
+      const mobileSectionId = targetId.endsWith('-mobile') ? targetId : targetId + '-mobile';
+      // Navegar a la sección principal mobile
+      showOnlyOneSection(mobileSectionId);
+      history.pushState(null, null, `#${targetId}`);
+      // Cerrar menú después de navegar
+      hamburgerMenu.classList.remove('active');
+      const spans = hamburgerBtn.querySelectorAll('span');
+      spans[0].style.transform = 'none';
+      spans[1].style.opacity = '1';
+      spans[2].style.transform = 'none';
+    }
+  });
 });
-}); 
 
+
+  
 // 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR (IGUAL A PC)
 function checkInitialHash() {
 const hash = window.location.hash.replace('#', '');
@@ -578,7 +583,6 @@ showOnlyOneSection(mobileSectionId);
 }
 }
 }
-
 // 4. FUNCIÓN PARA BOTONES DE NAVEGACIÓN DEL NAVEGADOR
 function handleBrowserNavigation(event) {
 const hash = window.location.hash.replace('#', '');
@@ -590,10 +594,8 @@ showOnlyOneSection(hash);
 }
 }
 }
-
 // EVENTO PARA LOS BOTONES DE NAVEGACIÓN DEL NAVEGADOR
 window.addEventListener('popstate', handleBrowserNavigation);
-
 // Cerrar menú al hacer clic fuera
 hamburgerMenu.addEventListener('click', function(e) {
 if (e.target === hamburgerMenu) {
@@ -604,7 +606,6 @@ spans[1].style.opacity = '1';
 spans[2].style.transform = 'none';
 }
 });
-
 // INICIALIZACIÓN
 checkInitialHash();
 console.log('✅ Menú hamburguesa móvil configurado correctamente');
