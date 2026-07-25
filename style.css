@@ -27,6 +27,19 @@ margin: 0;
 padding: 20px 10px 10px 10px;
 }
 
+/* ======================================
+   CONTENEDOR FLEX PARA PLANETA + MENÚ
+====================================== */
+.planeta-menu-wrapper {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+gap: 20px;
+width: 100%;
+}
+
+
 
 /* ======================================
    PLANETA PC (al lado del menú)
@@ -54,7 +67,10 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 display: inline-block;
 }
-
+.planeta-container { display: block; }
+.planeta-container-mobile{ display: none; }
+.planeta-title { display: block; }
+.planeta-title-mobile { display: none; }
 /* ======================================
    PLANETA MOBILE (centrado)
 ====================================== */
@@ -66,8 +82,11 @@ padding: 10px 0;
 display: block;
 width: 100%;
 }
+.planeta-container { display: none; }
+.planeta-container-mobile { display: block; }
+.planeta-title { display: none; }
+.planeta-title-mobile { display: block; }
 }
-
 
 
 
