@@ -234,8 +234,9 @@ border-bottom: 1px solid white !important;
 /* ======================================
    MENÚ HAMBURGUESA MOVIL
 ====================================== */
-.menu-mobile { display: none; }
-.menu-mobile-hamburger-button {
+.menuhamburger-mobile { display: none; }
+/* MENÚ HAMBURGUESA : BOTÓN */
+.menuhamburger-button-mobile {
 position: relative; /* Necesario para el punto LED */
 display: flex;
 flex-direction: column;
@@ -262,15 +263,15 @@ box-shadow:
 inset 0 0 5px rgba(0, 255, 255, 0.3);
 }
 /* LAS RAYAS DEL BOTÓN EN COLOR TURQUESA */
-.menu-mobile-hamburger-button span {
+.menuhamburger-button-mobile span {
 display: block;
 width: 25px;
 height: 3px;
-background: #00FFFF !important; /* Cambiado a turquesa */
+background: #00FFFF !important;
 transition: all 0.3s ease;
 }
 /* HOVER - MISMO EFECTO QUE MENÚ PRINCIPAL */
-.menu-mobile-hamburger-button:hover {
+.menuhamburger-button-mobile:hover {
 background: rgba(0, 255, 255, 0.1) !important;
 transform: translateY(-2px);
 box-shadow: 
@@ -279,7 +280,7 @@ box-shadow:
 inset 0 0 10px rgba(0, 255, 255, 0.5);
 }
 /* PUNTO LED - ESQUINA SUPERIOR DERECHA */
-.menu-mobile-hamburger-button::after {
+.menuhamburger-button-mobile::after {
 content: '';
 position: absolute;
 top: 5px;
@@ -292,26 +293,26 @@ box-shadow: 0 0 5px #00FFFF;
 transition: all 0.3s ease;
 }
 /* PUNTO LED EN HOVER */
-.menu-mobile-hamburger-button:hover::after {
+.menuhamburger-button-mobile:hover::after {
 box-shadow: 
 0 0 10px #00FFFF,
 0 0 20px #00FFFF;
 }
 /* OVERLAY - MORADO */
-.menu-mobile-hamburger-overlay {
+.menuhamburger-overlay-mobile {
 position: fixed;
 z-index: 1000; 
 width: 100%;
 height: 100%;
 top: 0;
 left: 0;
-background: #320046 !important;
+background: #2a0070 !important;
 display: none;
 }
-.menu-mobile-hamburger-overlay.active {
+.menuhamburger-overlay-mobile.active {
 display: block;
 }
-.menu-mobile-hamburger-overlay ul {
+.menuhamburger-overlay-mobile ul {
 list-style: none;
 padding: 0;
 margin: 0;
@@ -322,15 +323,15 @@ justify-content: center;
 align-items: center;
 }
 /* Elementos del menú - SOLO TEXTO */
-.menu-mobile-hamburger-overlay li {
+.menuhamburger-overlay-mobile li {
 text-align: center;
 border-bottom: 1px solid #FF66CC !important;
 padding: 12px 0;
 }
-.menu-mobile-hamburger-overlay li:last-child {
+.menuhamburger-overlay-mobile li:last-child {
 border-bottom: none !important;
 }
-.menu-mobile-hamburger-overlay a {
+.menuhamburger-overlay-mobile a {
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
 text-decoration: none; 
@@ -341,7 +342,7 @@ color: #00FFFF !important;
 }
 /* --- MEDIA QUERY PARA MÓVIL --- */
 @media (max-width: 768px) {
-.menu-mobile {
+.menuhamburger-mobile {
 display: block;
 position: fixed;
 top: 15px;
@@ -352,6 +353,11 @@ nav {
 display: none !important;
 }
 }
+
+
+
+
+
 
 
 
@@ -367,6 +373,7 @@ width: auto;
 box-sizing: border-box;
 background: transparent !important;
 text-align: center;
+margin: 0px;
 padding: 0px;
 }  
 .titlesmall-header-mobile {
