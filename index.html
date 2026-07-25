@@ -6,10 +6,7 @@
    
 <meta charset="UTF-8">   
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-<!-- TÍTULO DEL SITIO WEB -->
-<title>ARLYN LIGEIA</title>
-   
+     
 <!-- FUENTES -->
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
@@ -36,11 +33,6 @@
 <div class="site-wrapper-header-title">ARLYN<br>LIGEIA</div>
 </div>
 
-<!-- CONTENEDOR: TÍTULO PEQUEÑO MOBILE -->      
-<div class="site-wrapper-header-mobile">
-<div class="site-wrapper-header-title-mobile">ARLYN LIGEIA</div>
-</div>
-   
 <!-- CONTENEDOR: MENÚ PC -->
 <nav>
 <ul class="site-menu" id="site-menu">  
@@ -335,6 +327,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 console.log('🔧 Navegación iniciada');
+
 // 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN
 function showOnlyOneSection(sectionId) {
 console.log('Mostrando SOLO:', sectionId);
@@ -370,6 +363,7 @@ subsection.style.display = 'block';
 mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 }
+
 // 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN
 function goToSubsection(subsectionId) {
 console.log('Yendo a subsección:', subsectionId);
@@ -398,8 +392,9 @@ subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 }, 100);
 }
+
 // EVENTOS PARA BOTONES DEL MENÚ PRINCIPAL
-document.querySelectorAll('.menu-button').forEach(button => {
+document.querySelectorAll('.site-menu-button').forEach(button => {
 button.addEventListener('click', function(e) {
 e.preventDefault();
 const targetId = this.getAttribute('href').replace('#', '');
@@ -407,8 +402,9 @@ showOnlyOneSection(targetId);
 history.pushState(null, null, `#${targetId}`);
 });
 });
+
 // EVENTOS PARA BOTONES DEL SUBMENÚ
-document.querySelectorAll('.submenu-button').forEach(button => {
+document.querySelectorAll('.site-menu-submenu-button').forEach(button => {
 button.addEventListener('click', function(e) {
 e.preventDefault();
 const targetId = this.getAttribute('href').replace('#', '');
@@ -416,6 +412,7 @@ goToSubsection(targetId);
 history.pushState(null, null, `#${targetId}`);
 });
 });
+
 // 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR LA PÁGINA
 function checkInitialHash() {
 const hash = window.location.hash.replace('#', '');
@@ -427,6 +424,7 @@ showOnlyOneSection(hash);
 }
 }
 }
+
 // 4. FUNCIÓN PARA BOTONES DE NAVEGACIÓN DEL NAVEGADOR
 function handleBrowserNavigation(event) {
 const hash = window.location.hash.replace('#', '');
@@ -438,8 +436,10 @@ showOnlyOneSection(hash);
 }
 }
 }
+
 // EVENTO PARA LOS BOTONES DE NAVEGACIÓN DEL NAVEGADOR
 window.addEventListener('popstate', handleBrowserNavigation);  
+
 // INICIALIZACIÓN
 checkInitialHash();
 console.log('✅ Navegación configurada correctamente');
@@ -453,6 +453,10 @@ console.log('✅ Navegación configurada correctamente');
 
 
 
+
+
+
+   
   
 <!-- SCRIP: MENÚ HAMBURGUESA MÓVIL -->
 <script>
