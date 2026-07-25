@@ -73,10 +73,14 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 display: inline-block;
 }
-.site-wrapper-header { display: block; }
-.site-wrapper-header-mobile{ display: none; }
-.site-wrapper-header-title { display: block; }
-.site-wrapper-header-title-mobile { display: none; }
+@media (max-width: 768px) {
+.site-wrapper-header { display: none; }
+.site-wrapper-header-title { display: none; }
+}
+
+
+
+
 
 
 
