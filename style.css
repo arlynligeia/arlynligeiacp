@@ -429,7 +429,11 @@ background: transparent !important;
 text-align: center;
 margin: 0px;
 padding: 0px;
-}  
+}
+/* CLASE PARA OCULTAR EL TÍTULO PEQUEÑO MOBILE */
+.titlesmall-mobile.hidden {
+display: none !important;
+}
 .titlesmall-header-mobile {
 font-family: 'Bebas Neue', cursive;
 font-size: 3rem;
@@ -450,11 +454,23 @@ linear-gradient(#00FFFF, #00FFFF);
 -webkit-background-clip: text;
 background-clip: text;
 -webkit-text-fill-color: transparent;
-}
+}  
 nav {
 display: none !important;
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    CONTENEDOR: TÍTULO GRANDE MOBILE
