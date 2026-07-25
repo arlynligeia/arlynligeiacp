@@ -12,6 +12,7 @@ min-height: 100vh;
 }
 
 
+
 /* ======================================
    CONTENEDOR: SITIO WEB
 ====================================== */
@@ -25,6 +26,7 @@ background: transparent !important;
 margin: 0;
 padding: 20px 10px 10px 10px;
 }
+
 /* ======================================
    CONTENEDOR: ENCABEZADO
 ====================================== */
@@ -81,15 +83,6 @@ display: inline-block;
 .site-wrapper-header { display: none; }
 .site-wrapper-header-title { display: none; }
 }
-
-
-
-
-
-
-
-
-
 
 /* ======================================
    CONTENEDOR: MENÚ PC
@@ -236,7 +229,7 @@ border-bottom: 1px solid white !important;
 }
 
 /* ======================================
-   TÍTULO PC
+   TÍTULO GRANDE PC (PRINCIPAL)
 ====================================== */
 .site-title {
 font-family: 'Bebas Neue', cursive;
@@ -246,7 +239,7 @@ text-align: center;
 font-weight: 400;
 line-height: 1; 
 margin: 40px 0;
-padding: 200px 20px 20px 20px;
+padding: 210px 20px 20px 20px;
 background: 
 repeating-linear-gradient(
 0deg,
@@ -266,24 +259,6 @@ display: none !important;
 @media (max-width: 768px) {
 .site-title { display: none; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ======================================
    MENÚ HAMBURGUESA MOVIL
@@ -408,13 +383,6 @@ display: none !important;
 }
 }
 
-
-
-
-
-
-
-
 /* ======================================
    CONTENEDOR: TÍTULO PEQUEÑO MOBILE
 ====================================== */
@@ -474,9 +442,8 @@ width: 100%;
 box-sizing: border-box;
 background: transparent !important;   
 margin: 30px 0;
-padding: 190px 10px 10px 10px;
+padding: 200px 10px 10px 10px;
 }
-   /* CLASE PARA OCULTAR EL TÍTULO GRANDE MOBILE */
 .titlebig-mobile.hidden {
 display: none !important;
 }
@@ -505,6 +472,11 @@ nav {
 display: none !important;
 }
 }
+
+
+
+
+
 
 
 
