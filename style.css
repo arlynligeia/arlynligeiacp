@@ -106,7 +106,7 @@ background-clip: text;
 .planeta { display: none; }
 .planeta-container-mobile { display: block; }
 .planeta-title { display: none; }
-.planeta-container-mobile { display: block; }
+.planeta-title-mobile { display: block; }
 }
 
 
