@@ -361,6 +361,19 @@ titlesmallMobile.classList.remove('hidden');
 }
 // === FIN CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
 
+// === CONTROL DEL TÍTULO GRANDE MOBILE ===
+const titlebigMobile = document.querySelector('.titlebig-mobile');
+if (sectionId === 'home' || sectionId.startsWith('home-')) {
+if (titlebigMobile) {
+titlebigMobile.classList.remove('hidden');
+}
+} else {
+if (titlebigMobile) {
+titlebigMobile.classList.add('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO GRANDE MOBILE ===
+
 // === EXCEPCIÓN PARA CONTACT ===
 if (sectionId === 'contact') {
 document.querySelectorAll('.main-section, .subsection').forEach(section => {
@@ -431,6 +444,19 @@ titlesmallMobile.classList.remove('hidden');
 }
 // === FIN CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
 
+// === CONTROL DEL TÍTULO GRANDE MOBILE ===
+const titlebigMobile = document.querySelector('.titlebig-mobile');
+if (subsectionId === 'home' || subsectionId.startsWith('home-')) {
+if (titlebigMobile) {
+titlebigMobile.classList.remove('hidden');
+}
+} else {
+if (titlebigMobile) {
+titlebigMobile.classList.add('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO GRANDE MOBILE ===
+
 // === EXCEPCIÓN PARA CONTACT-FOR-FANS ===
 if (subsectionId === 'contact-contactforfans') {
 document.querySelectorAll('.main-section, .subsection').forEach(section => {
@@ -478,6 +504,7 @@ history.pushState(null, null, `#${targetId}`);
 function checkInitialHash() {
 const hash = window.location.hash.replace('#', '');
 const titlesmallMobile = document.querySelector('.titlesmall-mobile');
+const titlebigMobile = document.querySelector('.titlebig-mobile');
 if (hash) {
 if (hash.includes('-')) {
 goToSubsection(hash);
@@ -497,6 +524,9 @@ siteTitle.classList.remove('hidden');
 if (titlesmallMobile) {
 titlesmallMobile.classList.add('hidden');
 }
+if (titlebigMobile) {
+titlebigMobile.classList.remove('hidden');
+}
 }
 }
 
@@ -504,6 +534,7 @@ titlesmallMobile.classList.add('hidden');
 function handleBrowserNavigation(event) {
 const hash = window.location.hash.replace('#', '');
 const titlesmallMobile = document.querySelector('.titlesmall-mobile');
+const titlebigMobile = document.querySelector('.titlebig-mobile');
 if (hash) {
 if (hash.includes('-')) {
 goToSubsection(hash);
@@ -521,6 +552,9 @@ siteTitle.classList.remove('hidden');
 }
 if (titlesmallMobile) {
 titlesmallMobile.classList.add('hidden');
+}
+if (titlebigMobile) {
+titlebigMobile.classList.remove('hidden');
 }
 }
 }
@@ -560,7 +594,6 @@ console.log('📱 Mostrando SOLO:', sectionId);
 
 // === CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
 const titlesmallMobile = document.querySelector('.titlesmall-mobile');
-// Extraer el nombre real de la sección (sin -mobile)
 const realSectionId = sectionId.replace('-mobile', '');
 if (realSectionId === 'home' || realSectionId.startsWith('home-')) {
 if (titlesmallMobile) {
@@ -573,38 +606,45 @@ titlesmallMobile.classList.remove('hidden');
 }
 // === FIN CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
 
+// === CONTROL DEL TÍTULO GRANDE MOBILE ===
+const titlebigMobile = document.querySelector('.titlebig-mobile');
+if (realSectionId === 'home' || realSectionId.startsWith('home-')) {
+if (titlebigMobile) {
+titlebigMobile.classList.remove('hidden');
+}
+} else {
+if (titlebigMobile) {
+titlebigMobile.classList.add('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO GRANDE MOBILE ===
+
 // === EXCEPCIÓN PARA CONTACT MOBILE ===
 if (sectionId === 'contact-mobile') {
-// OCULTAR TODAS LAS SECCIONES MOBILE  
 document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
 section.style.display = 'none';
 });
-// MOSTRAR SOLO CONTACT MOBILE (NO sus subsecciones)
 const mainSection = document.getElementById(sectionId);
 if (mainSection && mainSection.classList.contains('mobile-only')) {
 mainSection.style.display = 'block';
 mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
-return; // Salir de la función aquí
+return;
 }
 // === FIN EXCEPCIÓN ===
 
-// OCULTAR TODAS LAS SECCIONES MOBILE  
 document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
 section.style.display = 'none';
 });
-// MOSTRAR SECCIÓN PRINCIPAL MOBILE
 const mainSection = document.getElementById(sectionId);
 if (mainSection && mainSection.classList.contains('mobile-only')) {
 mainSection.style.display = 'block';
-// MOSTRAR TODAS SUS SUBSECCIONES MOBILE (igual que en PC)
 const sectionPrefix = sectionId.replace('-mobile', '') + '-';
 document.querySelectorAll('.subsection.mobile-only').forEach(subsection => {
 if (subsection.id.startsWith(sectionPrefix)) {
 subsection.style.display = 'block';
 }
 });
-// DESPLAZAMIENTO HACIA LA SECCIÓN
 mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 }
@@ -627,25 +667,35 @@ titlesmallMobile.classList.remove('hidden');
 }
 // === FIN CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
 
+// === CONTROL DEL TÍTULO GRANDE MOBILE ===
+const titlebigMobile = document.querySelector('.titlebig-mobile');
+if (realSubsectionId === 'home' || realSubsectionId.startsWith('home-')) {
+if (titlebigMobile) {
+titlebigMobile.classList.remove('hidden');
+}
+} else {
+if (titlebigMobile) {
+titlebigMobile.classList.add('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO GRANDE MOBILE ===
+
 // === EXCEPCIÓN PARA CONTACT-FOR-FANS MOBILE ===
 if (subsectionId === 'contact-mobile-contactforfans') {
-// OCULTAR TODAS LAS SECCIONES MOBILE  
 document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
 section.style.display = 'none';
 });
-// MOSTRAR SOLO CONTACT-FOR-FANS MOBILE
 const subsection = document.getElementById(subsectionId);
 if (subsection) {  
 subsection.style.display = 'block';
 subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
-return; // Salir de la función aquí
+return;
 }
 // === FIN EXCEPCIÓN ===
 
 const mainSectionId = subsectionId.split('-')[0] + '-mobile';
 showOnlyOneSection(mainSectionId);
-// DESPLAZAMIENTO HACIA LA SUBSECCIÓN
 setTimeout(() => {
 const subsection = document.getElementById(subsectionId);
 if (subsection) {  
@@ -669,32 +719,25 @@ spans[2].style.transform = 'none';
 }
 });
 
-// NAVEGACIÓN PARA ENLACES DEL MENÚ HAMBURGUESA (SOLO SECCIONES PRINCIPALES)
+// NAVEGACIÓN PARA ENLACES DEL MENÚ HAMBURGUESA
 menuLinks.forEach(link => {
 link.addEventListener('click', function(e) {
-// EXCEPCIÓN: Si es el botón Cart, NO prevenir el comportamiento por defecto
 if (this.classList.contains('cart-mobile-button')) {
-// Solo cerrar el menú y dejar que el navegador siga el link normalmente
 hamburgerMenu.classList.remove('active');
 const spans = hamburgerBtn.querySelectorAll('span');
 spans[0].style.transform = 'none';
 spans[1].style.opacity = '1';
 spans[2].style.transform = 'none';
-return; // Salir sin preventDefault
+return;
 }
-
-// Para TODOS los demás links, aplicar preventDefault
 e.preventDefault();
 const href = this.getAttribute('href');
 if (href.startsWith('#')) {
 const targetId = href.replace('#', '');
 console.log('📱 Menú móvil: Navegando a:', targetId);
-// Convertir a ID mobile (ej: #home → #home-mobile)
 const mobileSectionId = targetId.endsWith('-mobile') ? targetId : targetId + '-mobile';
-// Navegar a la sección principal mobile
 showOnlyOneSection(mobileSectionId);
 history.pushState(null, null, `#${targetId}`);
-// Cerrar menú después de navegar
 hamburgerMenu.classList.remove('active');
 const spans = hamburgerBtn.querySelectorAll('span');
 spans[0].style.transform = 'none';
@@ -704,24 +747,25 @@ spans[2].style.transform = 'none';
 });
 });
 
-// 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR (IGUAL A PC)
+// 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR
 function checkInitialHash() {
 const hash = window.location.hash.replace('#', '');
 const titlesmallMobile = document.querySelector('.titlesmall-mobile');
+const titlebigMobile = document.querySelector('.titlebig-mobile');
 if (hash) {
 if (hash.includes('-')) {
-// Es una subsección (ej: home-socialmediacontent)
 const mobileSubsectionId = hash + '-mobile';
 goToSubsection(mobileSubsectionId);
 } else {
-// Es una sección principal (ej: home)
 const mobileSectionId = hash + '-mobile';
 showOnlyOneSection(mobileSectionId);
 }
 } else {
-// Si no hay hash, estamos en HOME → ocultar título mobile
 if (titlesmallMobile) {
 titlesmallMobile.classList.add('hidden');
+}
+if (titlebigMobile) {
+titlebigMobile.classList.remove('hidden');
 }
 }
 }
@@ -738,10 +782,8 @@ showOnlyOneSection(hash);
 }
 }
 
-// EVENTO PARA LOS BOTONES DE NAVEGACIÓN DEL NAVEGADOR
 window.addEventListener('popstate', handleBrowserNavigation);
 
-// Cerrar menú al hacer clic fuera
 hamburgerMenu.addEventListener('click', function(e) {
 if (e.target === hamburgerMenu) {
 hamburgerMenu.classList.remove('active');
@@ -752,13 +794,11 @@ spans[2].style.transform = 'none';
 }
 });
 
-// INICIALIZACIÓN
 checkInitialHash();
 console.log('✅ Menú hamburguesa móvil configurado correctamente');
 });
 </script>
 <!-- FIN SCRIP: MENÚ HAMBURGUESA MÓVIL -->
-
 
 
 
