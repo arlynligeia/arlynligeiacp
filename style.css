@@ -359,19 +359,18 @@ display: none !important;
 /* ======================================
    CONTENEDOR: TÍTULO PEQUEÑO MOBILE
 ====================================== */
-.site-wrapper-header-mobile { display: none; }
+.titlesmall-mobile { display: none; }
 @media (max-width: 768px) {
-.site-wrapper-header-mobile {
+.titlesmall-mobile {
 display: block;
 position: relative;
 width: auto;
 box-sizing: border-box;
 background: transparent !important;
 text-align: center;
-margin: 5px;
-padding: 0px;
+padding: 5px;
 }  
-.site-wrapper-header-title-mobile {
+.titlesmall-header-mobile {
 font-family: 'Bebas Neue', cursive;
 font-size: 3rem;
 color: #00FFFF !important;   
