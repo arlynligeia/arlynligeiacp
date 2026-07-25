@@ -260,9 +260,17 @@ linear-gradient(#ff00a9, #ff00a9);
 background-clip: text;
 -webkit-text-fill-color: transparent;
 }
+.site-title.hidden {
+display: none !important;
+}
 @media (max-width: 768px) {
 .site-title { display: none; }
 }
+
+
+
+
+
 
 
 
