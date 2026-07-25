@@ -406,7 +406,7 @@ display: none !important;
 @media (max-width: 768px) {
 .titlesmall-mobile {
 display: block;
-position: fixed;
+position: relative;
 width: auto;
 box-sizing: border-box;
 background: transparent !important;
