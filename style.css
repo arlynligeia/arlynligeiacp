@@ -420,6 +420,7 @@ padding: 0 20px;
 display: block;
 color: #00FFFF !important; 
 }
+.site-wrapper-mobile { display: block; }   
 } /* FIN DEL MEDIA QUERY */
 
 /* FUERA DEL MEDIA QUERY - ESTADO POR DEFECTO (PC) */
