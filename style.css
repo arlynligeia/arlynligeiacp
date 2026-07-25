@@ -11,10 +11,8 @@ margin: 0;
 min-height: 100vh;
 }
 
-
-
 /* ======================================
-   CONTENEDOR DEL MENÚ PC (SIN FONDO MORADO)
+   CONTENEDOR: SITIO WEB
 ====================================== */
 .site-container {
 position: relative;
@@ -26,23 +24,29 @@ background: transparent !important;
 margin: 0;
 padding: 20px 10px 10px 10px;
 }
-
 /* ======================================
-   CONTENEDOR FLEX PARA PLANETA + MENÚ
+   CONTENEDOR: ENCABEZADO
 ====================================== */
-.planeta-menu-wrapper {
+.site-wrapper {
+width: 100%;
+box-sizing: border-box;
 display: flex;
 align-items: center;
 justify-content: center;
 flex-wrap: wrap;
 gap: 20px;
-width: 100%;
 }
-
 /* ======================================
-   PLANETA PC (al lado del menú)
+   CONTENEDOR: TÍTULO PEQUEÑO PC
 ====================================== */
-.planeta {
+.site-wrapper-header {
+display: block;
+width: auto;   
+background: transparent;
+margin: 0;
+padding: 0;
+}
+.site-wrapper-header-title {
 font-family: 'Bebas Neue', cursive;
 font-size: 3.5rem;
 color: #00FFFF !important;
@@ -65,15 +69,15 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 display: inline-block;
 }
-.planeta { display: block; }
-.planeta-container-mobile{ display: none; }
-.planeta-title { display: block; }
-.planeta-title-mobile { display: none; }
+.site-wrapper-header { display: block; }
+.site-wrapper-header-mobile{ display: none; }
+.site-wrapper-header-title { display: block; }
+.site-wrapper-header-title-mobile { display: none; }
 /* ======================================
-   PLANETA MOBILE (centrado)
+   CONTENEDOR: TÍTULO PEQUEÑO MOBILE
 ====================================== */
 @media (max-width: 768px) {
-.planeta-container-mobile {
+.site-wrapper-header-mobile {
 position: relative;
 width: 100%;
 box-sizing: border-box;
@@ -81,8 +85,8 @@ background: transparent !important;
 text-align: center;
 margin: 10px;
 padding: 0px;
-}
-.planeta-title-mobile {
+}  
+.site-wrapper-header-title-mobile {
 font-family: 'Bebas Neue', cursive;
 font-size: 2.5rem;
 color: #00FFFF !important;   
@@ -103,10 +107,10 @@ linear-gradient(#00FFFF, #00FFFF);
 background-clip: text;
 -webkit-text-fill-color: transparent;
 }
-.planeta { display: none; }
-.planeta-container-mobile { display: block; }
-.planeta-title { display: none; }
-.planeta-title-mobile { display: block; }
+.site-wrapper-header { display: none; }
+.site-wrapper-header-mobile { display: block; }
+.site-wrapper-header-title { display: none; }
+.site-wrapper-header-title-mobile  { display: block; }
 }
 
 
