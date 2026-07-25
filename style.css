@@ -364,16 +364,16 @@ display: none !important;
 .site-wrapper-header-mobile {
 display: block;
 position: relative;
-width: 100%;
+width: auto;
 box-sizing: border-box;
 background: transparent !important;
 text-align: center;
-margin: 10px;
+margin: 5px;
 padding: 0px;
 }  
 .site-wrapper-header-title-mobile {
 font-family: 'Bebas Neue', cursive;
-font-size: 5rem;
+font-size: 3rem;
 color: #00FFFF !important;   
 text-align: center; 
 font-weight: 400;
