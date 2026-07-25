@@ -35,7 +35,7 @@ box-sizing: border-box;
 display: flex;
 align-items: center;
 justify-content: center;
-flex-wrap: wrap;
+flex-wrap: nowrap;
 background: transparent !important;  
 gap: 20px;
 }
@@ -44,7 +44,7 @@ gap: 20px;
 ====================================== */
 .site-wrapper-header {
 display: block;
-width: 100%;
+width: auto;
 box-sizing: border-box;
 background: transparent !important;  
 margin: 0;
@@ -84,17 +84,18 @@ display: inline-block;
    CONTENEDOR: MENÚ PC
 ====================================== */
 nav {
+display: inline-block;
 text-align: center;
 }
 .site-menu {
 list-style: none;
 display: flex;
-flex-wrap: wrap;
+flex-wrap: nowrap;
 justify-content: center;
 box-sizing: border-box;
 gap: 10px;
 margin: 10px auto 10px auto;
-padding: 0px;
+padding: 0px;  
 }
 .site-menu li {
 position: relative;
@@ -157,6 +158,11 @@ box-shadow:
 0 0 10px #00FFFF,
 0 0 20px #00FFFF;
 }
+
+
+
+
+
 /* ======================================
    CONTENEDOR: SUBMENUS PC
 ====================================== */
