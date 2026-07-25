@@ -163,10 +163,6 @@ box-shadow:
 0 0 20px #00FFFF;
 }
 
-
-
-
-
 /* ======================================
    CONTENEDOR: SUBMENUS PC
 ====================================== */
@@ -394,8 +390,7 @@ background-clip: text;
 .site-wrapper-header-mobile { display: block; }
 .site-wrapper-header-title-mobile  { display: block; }
 }
-.site-wrapper-header-mobile { display: none; }
-.site-wrapper-header-title-mobile  { display: none; }
+
 
 
 
