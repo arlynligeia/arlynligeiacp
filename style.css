@@ -440,6 +440,48 @@ display: none !important;
 }
 }
 
+/* ======================================
+   CONTENEDOR: TÍTULO GRANDE MOBILE
+====================================== */
+.titlebig-mobile { display: none; }
+@media (max-width: 768px) {  
+.titlebig-mobile { 
+display: block;
+position: relative;
+top: 0;
+left: 0;  
+width: 100%;
+box-sizing: border-box;
+background: transparent !important;   
+margin: 30px 0;
+padding: 190px 10px 10px 10px;
+}
+.titlesbig-body-mobile {
+font-family: 'Bebas Neue', cursive;
+font-size: 10rem; 
+color: #ff00a9 !important;
+text-align: center; 
+font-weight: 400;
+margin: 0px;
+padding: 0px;
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#ff00a9, #ff00a9);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+nav {
+display: none !important;
+}
+}
+
 
 
 
