@@ -26,6 +26,52 @@ background: transparent !important;
 margin: 0;
 padding: 20px 10px 10px 10px;
 }
+
+
+/* ======================================
+   PLANETA PC (al lado del menú)
+====================================== */
+.planeta {
+font-family: 'Bebas Neue', cursive;
+font-size: 3.5rem;
+color: #00FFFF !important;
+font-weight: 400;
+line-height: 1;
+margin: 0;
+padding: 10px 20px 10px 0;
+letter-spacing: 2px;
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#00FFFF, #00FFFF);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+display: inline-block;
+}
+
+/* ======================================
+   PLANETA MOBILE (centrado)
+====================================== */
+@media (max-width: 768px) {
+.planeta {
+font-size: 2.5rem;
+text-align: center;
+padding: 10px 0;
+display: block;
+width: 100%;
+}
+}
+
+
+
+
+
 /* ======================================
    MENÚ Y SUBMENUS PC
 ====================================== */
