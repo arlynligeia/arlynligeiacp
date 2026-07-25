@@ -558,6 +558,21 @@ const menuLinks = document.querySelectorAll('.menuhamburger-overlay-mobile a');
 function showOnlyOneSection(sectionId) {
 console.log('📱 Mostrando SOLO:', sectionId);
 
+// === CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
+const titlesmallMobile = document.querySelector('.titlesmall-mobile');
+// Extraer el nombre real de la sección (sin -mobile)
+const realSectionId = sectionId.replace('-mobile', '');
+if (realSectionId === 'home' || realSectionId.startsWith('home-')) {
+if (titlesmallMobile) {
+titlesmallMobile.classList.add('hidden');
+}
+} else {
+if (titlesmallMobile) {
+titlesmallMobile.classList.remove('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
+
 // === EXCEPCIÓN PARA CONTACT MOBILE ===
 if (sectionId === 'contact-mobile') {
 // OCULTAR TODAS LAS SECCIONES MOBILE  
@@ -597,6 +612,20 @@ mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 // 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN (IDÉNTICA A PC)
 function goToSubsection(subsectionId) {
 console.log('📱 Yendo a subsección:', subsectionId);
+
+// === CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
+const titlesmallMobile = document.querySelector('.titlesmall-mobile');
+const realSubsectionId = subsectionId.replace('-mobile', '');
+if (realSubsectionId === 'home' || realSubsectionId.startsWith('home-')) {
+if (titlesmallMobile) {
+titlesmallMobile.classList.add('hidden');
+}
+} else {
+if (titlesmallMobile) {
+titlesmallMobile.classList.remove('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
 
 // === EXCEPCIÓN PARA CONTACT-FOR-FANS MOBILE ===
 if (subsectionId === 'contact-mobile-contactforfans') {
@@ -678,6 +707,7 @@ spans[2].style.transform = 'none';
 // 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR (IGUAL A PC)
 function checkInitialHash() {
 const hash = window.location.hash.replace('#', '');
+const titlesmallMobile = document.querySelector('.titlesmall-mobile');
 if (hash) {
 if (hash.includes('-')) {
 // Es una subsección (ej: home-socialmediacontent)
@@ -687,6 +717,11 @@ goToSubsection(mobileSubsectionId);
 // Es una sección principal (ej: home)
 const mobileSectionId = hash + '-mobile';
 showOnlyOneSection(mobileSectionId);
+}
+} else {
+// Si no hay hash, estamos en HOME → ocultar título mobile
+if (titlesmallMobile) {
+titlesmallMobile.classList.add('hidden');
 }
 }
 }
@@ -723,7 +758,6 @@ console.log('✅ Menú hamburguesa móvil configurado correctamente');
 });
 </script>
 <!-- FIN SCRIP: MENÚ HAMBURGUESA MÓVIL -->
-
 
 
 
