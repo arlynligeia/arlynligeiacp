@@ -29,10 +29,13 @@
 <div class="site-wrapper">
    
 <!-- CONTENEDOR: TÍTULO PEQUEÑO PC -->   
-<div class="site-wrapper-header"> 
+<div class="site-wrapper-header" id="main-title-pc"> 
 <div class="site-wrapper-header-title">ARLYN<br>LIGEIA</div>
 </div>
 
+
+
+   
 <!-- CONTENEDOR: MENÚ PC -->
 <nav>
 <ul class="site-menu" id="site-menu">  
@@ -321,6 +324,22 @@ console.log('🔧 Navegación iniciada');
 // 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN
 function showOnlyOneSection(sectionId) {
 console.log('Mostrando SOLO:', sectionId);
+
+// === CONTROL DEL TÍTULO PEQUEÑO PC ===
+const mainTitle = document.getElementById('main-title-pc');
+// OCULTAR TÍTULO si es HOME o sus hijos
+if (sectionId === 'home' || sectionId.startsWith('home-')) {
+if (mainTitle) {
+mainTitle.classList.add('hidden');
+}
+} else {
+// MOSTRAR TÍTULO en cualquier otra sección
+if (mainTitle) {
+mainTitle.classList.remove('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO ===
+
 // === EXCEPCIÓN PARA CONTACT ===
 if (sectionId === 'contact') {
 // OCULTAR TODAS LAS SECCIONES  
@@ -357,6 +376,22 @@ mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 // 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN
 function goToSubsection(subsectionId) {
 console.log('Yendo a subsección:', subsectionId);
+
+// === CONTROL DEL TÍTULO PEQUEÑO PC ===
+const mainTitle = document.getElementById('main-title-pc');
+// OCULTAR TÍTULO si es HOME o sus hijos
+if (subsectionId === 'home' || subsectionId.startsWith('home-')) {
+if (mainTitle) {
+mainTitle.classList.add('hidden');
+}
+} else {
+// MOSTRAR TÍTULO en cualquier otra sección
+if (mainTitle) {
+mainTitle.classList.remove('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO ===
+
 // === EXCEPCIÓN PARA CONTACT-FOR-FANS ===
 if (subsectionId === 'contact-contactforfans') {
 // OCULTAR TODAS LAS SECCIONES  
@@ -412,6 +447,12 @@ goToSubsection(hash);
 } else {
 showOnlyOneSection(hash);
 }
+} else {
+// Si no hay hash, estamos en HOME → ocultar título
+const mainTitle = document.getElementById('main-title-pc');
+if (mainTitle) {
+mainTitle.classList.add('hidden');
+}
 }
 }
 
@@ -423,6 +464,12 @@ if (hash.includes('-')) {
 goToSubsection(hash);
 } else {
 showOnlyOneSection(hash);
+}
+} else {
+// Si no hay hash, estamos en HOME → ocultar título
+const mainTitle = document.getElementById('main-title-pc');
+if (mainTitle) {
+mainTitle.classList.add('hidden');
 }
 }
 }
