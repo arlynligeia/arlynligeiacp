@@ -239,7 +239,7 @@ text-align: center;
 font-weight: 400;
 line-height: 1; 
 margin: 40px 0;
-padding: 210px 20px 20px 20px;
+padding: 230px 20px 20px 20px;
 background: 
 repeating-linear-gradient(
 0deg,
@@ -442,7 +442,7 @@ width: 100%;
 box-sizing: border-box;
 background: transparent !important;   
 margin: 30px 0;
-padding: 200px 10px 10px 10px;
+padding: 220px 10px 10px 10px;
 }
 .titlebig-mobile.hidden {
 display: none !important;
