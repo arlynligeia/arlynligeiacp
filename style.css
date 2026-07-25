@@ -695,8 +695,8 @@ position: relative;
 width: 90%;
 box-sizing: border-box;
 background: #3f00a8 !important;
-border-radius: 20px;
-margin: 30px auto;
+border-radius: 0px;
+margin: 0px auto 30px auto;
 padding: 20px;
 }
 .universe-container-mobile::before {
@@ -708,7 +708,7 @@ left: 0;
 width: 100%;
 height: 60px; 
 background: #2a0070 !important;
-border-radius: 20px 20px 0 0;
+border-radius: 0px;
 }
 .universe-title-mobile {
 position: relative;
