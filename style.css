@@ -170,7 +170,7 @@ box-shadow:
 position: absolute; 
 display: none;
 top: 40px;
-left: 0;
+right: 0; 
 list-style: none;
 background: #ff00ff !important;
 z-index: 1000;
