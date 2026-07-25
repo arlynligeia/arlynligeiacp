@@ -32,9 +32,6 @@
 <div class="site-wrapper-header" id="main-title-pc"> 
 <div class="site-wrapper-header-title">ARLYN<br>LIGEIA</div>
 </div>
-
-
-
    
 <!-- CONTENEDOR: MENÚ PC -->
 <nav>
@@ -327,18 +324,33 @@ console.log('Mostrando SOLO:', sectionId);
 
 // === CONTROL DEL TÍTULO PEQUEÑO PC ===
 const mainTitle = document.getElementById('main-title-pc');
-// OCULTAR TÍTULO si es HOME o sus hijos
+// OCULTAR TÍTULO PEQUEÑO si es HOME o sus hijos
 if (sectionId === 'home' || sectionId.startsWith('home-')) {
 if (mainTitle) {
 mainTitle.classList.add('hidden');
 }
 } else {
-// MOSTRAR TÍTULO en cualquier otra sección
+// MOSTRAR TÍTULO PEQUEÑO en cualquier otra sección
 if (mainTitle) {
 mainTitle.classList.remove('hidden');
 }
 }
-// === FIN CONTROL DEL TÍTULO ===
+// === FIN CONTROL DEL TÍTULO PEQUEÑO ===
+
+// === CONTROL DEL TÍTULO GRANDE PC ===
+const siteTitle = document.querySelector('.site-title');
+// MOSTRAR TÍTULO GRANDE solo en HOME o sus hijos
+if (sectionId === 'home' || sectionId.startsWith('home-')) {
+if (siteTitle) {
+siteTitle.classList.remove('hidden');
+}
+} else {
+// OCULTAR TÍTULO GRANDE en cualquier otra sección
+if (siteTitle) {
+siteTitle.classList.add('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO GRANDE ===
 
 // === EXCEPCIÓN PARA CONTACT ===
 if (sectionId === 'contact') {
@@ -379,18 +391,33 @@ console.log('Yendo a subsección:', subsectionId);
 
 // === CONTROL DEL TÍTULO PEQUEÑO PC ===
 const mainTitle = document.getElementById('main-title-pc');
-// OCULTAR TÍTULO si es HOME o sus hijos
+// OCULTAR TÍTULO PEQUEÑO si es HOME o sus hijos
 if (subsectionId === 'home' || subsectionId.startsWith('home-')) {
 if (mainTitle) {
 mainTitle.classList.add('hidden');
 }
 } else {
-// MOSTRAR TÍTULO en cualquier otra sección
+// MOSTRAR TÍTULO PEQUEÑO en cualquier otra sección
 if (mainTitle) {
 mainTitle.classList.remove('hidden');
 }
 }
-// === FIN CONTROL DEL TÍTULO ===
+// === FIN CONTROL DEL TÍTULO PEQUEÑO ===
+
+// === CONTROL DEL TÍTULO GRANDE PC ===
+const siteTitle = document.querySelector('.site-title');
+// MOSTRAR TÍTULO GRANDE solo en HOME o sus hijos
+if (subsectionId === 'home' || subsectionId.startsWith('home-')) {
+if (siteTitle) {
+siteTitle.classList.remove('hidden');
+}
+} else {
+// OCULTAR TÍTULO GRANDE en cualquier otra sección
+if (siteTitle) {
+siteTitle.classList.add('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO GRANDE ===
 
 // === EXCEPCIÓN PARA CONTACT-FOR-FANS ===
 if (subsectionId === 'contact-contactforfans') {
@@ -448,10 +475,14 @@ goToSubsection(hash);
 showOnlyOneSection(hash);
 }
 } else {
-// Si no hay hash, estamos en HOME → ocultar título
+// Si no hay hash, estamos en HOME → ocultar título pequeño y mostrar título grande
 const mainTitle = document.getElementById('main-title-pc');
 if (mainTitle) {
 mainTitle.classList.add('hidden');
+}
+const siteTitle = document.querySelector('.site-title');
+if (siteTitle) {
+siteTitle.classList.remove('hidden');
 }
 }
 }
@@ -466,10 +497,14 @@ goToSubsection(hash);
 showOnlyOneSection(hash);
 }
 } else {
-// Si no hay hash, estamos en HOME → ocultar título
+// Si no hay hash, estamos en HOME → ocultar título pequeño y mostrar título grande
 const mainTitle = document.getElementById('main-title-pc');
 if (mainTitle) {
 mainTitle.classList.add('hidden');
+}
+const siteTitle = document.querySelector('.site-title');
+if (siteTitle) {
+siteTitle.classList.remove('hidden');
 }
 }
 }
