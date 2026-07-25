@@ -230,6 +230,8 @@ border-bottom: 1px solid white !important;
 
 
 
+
+
 /* ======================================
    MENÚ HAMBURGUESA MOVIL
 ====================================== */
@@ -358,6 +360,7 @@ display: none !important;
 ====================================== */
 @media (max-width: 768px) {
 .site-wrapper-header-mobile {
+display: block;
 position: relative;
 width: 100%;
 box-sizing: border-box;
@@ -387,8 +390,9 @@ linear-gradient(#00FFFF, #00FFFF);
 background-clip: text;
 -webkit-text-fill-color: transparent;
 }
-.site-wrapper-header-mobile { display: block; }
-.site-wrapper-header-title-mobile  { display: block; }
+nav {
+display: none !important;
+}
 }
 
 
