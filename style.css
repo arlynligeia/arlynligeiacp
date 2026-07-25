@@ -358,10 +358,11 @@ display: none !important;
 /* ======================================
    CONTENEDOR: TÍTULO PEQUEÑO MOBILE
 ====================================== */
+.site-wrapper-header-mobile { display: none; }
 @media (max-width: 768px) {
 .site-wrapper-header-mobile {
 display: block;
-position: relative;
+position: fixed;
 width: 100%;
 box-sizing: border-box;
 background: transparent !important;
