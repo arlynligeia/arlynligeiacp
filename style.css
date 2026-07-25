@@ -108,19 +108,6 @@ background-clip: text;
 .planeta-title { display: none; }
 .planeta-title-mobile { display: block; }
 }
-/* ======================================
-   PLANETA: OCULTAR EN HOME Y SUBHIJOS
-====================================== */
-/* Ocultar planeta en Home y sus subhijos */
-body.home-page .planeta-menu-wrapper {
-display: none !important;
-}
-
-/* Mostrar planeta en el resto de secciones */
-body:not(.home-page) .planeta-menu-wrapper {
-display: flex !important;
-}
-
 
 
 
