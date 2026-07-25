@@ -11,6 +11,8 @@ margin: 0;
 min-height: 100vh;
 }
 
+
+
 /* ======================================
    CONTENEDOR DEL MENÚ PC (SIN FONDO MORADO)
 ====================================== */
@@ -24,78 +26,6 @@ background: transparent !important;
 margin: 0;
 padding: 20px 10px 10px 10px;
 }
-
-
-
-
-/* --- TÍTULO --- */
-.site-title {
-font-family: 'Bebas Neue', cursive;
-font-size: 20rem; 
-color: #ff00a9 !important;
-text-align: center;
-font-weight: 400;
-line-height: 1; 
-margin: 0px;
-padding: 0px;
-background: 
-repeating-linear-gradient(
-0deg,
-rgba(0, 0, 0, 0.3) 0px,
-rgba(0, 0, 0, 0.3) 2px,
-transparent 2px,
-transparent 4px
-),
-linear-gradient(#ff00a9, #ff00a9);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-.site-container { display: block; }
-.site-container-mobile { display: none; }
-.site-title { display: block; }
-.site-title-mobile { display: none; }
-/* ======================================
-   TÍTULO DE LA PÁGINA MÓVIL
-====================================== */
-@media (max-width: 768px) {
-.site-container-mobile { 
-position: relative;
-top: 0;
-left: 0;  
-width: 100%;
-box-sizing: border-box;
-background: #320046 !important;    
-margin: 0;
-padding: 20px 10px 10px 10px;
-}
-.site-title-mobile {
-font-family: 'Bebas Neue', cursive;
-font-size: 10rem; 
-color: #ff00a9 !important;
-text-align: center; 
-font-weight: 400;
-margin: 0px;
-padding: 0px;
-background: 
-repeating-linear-gradient(
-0deg,
-rgba(0, 0, 0, 0.3) 0px,
-rgba(0, 0, 0, 0.3) 2px,
-transparent 2px,
-transparent 4px
-),
-linear-gradient(#ff00a9, #ff00a9);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-.site-container { display: none; }
-.site-container-mobile { display: block; }   
-.site-title { display: none; }
-.site-title-mobile { display: block; }
-}
-
 /* ======================================
    MENÚ Y SUBMENUS PC
 ====================================== */
@@ -177,12 +107,9 @@ box-shadow:
 0 0 10px #00FFFF,
 0 0 20px #00FFFF;
 }
-
-
-
-
-
-/* --- SUBMENÚS DESPLEGABLES --- */
+/* ======================================
+   SUBMENÚS DESPLEGABLES
+====================================== */
 .submenu {
 position: absolute; 
 display: none;
@@ -244,6 +171,81 @@ transform: scaleX(1);
 .submenu li:not(:last-child) {
 border-bottom: 1px solid white !important;
 }
+
+/* ======================================
+   TÍTULO PC
+====================================== */
+.site-title {
+font-family: 'Bebas Neue', cursive;
+font-size: 20rem; 
+color: #ff00a9 !important;
+text-align: center;
+font-weight: 400;
+line-height: 1; 
+margin: 40px 0;
+padding: 190px 20px 20px 20px;
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#ff00a9, #ff00a9);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.site-container { display: block; }
+.site-container-mobile { display: none; }
+.site-title { display: block; }
+.site-title-mobile { display: none; }
+/* ======================================
+   TÍTULO MOBILE
+====================================== */
+@media (max-width: 768px) {
+.site-container-mobile { 
+position: relative;
+top: 0;
+left: 0;  
+width: 100%;
+box-sizing: border-box;
+background: #320046 !important;    
+margin: 0;
+padding: 20px 10px 10px 10px;
+}
+.site-title-mobile {
+font-family: 'Bebas Neue', cursive;
+font-size: 10rem; 
+color: #ff00a9 !important;
+text-align: center; 
+font-weight: 400;
+margin: 0px;
+padding: 0px;
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#ff00a9, #ff00a9);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.site-container { display: none; }
+.site-container-mobile { display: block; }   
+.site-title { display: none; }
+.site-title-mobile { display: block; }
+}
+
+
+
+
+
 
 
 
