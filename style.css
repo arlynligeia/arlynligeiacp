@@ -251,7 +251,6 @@ background: transparent !important;
 padding: 10px;
 box-sizing: border-box;
 }
-
 /* ======================================
    CONTENEDOR: TÍTULO PEQUEÑO MOBILE
 ====================================== */
@@ -263,7 +262,6 @@ background: transparent !important;
 margin: 10px;
 padding: 0px;
 }  
-
 .site-wrapper-header-title-mobile {
 font-family: 'Bebas Neue', cursive;
 font-size: 2.5rem;
@@ -284,14 +282,12 @@ linear-gradient(#00FFFF, #00FFFF);
 background-clip: text;
 -webkit-text-fill-color: transparent;
 }   
-
 /* ======================================
    CONTENEDOR: MENÚ HAMBURGUESA MOBILE
 ====================================== */
 nav {
 display: none !important;
 }
-
 .site-wrapper-menuhamburger-mobile {
 display: flex;
 align-items: center;
@@ -300,7 +296,6 @@ top: 15px;
 right: 15px;
 z-index: 1000;
 }
-
 /* ======================================
    CONTENEDOR: BOTON MENÚ HAMBURGUESA
 ====================================== */
@@ -330,7 +325,6 @@ box-shadow:
 0 0 5px #00FFFF,
 inset 0 0 5px rgba(0, 255, 255, 0.3);
 }
-
 /* LAS RAYAS DEL BOTÓN EN COLOR TURQUESA */
 .site-wrapper-menuhamburger-button span {
 display: block;
@@ -339,7 +333,6 @@ height: 3px;
 background: #00FFFF !important;
 transition: all 0.3s ease;
 }
-
 /* HOVER - MISMO EFECTO QUE MENÚ PRINCIPAL */
 .site-wrapper-menuhamburger-button:hover {
 background: rgba(0, 255, 255, 0.1) !important;
@@ -349,7 +342,6 @@ box-shadow:
 0 0 25px #00FFFF,
 inset 0 0 10px rgba(0, 255, 255, 0.5);
 }
-
 /* PUNTO LED - ESQUINA SUPERIOR DERECHA */
 .site-wrapper-menuhamburger-button::after {
 content: '';
@@ -363,14 +355,12 @@ background: #00FFFF;
 box-shadow: 0 0 5px #00FFFF;
 transition: all 0.3s ease;
 }
-
 /* PUNTO LED EN HOVER */
 .site-wrapper-menuhamburger-button:hover::after {
 box-shadow: 
 0 0 10px #00FFFF,
 0 0 20px #00FFFF;
 }
-
 /* ======================================
    CONTENEDOR: OVERLAY MENU HAMBURGUESA
 ====================================== */
@@ -384,11 +374,9 @@ left: 0;
 background: #2a0070 !important;
 display: none;
 }
-
 .site-wrapper-menuhamburger-overlay.active {
 display: block;
 }
-
 .site-wrapper-menuhamburger-overlay ul {
 list-style: none;
 padding: 0;
@@ -399,18 +387,15 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 }
-
 /* Elementos del menú - SOLO TEXTO */
 .site-wrapper-menuhamburger-overlay li {
 text-align: center;
 border-bottom: 1px solid #ff00a9 !important;
 padding: 12px 0;
 }
-
 .site-wrapper-menuhamburger-overlay li:last-child {
 border-bottom: none !important;
 }
-
 .site-wrapper-menuhamburger-overlay a {
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
@@ -420,9 +405,10 @@ padding: 0 20px;
 display: block;
 color: #00FFFF !important; 
 }
+.site-wrapper-mobile { display: flex; }   
 } /* FIN DEL MEDIA QUERY */
 
-
+.site-wrapper-mobile { display: none; }
 
 
 
