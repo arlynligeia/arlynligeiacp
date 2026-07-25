@@ -460,18 +460,6 @@ display: none !important;
 }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    CONTENEDOR: TÍTULO GRANDE MOBILE
 ====================================== */
@@ -487,6 +475,10 @@ box-sizing: border-box;
 background: transparent !important;   
 margin: 30px 0;
 padding: 190px 10px 10px 10px;
+}
+   /* CLASE PARA OCULTAR EL TÍTULO GRANDE MOBILE */
+.titlebig-mobile.hidden {
+display: none !important;
 }
 .titlesbig-body-mobile {
 font-family: 'Bebas Neue', cursive;
