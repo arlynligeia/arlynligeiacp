@@ -12,213 +12,6 @@ min-height: 100vh;
 }
 
 /* ======================================
-   CONTENEDOR DEL TÍTULO GRANDE PC
-====================================== */
-.site-container-background {
-width: 100%;
-box-sizing: border-box;
-margin: 40px auto;      
-padding: 190px 20px 30px 20px;
-}
-/* ======================================
-   TÍTULO GRANDE PC (DEBAJO DEL MENÚ)
-====================================== */
-.site-container-background-title {
-font-family: 'Bebas Neue', cursive;
-font-size: 20rem; 
-color: #ff00a9 !important;
-text-align: center;
-font-weight: 400;
-line-height: 1; 
-margin: 0;
-padding: 0;
-display: block;
-position: relative;   
-background: 
-repeating-linear-gradient(
-0deg,
-rgba(0, 0, 0, 0.3) 0px,
-rgba(0, 0, 0, 0.3) 2px,
-transparent 2px,
-transparent 4px
-),
-linear-gradient(#ff00a9, #ff00a9);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-/* ======================================
-   CONTENEDOR DEL TÍTULO PEQUEÑO PC
-====================================== */
-.site-container-header {
-display: flex;
-align-items: center;
-width: 100%;
-max-width: 1400px;
-margin: 0 auto;
-padding: 10px 20px;
-box-sizing: border-box;
-}
-/* En HOME: menú centrado */
-body.home-page .site-container-header {
-justify-content: center;
-}
-/* En el resto de secciones: título y menú juntos */
-body:not(.home-page) .site-container-header {
-justify-content: center;
-}
-/* ======================================
-   TÍTULO PEQUEÑO PC (2 FILAS)
-====================================== */
-.site-container-header-title {
-display: flex;
-flex-direction: column;
-line-height: 1;
-margin-right: 30px;
-}
-.site-container-header-title h1 {
-font-family: 'Bebas Neue', cursive;
-font-size: 3.5rem;
-color: #00ffff !important;
-font-weight: 400;
-margin: 0;
-padding: 0;
-letter-spacing: 2px;
-background: 
-repeating-linear-gradient(
-0deg,
-rgba(0, 0, 0, 0.3) 0px,
-rgba(0, 0, 0, 0.3) 2px,
-transparent 2px,
-transparent 4px
-),
-linear-gradient(#00ffff, #00ffff);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-/* ======================================
-   CONTROL: OCULTAR/MOSTRAR TÍTULOS PC
-====================================== */
-/* OCULTAR TÍTULO GRANDE EN SECCIONES QUE NO SEAN HOME */
-body:not(.home-page) .site-container-background {
-display: none;
-}
-/* OCULTAR TÍTULO PEQUEÑO SOLO EN HOME */
-body.home-page .site-container-header-title {
-display: none !important;
-}
-/* MOSTRAR TÍTULO PEQUEÑO EN EL RESTO DE SECCIONES */
-body:not(.home-page) .site-container-header-title {
-display: flex !important;
-}
-
-/* ======================================
-  CONTENEDOR DE TÍTULO MOBILE
-====================================== */
-@media (max-width: 768px) {
-.site-container-mobile { 
-position: relative;
-top: 0;
-left: 0;  
-width: 100%;
-box-sizing: border-box;
-background: transparent !important;    
-margin: 0;
-padding: 20px 15px 10px 15px;
-}
-
-/* TÍTULO GRANDE MÓVIL (SOLO EN HOME) */
-.site-container-wrapper-title-mobile {
-font-family: 'Bebas Neue', cursive;
-font-size: 10rem;
-color: #ff00a9 !important;
-text-align: center;
-font-weight: 400;
-line-height: 1;
-margin: 0;
-padding: 80px 0 20px 0;
-display: block;
-position: relative;
-background: 
-repeating-linear-gradient(
-0deg,
-rgba(0, 0, 0, 0.3) 0px,
-rgba(0, 0, 0, 0.3) 2px,
-transparent 2px,
-transparent 4px
-),
-linear-gradient(#ff00a9, #ff00a9);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-
-/* CONTENEDOR TÍTULO PEQUEÑO MÓVIL */
-.site-container-wrapper-header-mobile {
-display: flex;
-align-items: center;
-justify-content: flex-start;
-padding: 0;
-width: 100%;
-box-sizing: border-box;
-}
-
-/* TÍTULO PEQUEÑO MÓVIL (UNA SOLA FILA) */
-.site-container-wrapper-header-title-mobile {
-font-family: 'Bebas Neue', cursive;
-font-size: 2.5rem;
-color: #00ffff !important;
-font-weight: 400;
-margin: 0;
-padding: 10px 0;
-letter-spacing: 2px;
-background: 
-repeating-linear-gradient(
-0deg,
-rgba(0, 0, 0, 0.3) 0px,
-rgba(0, 0, 0, 0.3) 2px,
-transparent 2px,
-transparent 4px
-),
-linear-gradient(#00ffff, #00ffff);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
-display: block;
-}
-
-/* OCULTAR PC Y MOSTRAR MÓVIL */
-.site-container { display: none; }
-.site-container-mobile { display: block; }   
-
-/* OCULTAR TÍTULO GRANDE EN SECCIONES QUE NO SEAN HOME */
-body:not(.home-page) .site-container-wrapper-title-mobile {
-display: none !important;
-}
-
-/* MOSTRAR TÍTULO GRANDE SOLO EN HOME */
-body.home-page .site-container-wrapper-title-mobile {
-display: block !important;
-}
-
-/* OCULTAR TÍTULO PEQUEÑO EN HOME */
-body.home-page .site-container-wrapper-header-mobile {
-display: none !important;
-}
-/* MOSTRAR TÍTULO PEQUEÑO EN EL RESTO DE SECCIONES */
-body:not(.home-page) .site-container-wrapper-header-mobile {
-display: flex !important;
-}
-}
-
-
-
-
-
-
-
-/* ======================================
    CONTENEDOR DEL MENÚ PC (SIN FONDO MORADO)
 ====================================== */
 .site-container {
@@ -232,8 +25,79 @@ margin: 0;
 padding: 20px 10px 10px 10px;
 }
 
+
+
+
+/* --- TÍTULO --- */
+.site-title {
+font-family: 'Bebas Neue', cursive;
+font-size: 20rem; 
+color: #ff00a9 !important;
+text-align: center;
+font-weight: 400;
+line-height: 1; 
+margin: 0px;
+padding: 0px;
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#ff00a9, #ff00a9);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.site-container { display: block; }
+.site-container-mobile { display: none; }
+.site-title { display: block; }
+.site-title-mobile { display: none; }
 /* ======================================
-   MENÚ Y SUBMENUS
+   TÍTULO DE LA PÁGINA MÓVIL
+====================================== */
+@media (max-width: 768px) {
+.site-container-mobile { 
+position: relative;
+top: 0;
+left: 0;  
+width: 100%;
+box-sizing: border-box;
+background: #320046 !important;    
+margin: 0;
+padding: 20px 10px 10px 10px;
+}
+.site-title-mobile {
+font-family: 'Bebas Neue', cursive;
+font-size: 10rem; 
+color: #ff00a9 !important;
+text-align: center; 
+font-weight: 400;
+margin: 0px;
+padding: 0px;
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#ff00a9, #ff00a9);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.site-container { display: none; }
+.site-container-mobile { display: block; }   
+.site-title { display: none; }
+.site-title-mobile { display: block; }
+}
+
+/* ======================================
+   MENÚ Y SUBMENUS PC
 ====================================== */
 nav {
 text-align: center;
@@ -250,7 +114,6 @@ padding: 0px;
 .menu li {
 position: relative;
 }
-
 /* --- BOTONES --- */
 .menu-button,
 .cart-button {
@@ -274,13 +137,13 @@ transparent 2px,
 rgba(255, 255, 255, 0.05) 2px,
 rgba(255, 255, 255, 0.05) 4px
 ) !important;
+/* ESTILO ÚNICO PARA TODOS LOS BOTONES - COLOR CELESTE/TURQUESA */
 border: 2px solid #00FFFF !important;
 color: #00FFFF !important;
 box-shadow: 
 0 0 5px #00FFFF,
 inset 0 0 5px rgba(0, 255, 255, 0.3);
 }
-
 /* HOVER PARA TODOS LOS BOTONES */
 .menu-button:hover,
 .cart-button:hover {
@@ -293,7 +156,6 @@ box-shadow:
 inset 0 0 10px rgba(0, 255, 255, 0.5);
 text-shadow: 0 0 10px #00FFFF;
 }
-
 /* PUNTO LED PARA TODOS LOS BOTONES */
 .menu-button::after,
 .cart-button::after {
@@ -308,7 +170,6 @@ background: #00FFFF;
 box-shadow: 0 0 5px #00FFFF;
 transition: all 0.3s ease;
 }
-
 /* PUNTO LED EN HOVER */
 .menu-button:hover::after,
 .cart-button:hover::after {
@@ -316,6 +177,10 @@ box-shadow:
 0 0 10px #00FFFF,
 0 0 20px #00FFFF;
 }
+
+
+
+
 
 /* --- SUBMENÚS DESPLEGABLES --- */
 .submenu {
@@ -329,12 +194,10 @@ z-index: 1000;
 border: 2px solid #ff1493 !important;
 margin: 0;
 padding: 0;
-min-width: 200px;
 }
 .menu li:hover .submenu {
 display: block;
 }
-
 /* --- ELEMENTOS DEL SUBMENÚ --- */
 .submenu li {
 position: relative;
@@ -361,7 +224,6 @@ background: rgba(255, 20, 147, 0.2) !important;
 color: white !important;
 padding-left: 20px;
 }
-
 /* --- LÍNEA CELESTE AGUA ANIMADA --- */
 .submenu li::before {
 content: '';
@@ -378,11 +240,25 @@ transition: transform 0.3s ease;
 .submenu li:hover::before {
 transform: scaleX(1);
 }
-
 /* --- Separadores entre items --- */
 .submenu li:not(:last-child) {
 border-bottom: 1px solid white !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ======================================
    MENÚ HAMBURGUESA MOVIL
 ====================================== */
