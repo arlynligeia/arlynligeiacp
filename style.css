@@ -39,8 +39,6 @@ gap: 20px;
 width: 100%;
 }
 
-
-
 /* ======================================
    PLANETA PC (al lado del menú)
 ====================================== */
@@ -67,7 +65,7 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 display: inline-block;
 }
-.planeta-container { display: block; }
+.planeta { display: block; }
 .planeta-container-mobile{ display: none; }
 .planeta-title { display: block; }
 .planeta-title-mobile { display: none; }
@@ -75,14 +73,37 @@ display: inline-block;
    PLANETA MOBILE (centrado)
 ====================================== */
 @media (max-width: 768px) {
-.planeta {
-font-size: 2.5rem;
-text-align: center;
-padding: 10px 0;
-display: block;
+.planeta-container-mobile {
+position: relative;
 width: 100%;
+box-sizing: border-box;
+background: transparent !important;
+text-align: center;
+margin: 10px;
+padding: 0px;
 }
-.planeta-container { display: none; }
+.planeta-title-mobile {
+font-family: 'Bebas Neue', cursive;
+font-size: 2.5rem;
+text-align: center; 
+font-weight: 400;
+margin: 0px;
+padding: 0px;
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#00FFFF, #00FFFF);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+}
+.planeta { display: none; }
 .planeta-container-mobile { display: block; }
 .planeta-title { display: none; }
 .planeta-title-mobile { display: block; }
@@ -99,6 +120,12 @@ display: none !important;
 body:not(.home-page) .planeta-menu-wrapper {
 display: flex !important;
 }
+
+
+
+
+
+
 
 
 
